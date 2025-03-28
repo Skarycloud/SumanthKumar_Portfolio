@@ -91,7 +91,7 @@ I'm always open to new opportunities, collaborations, or just a friendly chat ab
 
 ```
 Email: sumanth.k.0202@gmail.com
-Location: [Your Location]
+Location: Mangalore
 Availability: Open to freelance, part-time, and full-time opportunities
 ```
 
