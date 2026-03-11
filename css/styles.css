@@ -530,6 +530,7 @@ body {
 p {
     font-size      : inherit;
     text-rendering : optimizeLegibility;
+    text-align     : justify;
 }
 
 a {
