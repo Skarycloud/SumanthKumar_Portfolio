@@ -2899,3 +2899,17 @@ p.timeline__meta { color: var(--color-text-dark); line-height: var(--vspace-0_87
 .ui-dots  { bottom: 2cqw; }
 .ui-card .ui-glass b { font-size: 1.55cqw; }
 .ui--hero > .ui-dots { position: absolute; left: 50%; bottom: 2.4cqw; transform: translateX(-50%); }
+
+/* cursor name tag: the screen clips overflow, so the tag sits to the
+   left of the pointer where it always stays inside the phone */
+.bl__cursor { z-index: 6; }
+.bl__cursor span {
+    position   : absolute;
+    right      : 2.4cqw;
+    top        : 2.2cqw;
+    margin-top : 0;
+    background : #111;
+    color      : #fff;
+    box-shadow : 0 .6cqw 1.4cqw -.4cqw rgba(0, 0, 0, .35);
+}
+.bl__cursor span { top: auto; bottom: 2.4cqw; right: 2.2cqw; }
