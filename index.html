@@ -165,8 +165,15 @@
                 <div class="row about-info wide" data-animate-block>
 
                     <div class="column lg-6 md-12 about-info__pic-block">
+                        <!-- The Build Loop: three scenes, a mobile app, a website and an AI automation -->
+                        <div class="bls" data-animate-el>
+                            <div class="bls__switch" role="tablist" aria-label="Choose a build story">
+                                <button type="button" role="tab" data-scene="mobile" aria-selected="true"><i></i>Mobile app</button>
+                                <button type="button" role="tab" data-scene="site" aria-selected="false"><i></i>Website</button>
+                                <button type="button" role="tab" data-scene="web" aria-selected="false"><i></i>AI automation</button>
+                            </div>
                         <!-- The Build Loop: Figma → React Native → APIs → Google Play -->
-                        <div class="bl" data-step="1" data-animate-el>
+                        <div class="bl" data-step="1" data-scene-id="mobile">
                             <p class="bl__sr">An animation of how Sumanth works: designing an app in Figma, building it in React Native, connecting APIs and tests, then publishing it on Google Play.</p>
 
                             <div class="bl__stage" aria-hidden="true">
@@ -263,6 +270,156 @@
                                 <button type="button" role="tab" data-go="4" aria-selected="false"><em>04</em><b>Ship</b><small>Google Play</small><i class="bl__bar"></i></button>
                             </div>
                             <p class="bl__live" aria-live="polite"></p>
+                        </div>
+
+                        <div class="bl bl--site" data-step="1" data-scene-id="site" hidden>
+                            <p class="bl__sr">An animation of Sumanth building a website: designing the layout, building it in Next.js, optimising it to perfect Lighthouse scores on desktop and mobile, then launching it.</p>
+
+                            <div class="bl__stage" aria-hidden="true">
+                                <div class="bl__glow"></div>
+                                <div class="bl__scene">
+
+                                    <div class="bl__me">
+                                        <img src="images/about-photo-600.webp" alt="" width="600" height="821" loading="lazy" decoding="async">
+                                        <span><b>Sumanth Kumar</b><small><i></i>Full-stack &amp; AI product builder</small></span>
+                                    </div>
+
+                                    <div class="wf ws">
+                                        <div class="wf__bar"><i></i><i></i><i></i><span class="ws__url"><em class="u-dev">localhost:3000</em><em class="u-live"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="10.5" width="13" height="9.5" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>forma.studio</em></span><em class="wf__state"><i></i><b class="wf__draft">Preview</b><b class="wf__active">Live</b></em></div>
+                                        <div class="wf__body ws__page">
+                                            <div class="ws__blk ws__nav" style="--i:0"><b class="ws__logo">Forma</b><span class="ws__links"><i>Shop</i><i>Studio</i><i>Journal</i></span><span class="ws__btn ws__btn--sm">Cart</span></div>
+                                            <div class="ws__blk ws__copy" style="--i:1"><small>New season · 2026</small><b>Design that<br>feels like home.</b><p>Sculptural seating, made to order.</p><span class="ws__ctas"><span class="ws__btn">Shop now <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="ws__btn ws__btn--ghost">Lookbook</span></span></div>
+                                            <div class="ws__blk ws__img" style="--i:2"></div>
+                                            <div class="ws__blk ws__grid" style="--i:3"><span class="g1"></span><span class="g2"></span><span class="g3"></span></div>
+                                            <div class="bl__select ws__select"><i></i><i></i><i></i><i></i></div>
+                                            <div class="bl__cursor ws__cursor"><svg viewBox="0 0 16 16"><path d="M1 1l5.2 13 1.9-5.4L13.5 6.7z"/></svg><span>Sumanth</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ws__card ws__code">
+                                        <div class="bl__win"><i></i><i></i><i></i><span>app/page.tsx</span></div>
+<pre><span class="ln" style="--n:1;--c:33"><b class="k">export default function</b> <b class="f">Home</b>() {</span>
+<span class="ln" style="--n:2;--c:10">  <b class="k">return</b> (</span>
+<span class="ln" style="--n:3;--c:12">    &lt;<b class="t">main</b>&gt;</span>
+<span class="ln" style="--n:4;--c:33">      &lt;<b class="t">Hero</b> <b class="a">title</b>=<b class="s">"Design that…"</b> /&gt;</span>
+<span class="ln" style="--n:5;--c:31">      &lt;<b class="t">Products</b> <b class="a">items</b>={items} /&gt;</span>
+<span class="ln" style="--n:6;--c:13">    &lt;/<b class="t">main</b>&gt;</span>
+<span class="ln" style="--n:7;--c:4">  );</span>
+<span class="ln" style="--n:8;--c:1">}</span></pre>
+                                    </div>
+
+                                    <div class="ws__card ws__lh">
+                                        <small>Lighthouse</small>
+                                        <div class="ws__gauges"><span class="ws__g"><svg viewBox="0 0 36 36" aria-hidden="true"><circle class="t" cx="18" cy="18" r="15"/><circle class="v" cx="18" cy="18" r="15"/></svg><b>100</b><small>Performance</small></span><span class="ws__g"><svg viewBox="0 0 36 36" aria-hidden="true"><circle class="t" cx="18" cy="18" r="15"/><circle class="v" cx="18" cy="18" r="15"/></svg><b>100</b><small>Accessibility</small></span><span class="ws__g"><svg viewBox="0 0 36 36" aria-hidden="true"><circle class="t" cx="18" cy="18" r="15"/><circle class="v" cx="18" cy="18" r="15"/></svg><b>100</b><small>Best practices</small></span><span class="ws__g"><svg viewBox="0 0 36 36" aria-hidden="true"><circle class="t" cx="18" cy="18" r="15"/><circle class="v" cx="18" cy="18" r="15"/></svg><b>100</b><small>SEO</small></span></div>
+                                    </div>
+
+                                    <div class="ws__phone">
+                                        <div class="ws__pscreen"><i class="pn"></i><b>Design that feels like home.</b><i class="pi"></i><i class="pb"></i><span><i></i><i></i></span></div>
+                                    </div>
+
+                                    <div class="ws__card ws__deploy">
+                                        <span class="ws__tri"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 4 21 20H3z"/></svg></span>
+                                        <span><b>Deployed</b><small>forma.studio · Ready in 41s</small></span>
+                                        <span class="ws__ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17.5 19 7"/></svg></span>
+                                    </div>
+
+                                    <div class="ws__card ws__visits">
+                                        <span><small>Visitors · 7 days</small><b>2,418</b></span>
+                                        <div class="wf__spark"><i style="--h:.3"></i><i style="--h:.45"></i><i style="--h:.4"></i><i style="--h:.62"></i><i style="--h:.55"></i><i style="--h:.78"></i><i style="--h:1"></i></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="bl__steps" role="tablist" aria-label="How Sumanth builds a website">
+                                <button type="button" role="tab" data-go="1" aria-selected="true"><em>01</em><b>Design</b><small>Layout</small><i class="bl__bar"></i></button>
+                                <button type="button" role="tab" data-go="2" aria-selected="false"><em>02</em><b>Build</b><small>Next.js</small><i class="bl__bar"></i></button>
+                                <button type="button" role="tab" data-go="3" aria-selected="false"><em>03</em><b>Optimize</b><small>Lighthouse</small><i class="bl__bar"></i></button>
+                                <button type="button" role="tab" data-go="4" aria-selected="false"><em>04</em><b>Launch</b><small>Live domain</small><i class="bl__bar"></i></button>
+                            </div>
+                            <p class="bl__live" aria-live="polite"></p>
+                        </div>
+
+                        <div class="bl bl--web" data-step="1" data-scene-id="web" hidden>
+                            <p class="bl__sr">An animation of Sumanth building an AI automation in a web app: laying out a workflow, writing the AI agent's prompt, running it on a new lead, then taking it live.</p>
+
+                            <div class="bl__stage" aria-hidden="true">
+                                <div class="bl__glow"></div>
+                                <div class="bl__scene">
+
+                                    <div class="bl__me">
+                                        <img src="images/about-photo-600.webp" alt="" width="600" height="821" loading="lazy" decoding="async">
+                                        <span><b>Sumanth Kumar</b><small><i></i>Full-stack &amp; AI product builder</small></span>
+                                    </div>
+
+                                    <div class="wf">
+                                        <div class="wf__bar"><i></i><i></i><i></i><span>flows.app / lead-router</span><em class="wf__state"><i></i><b class="wf__draft">Draft</b><b class="wf__active">Active</b></em></div>
+                                        <div class="wf__body">
+                                            <div class="wf__side"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="6" height="5" rx="1.2"/><rect x="14.5" y="15" width="6" height="5" rx="1.2"/><path d="M9.5 6.5h3a2 2 0 0 1 2 2v6.5"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4.5l3 2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.2M12 18.3v2.2M3.5 12h2.2M18.3 12h2.2M6 6l1.6 1.6M16.4 16.4 18 18M6 18l1.6-1.6M16.4 7.6 18 6"/></svg></div>
+                                            <div class="wf__canvas">
+                                                <svg class="wf__wires" viewBox="0 0 508 322" preserveAspectRatio="none">
+                                                    <path class="w w0" d="M146 161 H186"/>
+                                                    <path class="w w1" d="M330 161 C 346 161, 346 65, 362 65"/>
+                                                    <path class="w w2" d="M330 161 H362"/>
+                                                    <path class="w w3" d="M330 161 C 346 161, 346 257, 362 257"/>
+                                                </svg>
+                                                <i class="wf__pkt p0"></i><i class="wf__pkt p1"></i><i class="wf__pkt p2"></i><i class="wf__pkt p3"></i>
+
+                                                <div class="wf__node n-trig" style="--i:0"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7a3.5 3.5 0 1 1 5.8 2.6L12 15M6.2 13.5a3.5 3.5 0 1 0 4.6 5.1H17M17.6 18.6a3.5 3.5 0 1 0-2.6-6"/></svg></span><span><b>New lead</b><small>Webhook</small></span><i class="wf__ok"></i></div>
+                                                <div class="wf__node n-agent" style="--i:1"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 13.8 10.2 20.5 12l-6.7 1.8L12 20.5l-1.8-6.7L3.5 12l6.7-1.8z"/></svg></span><span><b>AI Agent</b><small class="a-idle">Qualify &amp; draft reply</small><small class="a-think">Thinking<em>…</em></small><small class="a-done">Score 86 · demo request</small></span><i class="wf__ok"></i></div>
+                                                <div class="wf__node n-crm" style="--i:2"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.9-3 3-4.6 5.5-4.6s4.6 1.6 5.5 4.6M16 5.2a3 3 0 0 1 0 5.6M18.5 14.8c1 .8 1.7 2.2 2 4.2"/></svg></span><span><b>CRM</b><small>Create contact</small></span><i class="wf__ok"></i></div>
+                                                <div class="wf__node n-slack" style="--i:3"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 7 20M17 4l-2 16M4.5 9h16M3.5 15h16"/></svg></span><span><b>Slack</b><small>#sales</small></span><i class="wf__ok"></i></div>
+                                                <div class="wf__node n-mail" style="--i:4"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><span><b>Email</b><small>Send reply</small></span><i class="wf__ok"></i></div>
+
+                                                <div class="wf__inspect">
+                                                    <div class="wf__ih"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 13.8 10.2 20.5 12l-6.7 1.8L12 20.5l-1.8-6.7L3.5 12l6.7-1.8z"/></svg></span><b>AI Agent</b></div>
+                                                    <label>Model</label>
+                                                    <div class="wf__field">LLM · temperature 0.2</div>
+                                                    <label>Instructions</label>
+                                                    <div class="wf__field wf__prompt"><span class="tl" style="--n:1;--c:30">Score this lead from 0 to 100,</span><span class="tl" style="--n:2;--c:28">detect the intent, and draft</span><span class="tl" style="--n:3;--c:27">a short, friendly reply.</span></div>
+                                                    <label>Tools</label>
+                                                    <div class="wf__tools"><span>CRM</span><span>Slack</span><span>Email</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="bl__cursor wf__cursor"><svg viewBox="0 0 16 16"><path d="M1 1l5.2 13 1.9-5.4L13.5 6.7z"/></svg><span>Sumanth</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wf__log">
+                                        <div class="bl__win"><i></i><i></i><i></i><span>Run log · test</span></div>
+                                        <ul class="bl__checks">
+                                            <li style="--i:0">Lead received · priya@northwind.co</li>
+                                            <li style="--i:1">Agent scored 86 · demo request</li>
+                                            <li style="--i:2">Contact created in CRM</li>
+                                            <li style="--i:3">#sales notified · reply sent</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="wf__reply">
+                                        <small><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 13.8 10.2 20.5 12l-6.7 1.8L12 20.5l-1.8-6.7L3.5 12l6.7-1.8z"/></svg>Drafted reply</small>
+                                        <p><span class="tl" style="--n:1;--c:24">Hi Priya, thanks for</span><span class="tl" style="--n:2;--c:25">reaching out! Here are two</span><span class="tl" style="--n:3;--c:24">times for a quick demo…</span></p>
+                                    </div>
+
+                                    <div class="wf__stats">
+                                        <div class="wf__kpis">
+                                            <span><small>Runs today</small><b>1,284</b></span>
+                                            <span><small>Avg time</small><b>1.8s</b></span>
+                                            <span><small>Success</small><b>99.2%</b></span>
+                                        </div>
+                                        <div class="wf__spark"><i style="--h:.35"></i><i style="--h:.5"></i><i style="--h:.42"></i><i style="--h:.66"></i><i style="--h:.58"></i><i style="--h:.8"></i><i style="--h:.72"></i><i style="--h:.9"></i><i style="--h:.84"></i><i style="--h:1"></i></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="bl__steps" role="tablist" aria-label="How Sumanth builds an AI automation">
+                                <button type="button" role="tab" data-go="1" aria-selected="true"><em>01</em><b>Design</b><small>Workflow</small><i class="bl__bar"></i></button>
+                                <button type="button" role="tab" data-go="2" aria-selected="false"><em>02</em><b>Prompt</b><small>AI agent</small><i class="bl__bar"></i></button>
+                                <button type="button" role="tab" data-go="3" aria-selected="false"><em>03</em><b>Run</b><small>Test a lead</small><i class="bl__bar"></i></button>
+                                <button type="button" role="tab" data-go="4" aria-selected="false"><em>04</em><b>Live</b><small>Production</small><i class="bl__bar"></i></button>
+                            </div>
+                            <p class="bl__live" aria-live="polite"></p>
+                        </div>
                         </div>
                     </div>
 

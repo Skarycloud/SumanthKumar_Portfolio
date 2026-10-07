@@ -33,12 +33,23 @@
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <h3>The Build Loop</h3>
-      <p>The About section tells my process as a live scene: a screen is <b>designed in Figma</b>, <b>built in React Native</b>, <b>wired to APIs and tests</b>, then <b>shipped to Google Play</b>. Glassy UI, studio-rendered product shots, a Figma cursor and a typing code editor.</p>
-      <p><sub>Pure HTML/CSS · scales as one piece on any screen · click any step · pauses on hover · still frame for reduced motion</sub></p>
+    <td colspan="2">
+      <h3>The Build Loop: three ways I ship</h3>
+      <p>The About section tells my process as live, interactive scenes. A switch picks the story and they rotate on their own: a <b>mobile app</b> designed in Figma, built in React Native and shipped to Google Play; a <b>website</b> built in Next.js, tuned to perfect Lighthouse scores and launched; and an <b>AI automation</b> where an agent qualifies a lead, updates the CRM, pings Slack and drafts the reply.</p>
+      <table>
+        <tr>
+          <td width="33%"><img src="docs/media/scene-mobile.gif" alt="Mobile app scene: design, build, integrate, ship" width="100%" /></td>
+          <td width="33%"><img src="docs/media/scene-website.gif" alt="Website scene: design, build, optimize, launch" width="100%" /></td>
+          <td width="33%"><img src="docs/media/scene-ai.gif" alt="AI automation scene: workflow, prompt, test run, live" width="100%" /></td>
+        </tr>
+        <tr>
+          <td align="center"><sub><b>Mobile app</b> · Figma → React Native → APIs → Google Play</sub></td>
+          <td align="center"><sub><b>Website</b> · Layout → Next.js → Lighthouse 100 → live</sub></td>
+          <td align="center"><sub><b>AI automation</b> · Workflow → prompt → test run → production</sub></td>
+        </tr>
+      </table>
+      <p><sub>Pure HTML/CSS · glass UI with studio-rendered product shots · each scene scales as one piece on any screen · click any step · pauses on hover and off-screen · still frames for reduced motion</sub></p>
     </td>
-    <td width="50%"><img src="docs/media/build-loop.gif" alt="The Build Loop animation cycling through design, build, integrate and ship" width="100%" /></td>
   </tr>
   <tr>
     <td width="50%"><img src="docs/media/chat.gif" alt="S2-K1 answering questions about Sumanth" width="100%" /></td>

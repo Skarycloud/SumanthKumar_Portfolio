@@ -379,36 +379,49 @@
 
 
    /* The Build Loop (about section)
-    * Figma -> React Native -> APIs & tests -> Google Play, on a loop.
-    * Runs only while visible; pauses on hover and in hidden tabs.
+    * Two scenes, each a 4-step loop: a mobile app (Figma -> React Native
+    * -> APIs -> Google Play) and an AI automation web app (workflow ->
+    * prompt -> test run -> live). A switch picks the scene; after a full
+    * loop the next scene plays. Runs only while visible; pauses on hover
+    * and in hidden tabs; still frames for reduced motion.
     * -------------------------------------------------- */
-    const ssBuildLoop = function() {
+    const SCENES = {
+        mobile: {
+            dur  : { 1: 3800, 2: 3800, 3: 3600, 4: 4200 },
+            names: { 1: 'Design in Figma', 2: 'Build in React Native', 3: 'Connect APIs and run tests', 4: 'Ship to Google Play' },
+        },
+        site: {
+            dur  : { 1: 3800, 2: 3900, 3: 4000, 4: 4200 },
+            names: { 1: 'Design the layout', 2: 'Build it in Next.js', 3: 'Optimize to perfect Lighthouse scores', 4: 'Launch on a live domain' },
+        },
+        web: {
+            dur  : { 1: 3900, 2: 4300, 3: 4200, 4: 4400 },
+            names: { 1: 'Design the workflow', 2: 'Write the AI agent prompt', 3: 'Test run on a new lead', 4: 'Live in production' },
+        },
+    };
 
-        const bl = document.querySelector('.bl');
-        if (!bl) return;
+    function makeLoop(bl, cfg, onCycle) {
 
         const stage = bl.querySelector('.bl__stage');
         const tabs  = Array.prototype.slice.call(bl.querySelectorAll('[data-go]'));
         const live  = bl.querySelector('.bl__live');
-        const DUR   = { 1: 3800, 2: 3800, 3: 3600, 4: 4200 };
-        const NAMES = { 1: 'Design in Figma', 2: 'Build in React Native', 3: 'Connect APIs and run tests', 4: 'Ship to Google Play' };
 
-        // the scene is designed at 600px wide; scale it to the stage
-        function fit() { bl.style.setProperty('--k', (stage.clientWidth / 600).toFixed(4)); }
+        // each scene is designed at 600px wide; scale it to the stage
+        function fit() { if (stage.clientWidth) bl.style.setProperty('--k', (stage.clientWidth / 600).toFixed(4)); }
         fit();
         if ('ResizeObserver' in window) new ResizeObserver(fit).observe(stage);
         else window.addEventListener('resize', fit);
 
-        let step = 1, timer = 0, startedAt = 0, remaining = DUR[1];
-        let inView = false, hovering = false, started = false;
+        let step = 1, timer = 0, startedAt = 0, remaining = cfg.dur[1];
+        let active = false, inView = false, hovering = false;
 
         function show(n, announce) {
             // re-setting the same step restarts its choreography
             if (String(n) === bl.dataset.step) { bl.dataset.step = '0'; void bl.offsetWidth; }
             step = n;
             bl.dataset.step = n;
-            bl.style.setProperty('--dur', DUR[n] + 'ms');
-            remaining = DUR[n];
+            bl.style.setProperty('--dur', cfg.dur[n] + 'ms');
+            remaining = cfg.dur[n];
 
             tabs.forEach(function(tab, i) {
                 const k = i + 1;
@@ -417,16 +430,15 @@
                 tab.classList.toggle('is-done', k < n);
             });
 
-            // restart the progress bar of the active tab
             const bar = tabs[n - 1].querySelector('.bl__bar');
             bar.style.animation = 'none';
             void bar.offsetWidth;
             bar.style.animation = '';
 
-            if (announce) live.textContent = 'Step ' + n + ' of 4: ' + NAMES[n];
+            if (announce) live.textContent = 'Step ' + n + ' of 4: ' + cfg.names[n];
         }
 
-        function canRun() { return inView && !hovering && !document.hidden && !reduceMotion; }
+        function canRun() { return active && inView && !hovering && !document.hidden && !reduceMotion; }
 
         function run() {
             clearTimeout(timer);
@@ -434,6 +446,7 @@
             bl.classList.remove('is-paused');
             startedAt = performance.now();
             timer = setTimeout(function() {
+                if (step === 4 && onCycle && onCycle()) return;   // handed over to the other scene
                 show(step % 4 + 1, false);
                 run();
             }, remaining);
@@ -448,12 +461,8 @@
             bl.classList.add('is-paused');
         }
 
-        // tabs: click or arrow keys jump to a step
         tabs.forEach(function(tab, i) {
-            tab.addEventListener('click', function() {
-                show(i + 1, true);
-                run();
-            });
+            tab.addEventListener('click', function() { show(i + 1, true); run(); });
             tab.addEventListener('keydown', function(e) {
                 const dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
                 if (!dir) return;
@@ -465,26 +474,6 @@
             });
         });
 
-        if (reduceMotion) {
-            bl.classList.add('is-static');
-            show(4, false);
-            return;
-        }
-
-        // only animate while on screen
-        if ('IntersectionObserver' in window) {
-            new IntersectionObserver(function(entries) {
-                inView = entries[0].isIntersecting;
-                if (inView && !started) { started = true; show(1, false); }
-                inView ? run() : pause();
-            }, { threshold: 0.35 }).observe(stage);
-        } else {
-            inView = true; started = true; run();
-        }
-
-        document.addEventListener('visibilitychange', function() { document.hidden ? pause() : run(); });
-
-        // hover: pause to look closer, with a subtle 3D tilt toward the pointer
         if (window.matchMedia('(hover: hover)').matches) {
             stage.addEventListener('pointerenter', function() { hovering = true; pause(); });
             stage.addEventListener('pointerleave', function() {
@@ -495,15 +484,78 @@
             });
             stage.addEventListener('pointermove', function(e) {
                 const r = stage.getBoundingClientRect();
-                const x = (e.clientX - r.left) / r.width - 0.5;
-                const y = (e.clientY - r.top) / r.height - 0.5;
-                bl.style.setProperty('--rx', (-y * 5).toFixed(2) + 'deg');
-                bl.style.setProperty('--ry', (x * 6).toFixed(2) + 'deg');
+                bl.style.setProperty('--rx', (-((e.clientY - r.top) / r.height - .5) * 5).toFixed(2) + 'deg');
+                bl.style.setProperty('--ry', (((e.clientX - r.left) / r.width - .5) * 6).toFixed(2) + 'deg');
             });
         }
 
-        show(1, false);
+        if (reduceMotion) bl.classList.add('is-static');
+        show(reduceMotion ? 4 : 1, false);
         pause();
+
+        return {
+            start: function() { active = true; fit(); show(reduceMotion ? 4 : 1, false); run(); },
+            stop : function() { active = false; pause(); },
+            view : function(v) { inView = v; v ? run() : pause(); },
+            resume: run,
+            pause: pause,
+        };
+    }
+
+    const ssBuildLoop = function() {
+
+        const wrap = document.querySelector('.bls');
+        if (!wrap) return;
+
+        const btns  = Array.prototype.slice.call(wrap.querySelectorAll('.bls__switch [data-scene]'));
+        const loops = {};
+        let current = 'mobile';
+
+        function select(name, focus) {
+            if (loops[current]) loops[current].stop();
+            current = name;
+            btns.forEach(function(b) {
+                const on = b.dataset.scene === name;
+                b.setAttribute('aria-selected', on ? 'true' : 'false');
+                b.tabIndex = on ? 0 : -1;
+                if (on && focus) b.focus();
+            });
+            wrap.querySelectorAll('.bl[data-scene-id]').forEach(function(el) { el.hidden = el.dataset.sceneId !== name; });
+            loops[name].start();
+        }
+
+        wrap.querySelectorAll('.bl[data-scene-id]').forEach(function(el) {
+            const id = el.dataset.sceneId;
+            loops[id] = makeLoop(el, SCENES[id], function() {
+                // after a full loop, play the other scene
+                const order = ['mobile', 'site', 'web'];
+                select(order[(order.indexOf(id) + 1) % order.length], false);
+                return true;
+            });
+        });
+
+        btns.forEach(function(b, i) {
+            b.addEventListener('click', function() { select(b.dataset.scene, false); });
+            b.addEventListener('keydown', function(e) {
+                const dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+                if (!dir) return;
+                e.preventDefault();
+                select(btns[(i + dir + btns.length) % btns.length].dataset.scene, true);
+            });
+        });
+
+        // only animate while the section is on screen
+        let inView = !('IntersectionObserver' in window);
+        if (!inView) {
+            new IntersectionObserver(function(entries) {
+                inView = entries[0].isIntersecting;
+                Object.keys(loops).forEach(function(k) { loops[k].view(inView); });
+            }, { threshold: 0.3 }).observe(wrap);
+        }
+        document.addEventListener('visibilitychange', function() { loops[current][document.hidden ? 'pause' : 'resume'](); });
+
+        Object.keys(loops).forEach(function(k) { loops[k].view(inView); });
+        select('mobile', false);
 
     }; // end ssBuildLoop
 
