@@ -31,52 +31,35 @@
 
 ## ✦ Highlights
 
-<table>
-  <tr>
-    <td colspan="2">
-      <h3>The Build Loop: three ways I ship</h3>
-      <p>The About section tells my process as live, interactive scenes. A switch picks the story and they rotate on their own: a <b>mobile app</b> designed in Figma, built in React Native and shipped to Google Play; a <b>website</b> built in Next.js, tuned to perfect Lighthouse scores and launched; and an <b>AI automation</b> where an agent qualifies a lead, updates the CRM, pings Slack and drafts the reply.</p>
-      <table>
-        <tr>
-          <td width="33%"><img src="docs/media/scene-mobile.gif" alt="Mobile app scene: design, build, integrate, ship" width="100%" /></td>
-          <td width="33%"><img src="docs/media/scene-website.gif" alt="Website scene: design, build, optimize, launch" width="100%" /></td>
-          <td width="33%"><img src="docs/media/scene-ai.gif" alt="AI automation scene: workflow, prompt, test run, live" width="100%" /></td>
-        </tr>
-        <tr>
-          <td align="center"><sub><b>Mobile app</b> · Figma → React Native → APIs → Google Play</sub></td>
-          <td align="center"><sub><b>Website</b> · Layout → Next.js → Lighthouse 100 → live</sub></td>
-          <td align="center"><sub><b>AI automation</b> · Workflow → prompt → test run → production</sub></td>
-        </tr>
-      </table>
-      <p><sub>Pure HTML/CSS · dark-mode app UIs with studio-rendered product shots · pixel-aligned layouts verified by script · each scene scales as one piece on any screen · click any step · pauses on hover and off-screen · still frames for reduced motion</sub></p>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <h3>Expertise, drawn in hairlines</h3>
-      <p>Twelve skills as an index, each paired with an isometric line drawing from <a href="https://hairline.lucasmarkes.com/">Hairline</a>: a server rack for full-stack, a phone in layers for React Native, an exploded app window for UI/UX, a router whose antennas lean toward your cursor for AI agents. Hover a skill and its drawing crossfades in; move onto the drawing and it answers the pointer. Left alone, it cycles on its own.</p>
-      <img src="docs/media/expertise.gif" alt="Hovering skills swaps the Hairline drawing; the drawing reacts to the cursor" width="100%" />
-      <p><sub>Smart hover that ignores rows you pass on the way to the drawing · keyboard focus works too · autoplay only while on screen · no motion for reduced-motion users</sub></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="docs/media/chat.gif" alt="S2-K1 answering questions about Sumanth" width="100%" /></td>
-    <td width="50%" valign="top">
-      <h3>S2-K1, a droid assistant</h3>
-      <p>Ask it anything about my work. Known questions get exact, hand-written answers; compliments and confusion get sentiment-aware replies, and its face reacts.</p>
-      <p>Optionally it wakes a <b>local AI brain</b>: <a href="https://huggingface.co/onnx-community/LFM2.5-350M-ONNX">LFM2.5-350M</a> running <b>inside the browser</b> with Transformers.js + WebGPU. No server, no API key, messages never leave the device. Answers are grounded in portfolio facts and unsupported sentences are filtered out.</p>
-      <p><sub>Blobatar face with cursor-tracking eyes · droid beeps synthesised with the Web Audio API (mutable)</sub></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>Selected Work</h3>
-      <p>Category filters with View Transitions, cursor-tracked card spotlights and per-project accents. Each project opens a <b>case study</b> with a draggable, momentum-scrolling gallery of real Play Store screenshots and live site captures.</p>
-      <p><sub>Native &lt;dialog&gt; · keyboard &amp; screen-reader friendly · bottom sheet on mobile</sub></p>
-    </td>
-    <td width="50%"><img src="docs/media/work.gif" alt="Filtering projects and opening a case study" width="100%" /></td>
-  </tr>
-</table>
+### The Build Loop: three ways I ship
+
+The About section tells my process as live, interactive scenes that rotate on their own: a **mobile app** taken from Figma to Google Play, a **website** built in Next.js and tuned to Lighthouse 100, and an **AI automation** where an agent qualifies a lead, updates the CRM and drafts the reply.
+
+<p align="center">
+  <img src="docs/media/scene-mobile.gif" alt="Mobile app scene" width="32%" />
+  <img src="docs/media/scene-website.gif" alt="Website scene" width="32%" />
+  <img src="docs/media/scene-ai.gif" alt="AI automation scene" width="32%" />
+</p>
+
+<sub>Mobile app · Website · AI automation &nbsp;—&nbsp; pure HTML/CSS, click any step, pauses on hover, still frames for reduced motion</sub>
+
+### Expertise, drawn in hairlines
+
+Twelve skills, each paired with an isometric line drawing from [Hairline](https://hairline.lucasmarkes.com/). Hover a skill and its drawing crossfades in; move onto the drawing and it reacts to your cursor.
+
+<p align="center"><img src="docs/media/expertise.gif" alt="Hovering skills swaps the Hairline drawing" width="85%" /></p>
+
+### S2-K1, a droid assistant
+
+Ask it anything about my work: exact answers for known questions, sentiment-aware replies, and a face that reacts. It can also wake a **local AI brain** ([LFM2.5-350M](https://huggingface.co/onnx-community/LFM2.5-350M-ONNX) via Transformers.js + WebGPU) that runs entirely in the browser, with no server and no API key.
+
+<p align="center"><img src="docs/media/chat.gif" alt="S2-K1 answering questions" width="46%" /></p>
+
+### Selected Work
+
+Category filters, cursor-tracked card spotlights, and a case study for every project with a draggable gallery of real Play Store screenshots and live site captures.
+
+<p align="center"><img src="docs/media/work.gif" alt="Filtering projects and opening a case study" width="85%" /></p>
 
 ---
 
