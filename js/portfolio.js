@@ -378,6 +378,136 @@
     }; // end ssMarquee
 
 
+   /* The Build Loop (about section)
+    * Figma -> React Native -> APIs & tests -> Google Play, on a loop.
+    * Runs only while visible; pauses on hover and in hidden tabs.
+    * -------------------------------------------------- */
+    const ssBuildLoop = function() {
+
+        const bl = document.querySelector('.bl');
+        if (!bl) return;
+
+        const stage = bl.querySelector('.bl__stage');
+        const tabs  = Array.prototype.slice.call(bl.querySelectorAll('[data-go]'));
+        const live  = bl.querySelector('.bl__live');
+        const DUR   = { 1: 3800, 2: 3800, 3: 3600, 4: 4200 };
+        const NAMES = { 1: 'Design in Figma', 2: 'Build in React Native', 3: 'Connect APIs and run tests', 4: 'Ship to Google Play' };
+
+        // the scene is designed at 600px wide; scale it to the stage
+        function fit() { bl.style.setProperty('--k', (stage.clientWidth / 600).toFixed(4)); }
+        fit();
+        if ('ResizeObserver' in window) new ResizeObserver(fit).observe(stage);
+        else window.addEventListener('resize', fit);
+
+        let step = 1, timer = 0, startedAt = 0, remaining = DUR[1];
+        let inView = false, hovering = false, started = false;
+
+        function show(n, announce) {
+            // re-setting the same step restarts its choreography
+            if (String(n) === bl.dataset.step) { bl.dataset.step = '0'; void bl.offsetWidth; }
+            step = n;
+            bl.dataset.step = n;
+            bl.style.setProperty('--dur', DUR[n] + 'ms');
+            remaining = DUR[n];
+
+            tabs.forEach(function(tab, i) {
+                const k = i + 1;
+                tab.setAttribute('aria-selected', k === n ? 'true' : 'false');
+                tab.tabIndex = k === n ? 0 : -1;
+                tab.classList.toggle('is-done', k < n);
+            });
+
+            // restart the progress bar of the active tab
+            const bar = tabs[n - 1].querySelector('.bl__bar');
+            bar.style.animation = 'none';
+            void bar.offsetWidth;
+            bar.style.animation = '';
+
+            if (announce) live.textContent = 'Step ' + n + ' of 4: ' + NAMES[n];
+        }
+
+        function canRun() { return inView && !hovering && !document.hidden && !reduceMotion; }
+
+        function run() {
+            clearTimeout(timer);
+            if (!canRun()) { pause(); return; }
+            bl.classList.remove('is-paused');
+            startedAt = performance.now();
+            timer = setTimeout(function() {
+                show(step % 4 + 1, false);
+                run();
+            }, remaining);
+        }
+
+        function pause() {
+            if (timer) {
+                clearTimeout(timer);
+                timer = 0;
+                remaining = Math.max(200, remaining - (performance.now() - startedAt));
+            }
+            bl.classList.add('is-paused');
+        }
+
+        // tabs: click or arrow keys jump to a step
+        tabs.forEach(function(tab, i) {
+            tab.addEventListener('click', function() {
+                show(i + 1, true);
+                run();
+            });
+            tab.addEventListener('keydown', function(e) {
+                const dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+                if (!dir) return;
+                e.preventDefault();
+                const next = (i + dir + 4) % 4;
+                tabs[next].focus();
+                show(next + 1, true);
+                run();
+            });
+        });
+
+        if (reduceMotion) {
+            bl.classList.add('is-static');
+            show(4, false);
+            return;
+        }
+
+        // only animate while on screen
+        if ('IntersectionObserver' in window) {
+            new IntersectionObserver(function(entries) {
+                inView = entries[0].isIntersecting;
+                if (inView && !started) { started = true; show(1, false); }
+                inView ? run() : pause();
+            }, { threshold: 0.35 }).observe(stage);
+        } else {
+            inView = true; started = true; run();
+        }
+
+        document.addEventListener('visibilitychange', function() { document.hidden ? pause() : run(); });
+
+        // hover: pause to look closer, with a subtle 3D tilt toward the pointer
+        if (window.matchMedia('(hover: hover)').matches) {
+            stage.addEventListener('pointerenter', function() { hovering = true; pause(); });
+            stage.addEventListener('pointerleave', function() {
+                hovering = false;
+                bl.style.setProperty('--rx', '0deg');
+                bl.style.setProperty('--ry', '0deg');
+                run();
+            });
+            stage.addEventListener('pointermove', function(e) {
+                const r = stage.getBoundingClientRect();
+                const x = (e.clientX - r.left) / r.width - 0.5;
+                const y = (e.clientY - r.top) / r.height - 0.5;
+                bl.style.setProperty('--rx', (-y * 5).toFixed(2) + 'deg');
+                bl.style.setProperty('--ry', (x * 6).toFixed(2) + 'deg');
+            });
+        }
+
+        show(1, false);
+        pause();
+
+    }; // end ssBuildLoop
+
+
    /* Copy email / phone
     * -------------------------------------------------- */
     const ssCopy = function() {
@@ -446,6 +576,7 @@
         ssMarquee();
         ssYear();
         ssCopy();
+        ssBuildLoop();
     })();
 
 })();

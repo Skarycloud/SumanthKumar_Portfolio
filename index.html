@@ -165,16 +165,96 @@
                 <div class="row about-info wide" data-animate-block>
 
                     <div class="column lg-6 md-12 about-info__pic-block">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="images/about-photo-600.webp 600w, images/about-photo-900.webp 900w, images/about-photo-1200.webp 1200w"
-                                    sizes="(max-width: 1000px) 100vw, 50vw">
-                            <img src="images/about-photo-900.jpg"
-                                 srcset="images/about-photo-600.jpg 600w, images/about-photo-900.jpg 900w, images/about-photo-1200.jpg 1200w"
-                                 sizes="(max-width: 1000px) 100vw, 50vw"
-                                 width="1123" height="1536" loading="lazy" decoding="async"
-                                 alt="Portrait of Sumanth Kumar" class="about-info__pic" data-animate-el>
-                        </picture>
+                        <!-- The Build Loop: Figma → React Native → APIs → Google Play -->
+                        <div class="bl" data-step="1" data-animate-el>
+                            <p class="bl__sr">An animation of how Sumanth works: designing an app in Figma, building it in React Native, connecting APIs and tests, then publishing it on Google Play.</p>
+
+                            <div class="bl__stage" aria-hidden="true">
+                                <div class="bl__glow"></div>
+                                <div class="bl__scene">
+
+                                    <div class="bl__me">
+                                        <img src="images/about-photo-600.webp" alt="" width="600" height="821" loading="lazy" decoding="async">
+                                        <span><b>Sumanth Kumar</b><small><i></i>Building in Mangalore</small></span>
+                                    </div>
+
+                                    <!-- connector phone → API (step 3) -->
+                                    <svg class="bl__wire" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 50 C 40 50, 60 20, 100 20"/></svg>
+
+                                    <div class="bl__phone">
+                                        <div class="bl__screen">
+                                            <div class="ui ui--bar" style="--i:0"><i></i><i></i></div>
+                                            <div class="ui ui--head" style="--i:1"><span class="ui-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.4"/></svg></span><span class="ui-t">Nearby</span><span class="ui-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5a2 2 0 0 0 4 0"/></svg></span></div>
+                                            <div class="ui ui--hero" style="--i:2"><span class="ui-tag">Live now</span><b>Offers near you</b><small>Fresh from local businesses</small><span class="ui-btn">Explore <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+                                            <div class="ui ui--chips" style="--i:3"><span>Food</span><span>Retail</span><span>Services</span></div>
+                                            <div class="ui ui--row" style="--i:4"><span class="ui-av"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3.5v2M11 3v2.5M14 3.5v2"/></svg></span><span class="ui-lines"><b>Harbor Café</b><small>20% off today</small></span></div>
+                                            <div class="ui ui--row ui--row2" style="--i:5"><span class="ui-av"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6zM9 8V6.5a3 3 0 0 1 6 0V8"/></svg></span><span class="ui-lines"><b>Northline Studio</b><small>New arrivals</small></span></div>
+                                            <div class="ui ui--nav" style="--i:6"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7v9h-5v-6H9v6H4z"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c1.3-3.4 3.8-5 7-5s5.7 1.6 7 5"/></svg></i></div>
+
+                                            <div class="bl__select"><i></i><i></i><i></i><i></i></div>
+                                            <div class="bl__cursor"><svg viewBox="0 0 16 16"><path d="M1 1l5.2 13 1.9-5.4L13.5 6.7z"/></svg><span>Sumanth</span></div>
+                                            <div class="bl__toast"><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7"/></svg>Published on Google Play</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bl__layers">
+                                        <div class="bl__win"><i></i><i></i><i></i><span>Layers</span></div>
+                                        <ul>
+                                            <li><em>#</em>Home · Mobile</li>
+                                            <li class="l-sub">Header</li>
+                                            <li class="l-sub l-hero">Hero / Offer card</li>
+                                            <li class="l-sub l-chips">Category chips</li>
+                                            <li class="l-sub l-row">Listing card</li>
+                                            <li class="l-sub">Tab bar</li>
+                                        </ul>
+                                        <div class="bl__props"><span>W <b>327</b></span><span>H <b>96</b></span><span>Radius <b>12</b></span><span>Auto layout <b>↓ 8</b></span></div>
+                                    </div>
+
+                                    <div class="bl__code">
+                                        <div class="bl__win"><i></i><i></i><i></i><span>HomeScreen.tsx</span></div>
+<pre><span class="ln" style="--n:1;--c:41"><b class="k">import</b> { <b class="t">FlatList</b> } <b class="k">from</b> <b class="s">'react-native'</b>;</span>
+<span class="ln" style="--n:2;--c:32"><b class="k">export default function</b> <b class="f">Home</b>() {</span>
+<span class="ln" style="--n:3;--c:32">  <b class="k">const</b> { data } = <b class="f">useOffers</b>();</span>
+<span class="ln" style="--n:4;--c:10">  <b class="k">return</b> (</span>
+<span class="ln" style="--n:5;--c:37">    &lt;<b class="t">Screen</b> <b class="a">title</b>=<b class="s">"Offers near you"</b>&gt;</span>
+<span class="ln" style="--n:6;--c:22">      &lt;<b class="t">OfferCard</b> <b class="a">live</b> /&gt;</span>
+<span class="ln" style="--n:7;--c:31">      &lt;<b class="t">FlatList</b> <b class="a">data</b>={data} /&gt;</span>
+<span class="ln" style="--n:8;--c:13">    &lt;/<b class="t">Screen</b>&gt;</span>
+<span class="ln" style="--n:9;--c:4">  );</span>
+<span class="ln" style="--n:10;--c:1">}</span></pre>
+                                    </div>
+
+                                    <div class="bl__api">
+                                        <div class="bl__node"><span class="bl__pulse"></span><b>REST API</b><small>GET /offers <em>200</em></small></div>
+                                        <ul class="bl__checks">
+                                            <li style="--i:0">API connected</li>
+                                            <li style="--i:1">Tests passing</li>
+                                            <li style="--i:2">Android release build</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="bl__ship">
+                                        <div class="bl__play">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="gp" d="M4.2 2.6 13.6 12l-9.4 9.4c-.3-.2-.5-.6-.5-1V3.6c0-.4.2-.8.5-1zM14.6 13l2.5 2.5-10.4 5.9zM14.6 11 6.7 2.6l10.4 5.9zM18.2 9.1l2.6 1.5c.8.5.8 1.6 0 2.1l-2.6 1.5-2.6-2.6z"/></svg>
+                                            <span><small>Now available on</small><b>Google Play</b></span>
+                                        </div>
+                                        <ul class="bl__checks bl__checks--ship">
+                                            <li style="--i:0">Signed &amp; published</li>
+                                            <li style="--i:1">Live for real users</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="bl__steps" role="tablist" aria-label="How Sumanth builds a product">
+                                <button type="button" role="tab" data-go="1" aria-selected="true"><em>01</em><b>Design</b><small>Figma</small><i class="bl__bar"></i></button>
+                                <button type="button" role="tab" data-go="2" aria-selected="false"><em>02</em><b>Build</b><small>React Native</small><i class="bl__bar"></i></button>
+                                <button type="button" role="tab" data-go="3" aria-selected="false"><em>03</em><b>Integrate</b><small>APIs &amp; tests</small><i class="bl__bar"></i></button>
+                                <button type="button" role="tab" data-go="4" aria-selected="false"><em>04</em><b>Ship</b><small>Google Play</small><i class="bl__bar"></i></button>
+                            </div>
+                            <p class="bl__live" aria-live="polite"></p>
+                        </div>
                     </div>
 
                     <div class="column lg-6 md-12">

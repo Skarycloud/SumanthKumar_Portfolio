@@ -156,6 +156,7 @@ Lately I spend a lot of time on AI: agentic workflows, AI-powered features, and 
 
 A fast, dependency-free static site: plain HTML, CSS and JavaScript, no build step.
 
+- **The Build Loop** in the About section: an animated, interactive scene of how Sumanth works (design in Figma, build in React Native, connect APIs and tests, ship to Google Play). Pure HTML/CSS laid out at one design size and scaled as a whole, so it is identical on every screen; clickable steps, pauses on hover and off-screen, and a still version for reduced motion
 - **Work section** with category filters (animated with the View Transitions API where supported), cursor-tracked card spotlights and per-project accent colours
 - **Case studies** in a native `<dialog>`: focus handling, Escape and backdrop to close, and a bottom sheet on mobile
 - **Real imagery**: Google Play store screenshots and live captures of each shipped site
