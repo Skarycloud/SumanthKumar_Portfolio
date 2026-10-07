@@ -357,16 +357,19 @@
                                         <div class="wf__body">
                                             <div class="wf__side"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="6" height="5" rx="1.2"/><rect x="14.5" y="15" width="6" height="5" rx="1.2"/><path d="M9.5 6.5h3a2 2 0 0 1 2 2v6.5"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4.5l3 2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.2M12 18.3v2.2M3.5 12h2.2M18.3 12h2.2M6 6l1.6 1.6M16.4 16.4 18 18M6 18l1.6-1.6M16.4 7.6 18 6"/></svg></div>
                                             <div class="wf__canvas">
-                                                <svg class="wf__wires" viewBox="0 0 508 322" preserveAspectRatio="none">
-                                                    <path class="w w0" d="M146 161 H186"/>
-                                                    <path class="w w1" d="M330 161 C 346 161, 346 65, 362 65"/>
-                                                    <path class="w w2" d="M330 161 H362"/>
-                                                    <path class="w w3" d="M330 161 C 346 161, 346 257, 362 257"/>
+                                                <div class="wf__tb"><span class="wf__crumb">Workflows <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg><b>Lead router</b></span><em>v3</em><span class="wf__saved">Saved</span><span class="wf__run"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>Test run</span></div>
+                                                <span class="wf__lbl l1">Trigger</span><span class="wf__lbl l2">AI</span><span class="wf__lbl l3">Actions</span>
+                                                <div class="wf__zoom"><i>−</i><b>100%</b><i>+</i></div>
+                                                <svg class="wf__wires" viewBox="0 0 508 324" preserveAspectRatio="none">
+                                                    <path class="w w0" d="M146 177 H186"/>
+                                                    <path class="w w1" d="M330 177 C 346 177, 346 81, 362 81"/>
+                                                    <path class="w w2" d="M330 177 H362"/>
+                                                    <path class="w w3" d="M330 177 C 346 177, 346 273, 362 273"/>
                                                 </svg>
                                                 <i class="wf__pkt p0"></i><i class="wf__pkt p1"></i><i class="wf__pkt p2"></i><i class="wf__pkt p3"></i>
 
                                                 <div class="wf__node n-trig" style="--i:0"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7a3.5 3.5 0 1 1 5.8 2.6L12 15M6.2 13.5a3.5 3.5 0 1 0 4.6 5.1H17M17.6 18.6a3.5 3.5 0 1 0-2.6-6"/></svg></span><span><b>New lead</b><small>Webhook</small></span><i class="wf__ok"></i></div>
-                                                <div class="wf__node n-agent" style="--i:1"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 13.8 10.2 20.5 12l-6.7 1.8L12 20.5l-1.8-6.7L3.5 12l6.7-1.8z"/></svg></span><span><b>AI Agent</b><small class="a-idle">Qualify &amp; draft reply</small><small class="a-think">Thinking<em>…</em></small><small class="a-done">Score 86 · demo request</small></span><i class="wf__ok"></i></div>
+                                                <div class="wf__node n-agent" style="--i:1"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 13.8 10.2 20.5 12l-6.7 1.8L12 20.5l-1.8-6.7L3.5 12l6.7-1.8z"/></svg></span><span><b>AI Agent</b><small class="a-idle">Qualify &amp; draft reply</small><small class="a-think">Thinking<em>…</em></small><small class="a-done">Score 86 · Demo</small></span><i class="wf__ok"></i></div>
                                                 <div class="wf__node n-crm" style="--i:2"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.9-3 3-4.6 5.5-4.6s4.6 1.6 5.5 4.6M16 5.2a3 3 0 0 1 0 5.6M18.5 14.8c1 .8 1.7 2.2 2 4.2"/></svg></span><span><b>CRM</b><small>Create contact</small></span><i class="wf__ok"></i></div>
                                                 <div class="wf__node n-slack" style="--i:3"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 7 20M17 4l-2 16M4.5 9h16M3.5 15h16"/></svg></span><span><b>Slack</b><small>#sales</small></span><i class="wf__ok"></i></div>
                                                 <div class="wf__node n-mail" style="--i:4"><span class="wf__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><span><b>Email</b><small>Send reply</small></span><i class="wf__ok"></i></div>
@@ -453,25 +456,121 @@
                 </div> <!-- about-info -->
 
 
-                <div class="row about-expertise" data-animate-block>
+                <div class="row about-expertise">
                     <div class="column lg-12">
 
-                        <h2 class="text-pretitle" data-animate-el>Expertise</h2>
+                        <div class="xph" data-reveal>
+                            <h2 class="text-pretitle">Expertise</h2>
+                            <p class="xph__title">Twelve crafts, <em>one product.</em></p>
+                        </div>
 
-                        <ul class="skills-list h1" data-animate-el>
-                            <li>Full-stack Product Development</li>
-                            <li>React &amp; Next.js</li>
-                            <li>React Native &amp; Expo</li>
-                            <li>UI/UX &amp; Product Design</li>
-                            <li>AI &amp; Agentic Systems</li>
-                            <li>AI-assisted Development</li>
-                            <li>API Integration</li>
-                            <li>Backend Development</li>
-                            <li>Automation &amp; Workflows</li>
-                            <li>Data Visualization</li>
-                            <li>Rapid Prototyping</li>
-                            <li>Product Engineering</li>
-                        </ul>
+                        <div class="xpg">
+                            <figure class="xps" data-reveal aria-label="Illustration for the selected skill">
+                                <div class="xps__bar"><span class="xps__idx">01 / 12</span><span class="xps__tag">Build</span></div>
+                                <div class="xps__fig"></div>
+                                <span class="xps__hint" aria-hidden="true">Move your cursor over the drawing</span>
+                                <figcaption class="xps__cap"><b class="xps__name">Full-stack Product Development</b><span class="xps__read">rest</span></figcaption>
+                            </figure>
+
+                            <ul class="xpl" role="list">
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="cabinet" data-i="01" data-tag="Build" aria-pressed="true">
+                                        <em>01</em>
+                                        <span class="xpr__t"><b>Full-stack Product Development</b><small>Idea to production, end to end</small></span>
+                                        <i class="xpr__tag">Build</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="laptop" data-i="02" data-tag="Build" aria-pressed="false">
+                                        <em>02</em>
+                                        <span class="xpr__t"><b>React &amp; Next.js</b><small>Fast, responsive web apps and sites</small></span>
+                                        <i class="xpr__tag">Build</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="patch" data-i="03" data-tag="Build" aria-pressed="false">
+                                        <em>03</em>
+                                        <span class="xpr__t"><b>API Integration</b><small>REST and third-party services, wired up</small></span>
+                                        <i class="xpr__tag">Build</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="terminal" data-i="04" data-tag="Build" aria-pressed="false">
+                                        <em>04</em>
+                                        <span class="xpr__t"><b>Backend Development</b><small>Node.js, Express and databases</small></span>
+                                        <i class="xpr__tag">Build</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="phone" data-i="05" data-tag="Mobile" aria-pressed="false">
+                                        <em>05</em>
+                                        <span class="xpr__t"><b>React Native &amp; Expo</b><small>Android apps live on Google Play</small></span>
+                                        <i class="xpr__tag">Mobile</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="exploded" data-i="06" data-tag="Design" aria-pressed="false">
+                                        <em>06</em>
+                                        <span class="xpr__t"><b>UI/UX &amp; Product Design</b><small>Flows, screens and systems in Figma</small></span>
+                                        <i class="xpr__tag">Design</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="plot" data-i="07" data-tag="Design" aria-pressed="false">
+                                        <em>07</em>
+                                        <span class="xpr__t"><b>Data Visualization</b><small>Dashboards that read at a glance</small></span>
+                                        <i class="xpr__tag">Design</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="router" data-i="08" data-tag="AI" aria-pressed="false">
+                                        <em>08</em>
+                                        <span class="xpr__t"><b>AI &amp; Agentic Systems</b><small>Agents and AI-powered features</small></span>
+                                        <i class="xpr__tag">AI</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="keyboard" data-i="09" data-tag="AI" aria-pressed="false">
+                                        <em>09</em>
+                                        <span class="xpr__t"><b>AI-assisted Development</b><small>Prototyping and shipping faster with AI</small></span>
+                                        <i class="xpr__tag">AI</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="slow" data-i="10" data-tag="AI" aria-pressed="false">
+                                        <em>10</em>
+                                        <span class="xpr__t"><b>Automation &amp; Workflows</b><small>Tools connected so work runs itself</small></span>
+                                        <i class="xpr__tag">AI</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="turntable" data-i="11" data-tag="Ship" aria-pressed="false">
+                                        <em>11</em>
+                                        <span class="xpr__t"><b>Rapid Prototyping</b><small>Ideas tested in days, not months</small></span>
+                                        <i class="xpr__tag">Ship</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                                <li data-reveal>
+                                    <button type="button" class="xpr" data-fig="branches" data-i="12" data-tag="Ship" aria-pressed="false">
+                                        <em>12</em>
+                                        <span class="xpr__t"><b>Product Engineering</b><small>Ship, measure, iterate</small></span>
+                                        <i class="xpr__tag">Ship</i>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
 
                     </div>
                 </div> <!-- end about-expertise -->
@@ -1179,6 +1278,7 @@
     <script src="js/plugins.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/portfolio.js" defer></script>
+    <script type="module" src="js/expertise.js"></script>
     <script type="module" src="js/chatbot.js"></script>
 
 </body>

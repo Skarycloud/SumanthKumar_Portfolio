@@ -48,7 +48,15 @@
           <td align="center"><sub><b>AI automation</b> · Workflow → prompt → test run → production</sub></td>
         </tr>
       </table>
-      <p><sub>Pure HTML/CSS · glass UI with studio-rendered product shots · each scene scales as one piece on any screen · click any step · pauses on hover and off-screen · still frames for reduced motion</sub></p>
+      <p><sub>Pure HTML/CSS · dark-mode app UIs with studio-rendered product shots · pixel-aligned layouts verified by script · each scene scales as one piece on any screen · click any step · pauses on hover and off-screen · still frames for reduced motion</sub></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <h3>Expertise, drawn in hairlines</h3>
+      <p>Twelve skills as an index, each paired with an isometric line drawing from <a href="https://hairline.lucasmarkes.com/">Hairline</a>: a server rack for full-stack, a phone in layers for React Native, an exploded app window for UI/UX, a router whose antennas lean toward your cursor for AI agents. Hover a skill and its drawing crossfades in; move onto the drawing and it answers the pointer. Left alone, it cycles on its own.</p>
+      <img src="docs/media/expertise.gif" alt="Hovering skills swaps the Hairline drawing; the drawing reacts to the cursor" width="100%" />
+      <p><sub>Smart hover that ignores rows you pass on the way to the drawing · keyboard focus works too · autoplay only while on screen · no motion for reduced-motion users</sub></p>
     </td>
   </tr>
   <tr>
@@ -80,7 +88,7 @@
     <td width="50%"><img src="docs/media/work.jpg" alt="Selected work with filters" /></td>
   </tr>
   <tr>
-    <td align="center"><sub><b>About</b> · the Build Loop next to the story</sub></td>
+    <td align="center"><sub><b>About</b> · the Build Loop (AI automation scene) next to the story</sub></td>
     <td align="center"><sub><b>Selected Work</b> · stats and filters</sub></td>
   </tr>
   <tr>
@@ -156,6 +164,7 @@
   <img src="https://img.shields.io/badge/WebGPU-1E1F22?style=for-the-badge&logo=webgpu&logoColor=white" alt="WebGPU" />
   <img src="https://img.shields.io/badge/Web_Audio-1E1F22?style=for-the-badge&logo=audiomack&logoColor=white" alt="Web Audio API" />
   <img src="https://img.shields.io/badge/anime.js-1E1F22?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="anime.js" />
+  <img src="https://img.shields.io/badge/Hairline-1E1F22?style=for-the-badge&logo=svg&logoColor=ECC47E" alt="Hairline" />
   <img src="https://img.shields.io/badge/Vercel-1E1F22?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 </p>
 
@@ -197,9 +206,10 @@ Or open the folder in VS Code and use **Live Server**. The optional AI brain nee
 │   ├── main.js              preloader, nav, scroll spy, intro animation
 │   ├── portfolio.js         reveals, filters, modal, gallery, Build Loop, copy
 │   ├── chatbot.js           S2-K1: knowledge, router, sentiment, UI, sounds
+│   ├── expertise.js         Expertise: Hairline figure swaps, hover intent, autoplay
 │   ├── ai/brain.js          local AI: support check, loading, streaming
 │   ├── ai/worker.js         Web Worker running the model (Transformers.js)
-│   └── vendor/blobatar/     Blobatar (MIT), vendored
+│   └── vendor/              Blobatar and Hairline (both MIT), vendored
 ├── images/                  project shots, Build Loop renders, tech icons
 ├── assets/                  résumé (PDF)
 ├── docs/media/              README media
