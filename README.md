@@ -1,100 +1,222 @@
-# Sumanth Kumar | Fullstack Developer 👨‍💻
+<!-- Header -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:141516,55:2a2112,100:ECC47E&height=220&section=header&text=Sumanth%20Kumar&fontSize=64&fontColor=F4F2EE&fontAlignY=36&desc=Full-stack%20Developer%20%26%20AI%20Product%20Builder&descSize=20&descAlignY=58&animation=fadeIn" alt="Sumanth Kumar — Full-stack Developer & AI Product Builder" width="100%" />
+</p>
 
-![My Portfolio Banner](https://github.com/Skarycloud/SumanthKumar_Portfolio/blob/main/myportfolio.png)
+<p align="center">
+  <a href="https://sumanth-kumar-portfolio.vercel.app/">
+    <img src="https://readme-typing-svg.demolab.com?font=DM+Serif+Display&size=26&duration=2800&pause=900&color=ECC47E&center=true&vCenter=true&width=760&lines=I+design+and+build+real+products+for+web+%26+mobile.;From+the+Figma+file+to+the+Play+Store+listing.;React+%C2%B7+Next.js+%C2%B7+React+Native+%C2%B7+Expo+%C2%B7+Node.js+%C2%B7+AI" alt="Typing intro" />
+  </a>
+</p>
 
-## 🔗 [Live Demo](https://sumanth-kumar-portfolio.vercel.app/)
+<p align="center">
+  <a href="https://sumanth-kumar-portfolio.vercel.app/"><img src="https://img.shields.io/badge/Live_Portfolio-ECC47E?style=for-the-badge&logo=vercel&logoColor=111111" alt="Live portfolio" /></a>
+  <a href="https://play.google.com/store/apps/details?id=com.mirchi35.studio"><img src="https://img.shields.io/badge/Apps_live_on-Google_Play-1E1F22?style=for-the-badge&logo=googleplay&logoColor=34A853" alt="Apps live on Google Play" /></a>
+  <a href="https://www.linkedin.com/in/sumanth-kumar-230194294"><img src="https://img.shields.io/badge/LinkedIn-1E1F22?style=for-the-badge&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
+  <a href="mailto:sumanth.k.0202@gmail.com"><img src="https://img.shields.io/badge/Say_hello-1E1F22?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+</p>
 
-## 🚀 About Me
+<br />
 
-Fullstack Developer with expertise in React, Node.js, and a solid foundation in AI & ML. I specialize in building scalable web applications and enjoy integrating AI-driven features and rapid prototyping using AI-assisted tools and agentic workflows. I combine technical precision with creative problem-solving to deliver high-impact solutions.
+<p align="center">
+  <a href="https://sumanth-kumar-portfolio.vercel.app/">
+    <img src="docs/screenshots/demo.gif" alt="Portfolio walkthrough: hero, filtering the work grid, hovering a project and opening a case study" width="100%" />
+  </a>
+</p>
 
-### 🌟 Why Work With Me?
+---
 
-- **Fast Problem Solver** - Quickly identify and resolve technical challenges
-- **AI-Driven Development** - Leverage AI tools to enhance productivity and innovation
-- **Full Stack Knowledge** - Frontend expertise with solid understanding of backend technologies
-- **Rapid Learner** - Adapt quickly to new technologies and environments
-- **Team Collaborator** - Effective communication and seamless integration with development teams
+## About
 
-## 🛠️ Skills & Technologies
+I design and build real products for web and mobile, from the Figma file to the Play Store listing.
 
-### Frontend Development
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+By day I'm an **Associate MERN Stack Developer & Test Engineer at Mirchi35**, where I've shipped two Android apps (React Native + Expo) to Google Play and worked on the company website, owning the UI/UX, frontend, API integration and testing. Alongside that I take on freelance product and design work, I'm building **[eMenu](https://emenuweb.com/)** (a SaaS I founded), and I co-founded **[Auralion Labs](https://auralionlabs.com/)**, a product studio whose website I designed and built.
 
-### Backend & Database
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
+Lately I spend a lot of time on AI: agentic workflows, AI-powered features, and using AI to prototype fast.
 
-### Mobile & APIs
-![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Expo](https://img.shields.io/badge/expo-000020?style=for-the-badge&logo=expo&logoColor=white)
-![Ionic](https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white)
-![Maps API](https://img.shields.io/badge/Maps_API-4285F4?style=for-the-badge&logo=google-maps&logoColor=white)
+| | |
+|---|---|
+| **Production experience** | Apps live on Google Play |
+| **Design + engineering** | Figma → React / React Native |
+| **Full-stack** | Frontend, APIs, backend and automation |
+| **Founder mindset** | I build and ship my own products |
 
-## 🔥 Projects
+---
 
-### 1. eMenu - QR-Based Digital Menu Platform
-QR-based digital menu platform for restaurants to publish and update menus instantly.
-- **Link**: [emenuweb.com](https://emenuweb.com/)
-- **Tech**: React, Next.js, Node.js, Google Sheets API
+## Screenshots
 
-### 2. Scavenge - Adventure Platform
-Interactive scavenger hunt platform with real-time GPS tracking and live leaderboards.
-- **Link**: [scavenge.rs](https://scavenge.rs/)
-- **Tech**: React, Node.js, Maps API, GPS Tracking
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/hero.jpg" alt="Hero section" /></td>
+    <td width="50%"><img src="docs/screenshots/about.jpg" alt="About section" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Hero</b> · identity, focus and stack at a glance</sub></td>
+    <td align="center"><sub><b>About</b> · what I do and what I bring</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/work.jpg" alt="Selected work header with filters" /></td>
+    <td width="50%"><img src="docs/screenshots/work-grid.jpg" alt="Project cards grid" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Selected Work</b> · stats and category filters</sub></td>
+    <td align="center"><sub><b>Project cards</b> · real store screenshots and live site captures</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/case-study.jpg" alt="Case study modal" /></td>
+    <td width="50%"><img src="docs/screenshots/stack.jpg" alt="Tech stack" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Case study</b> · role, scope, features, tech and links</sub></td>
+    <td align="center"><sub><b>Tech stack</b> · marquee and grouped skills</sub></td>
+  </tr>
+</table>
 
-### 3. image-π - Privacy Image Toolkit
-Browser-based toolkit for client-side image editing, compression, and metadata removal.
-- **Link**: [image-pi-dusky.vercel.app](https://image-pi-dusky.vercel.app/)
-- **Tech**: React, TypeScript, Canvas API, Web APIs
+<p align="center">
+  <img src="docs/screenshots/mobile.jpg" alt="Mobile layouts: hero, project card and case-study bottom sheet" width="100%" />
+  <br />
+  <sub><b>Mobile</b> · fully responsive, with the case study as a bottom sheet</sub>
+</p>
 
-### 4. Code Stack
-Open-source platform to help developers explore and organize programming technologies.
-- **Link**: [codestack-sigma.vercel.app](https://codestack-sigma.vercel.app/)
-- **Tech**: Next.js, React.js, Tailwind CSS
+---
 
-### 5. Oryx AI
-Platform for standardizing and evaluating high-quality training data for LLMs.
-- **Link**: [oryx-ai.vercel.app](https://oryx-ai.vercel.app/)
-- **Tech**: Python, Next.js, UI/UX Design
+## Featured work
 
-### 6. Salary Split
-Responsive tool for salary breakdown and multi-currency earnings visualization.
-- **Link**: [salary-split-three.vercel.app](https://salary-split-three.vercel.app/)
-- **Tech**: React.js, API Integration, Financial Visualization
+| # | Project | What it is | My role | Stack | Link |
+|:-:|---|---|---|---|---|
+| 01 | **Mirchi35 Studio** | Vendor app for India's live local-discovery platform | UI/UX, React Native frontend, testing, Play Store launch | React Native · Expo Router · Redux Toolkit | [Google Play](https://play.google.com/store/apps/details?id=com.mirchi35.studio) |
+| 02 | **Mirchi35 Community Connect** | Multi-language community app in the Mirchi35 ecosystem | UI/UX, React Native frontend, API integration, deployment | React Native · Expo Router · i18next | [Google Play](https://play.google.com/store/apps/details?id=com.mirchi35.pulse) |
+| 03 | **eMenu** | Digital menu SaaS for restaurants, shared by QR | Founder: design and build | Next.js · Supabase · Prisma · Stripe | [emenuweb.com](https://emenuweb.com/) |
+| 04 | **GT-Five** | Premium modular switches brand with an Android app | Freelance app UI/UX, logo, posters, banners | Figma | [Google Play](https://play.google.com/store/apps/details?id=com.gtfive.gtfive_app) · [gtfive.com](https://gtfive.com/) |
+| 05 | **Scavenge** | Platform for real-world scavenger hunts: GPS tracking, live leaderboards, QR challenges | Full-stack development | React · Node.js · Maps API | [scavenge.rs](https://scavenge.rs/) |
+| 06 | **Auralion Labs** | Product studio for AI, web, mobile and SaaS | Co-founder; designed and built the website | Next.js · GSAP · Sanity CMS | [auralionlabs.com](https://auralionlabs.com/) |
+| 07 | **Mirchi35 Website** | Marketing site for the Mirchi35 platform | Frontend: UI, responsive build, optimization | Next.js · TypeScript · Tailwind CSS | [mirchi35.com](https://mirchi35.com/) |
+| 08 | **Wren** | Agentic waiting-room assistant for GP clinics *(hackathon prototype)* | Patient and clinician interfaces, speech input | Gemini · Google ADK · Cloud Run · Firestore | [Devpost](https://allthingsagentichackathon.devpost.com/) |
 
-## 💼 Work Experience
+<details>
+<summary><b>More projects</b></summary>
+<br />
 
-- **Mirchi35 Private Limited** | Associate MERN Stack Developer | Nov 2025 – Present
-- **Ants Applied DataScience** | Frontend Programmer (MEAN) | Nov 2023 – Feb 2025
-- **Ants Applied DataScience** | Assistant Software Programmer (Intern) | Mar 2023 – Oct 2023
+<table>
+  <tr>
+    <td width="50%"><a href="https://oryx-ai.vercel.app/"><img src="images/projects/oryx-web.jpg" alt="Oryx AI" /></a></td>
+    <td width="50%"><a href="https://codestack-sigma.vercel.app/"><img src="images/projects/codestack-web.jpg" alt="Code Stack" /></a></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Oryx AI</b></sub></td>
+    <td align="center"><sub><b>Code Stack</b></sub></td>
+  </tr>
+</table>
 
-## 🚀 Getting Started
+- **[Vakya](https://vakya.fun/)**: a Bhagavad Gita verse on your lock screen, every day; landing page design and build (Next.js, GSAP, Motion)
+- **[Oryx AI](https://oryx-ai.vercel.app/)**: training datasets and evaluation tools for AI/LLM models (Node.js, React, Python, Tailwind CSS)
+- **[Code Stack](https://codestack-sigma.vercel.app/)**: open-source directory of developer tools (Next.js, TypeScript, React, Tailwind CSS)
+- **[image-π](https://image-pi-dusky.vercel.app/)**: privacy-first image toolkit that runs in the browser
+- **[Salary Split](https://salary-split-three.vercel.app/)**: salary budgeting visualization (React)
+- **[Terminal Portfolio](https://terminal-portfolio-seven-kohl.vercel.app/)**: a portfolio you navigate by command line
 
-To run the portfolio locally:
+</details>
+
+---
+
+## Experience
+
+| Role | Company | When |
+|---|---|---|
+| **Associate MERN Stack Developer & Test Engineer** | Mirchi35 Private Limited | Nov 2025 – Present |
+| **Freelance Full-stack Developer & UI/UX Designer** | Part-time, alongside Mirchi35 | Present |
+| **Founder** · eMenu &nbsp;/&nbsp; **Co-founder** · Auralion Labs | — | Present |
+| **Frontend Programmer (MEAN Stack)** | Ants Applied DataScience | Nov 2023 – Feb 2025 |
+| **Assistant Software Programmer (Intern)** | Ants Applied DataScience | Mar 2023 – Oct 2023 |
+
+**Education** · BCA in Artificial Intelligence & Machine Learning, Manipal University Jaipur (Online), Sep 2024 – 2027 (expected) · Diploma in Computer Science & Engineering, S J Government Polytechnic, 2021 – 2023 (GPA 9.0)
+
+---
+
+## Tech stack
+
+<p>
+  <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,html,css,tailwind,bootstrap,materialui&theme=dark" alt="Frontend" /><br />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,firebase,supabase,python&theme=dark" alt="Backend and data" /><br />
+  <img src="https://skillicons.dev/icons?i=git,github,docker,postman,figma,vscode,vercel,netlify&theme=dark" alt="Tools and deployment" />
+</p>
+
+| Area | Tools |
+|---|---|
+| **Frontend** | React, Next.js, JavaScript, TypeScript, HTML, CSS, Tailwind CSS, Bootstrap, Material UI |
+| **Mobile** | React Native, Expo, Ionic, Capacitor |
+| **Backend** | Node.js, Express.js, MongoDB, Firebase, Supabase |
+| **AI / Data** | Python, AI/ML, Agentic AI, Data Visualization |
+| **Tools** | Git, GitHub, Docker, Postman, Figma, VS Code |
+| **Deployment** | Vercel, Netlify, Hostinger, Google Play Console |
+
+---
+
+## About this site
+
+A fast, dependency-free static site: plain HTML, CSS and JavaScript, no build step.
+
+- **Work section** with category filters (animated with the View Transitions API where supported), cursor-tracked card spotlights and per-project accent colours
+- **Case studies** in a native `<dialog>`: focus handling, Escape and backdrop to close, and a bottom sheet on mobile
+- **Real imagery**: Google Play store screenshots and live captures of each shipped site
+- **Motion with restraint**: scroll reveals via `IntersectionObserver`, a seamless tech marquee, and full `prefers-reduced-motion` support
+- **S2-K1, a droid assistant**: a scripted chat bot (no AI model, no network calls) that answers questions about projects, skills, experience and hiring, and can open any case study. Its face is a [Blobatar](https://blobatar.dev/) whose eyes follow the cursor and whose expression changes as it "thinks", and it chirps with original droid-style beeps synthesised live with the Web Audio API (mutable)
+- **SEO-ready**: Open Graph and Twitter cards, canonical URL and `Person` structured data (JSON-LD)
+
+### Run locally
+
+There is no `package.json`; any static file server works.
 
 ```bash
 git clone https://github.com/Skarycloud/SumanthKumar_Portfolio.git
 cd SumanthKumar_Portfolio
-# Install dependencies and start local server
-npm install
-npm run dev
+
+npx serve .                 # or
+python -m http.server 5500  # then open http://localhost:5500
 ```
 
-## 📩 Contact
+Or open the folder in VS Code and use the **Live Server** extension.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sumanth-kumar-230194294)
-[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Skarycloud)
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:sumanth.k.0202@gmail.com)
+### Project structure
+
+```
+├── index.html              # all content and sections
+├── css/
+│   ├── vendor.css          # third-party styles
+│   ├── styles.css          # base theme (layout, typography, timeline)
+│   ├── portfolio.css       # work section, case-study modal, overrides
+│   └── chatbot.css         # S2-K1 chat window
+├── js/
+│   ├── plugins.js          # anime.js, MoveTo, etc.
+│   ├── main.js             # preloader, nav, scroll spy, intro animation
+│   ├── portfolio.js        # reveals, filters, spotlight, modal, marquee
+│   ├── chatbot.js          # S2-K1: knowledge base, matcher, chat UI, droid sounds
+│   └── vendor/blobatar/    # Blobatar (MIT), vendored, no CDN at runtime
+├── images/
+│   ├── projects/           # project covers and store screenshots
+│   └── tech/               # tech stack icons
+├── assets/                 # résumé (PDF)
+└── docs/screenshots/       # README media
+```
+
+Deployed on **Vercel** as a static site.
 
 ---
 
-<p align="center">Built with ❤️ by Sumanth Kumar</p>
+## Let's talk
+
+Have a product idea, need a web or mobile app, or want to build something with AI?
+
+<p>
+  <a href="mailto:sumanth.k.0202@gmail.com"><img src="https://img.shields.io/badge/Email-sumanth.k.0202%40gmail.com-1E1F22?style=flat-square&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+  <a href="https://github.com/Skarycloud"><img src="https://img.shields.io/badge/GitHub-Skarycloud-1E1F22?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://www.linkedin.com/in/sumanth-kumar-230194294"><img src="https://img.shields.io/badge/LinkedIn-Sumanth_Kumar-1E1F22?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
+  <a href="https://x.com/SumanthKum75525"><img src="https://img.shields.io/badge/X-@SumanthKum75525-1E1F22?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
+  <a href="https://www.instagram.com/skarycloud/"><img src="https://img.shields.io/badge/Instagram-skarycloud-1E1F22?style=flat-square&logo=instagram&logoColor=E4405F" alt="Instagram" /></a>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ECC47E,45:2a2112,100:141516&height=120&section=footer" alt="" width="100%" />
+</p>
+
+<p align="center"><sub>© Sumanth Kumar · Mangalore, Karnataka, India</sub></p>

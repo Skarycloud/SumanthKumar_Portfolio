@@ -5,17 +5,43 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Sumanth Kumar | Fullstack Developer</title>
-    <meta name="description" content="Sumanth Kumar - Fullstack Developer based in Mangalore. Specializing in React, Node.js, and AI-driven development. Explore my portfolio of innovative web applications and digital solutions.">
+    <title>Sumanth Kumar — Full-stack Developer & AI Product Builder</title>
+    <meta name="description" content="Sumanth Kumar is a full-stack developer and AI product builder specializing in React, Next.js, React Native, Expo, UI/UX, and AI-powered applications.">
     <meta name="author" content="Sumanth Kumar">
+    <meta name="keywords" content="Sumanth Kumar, full-stack developer, AI product builder, React, Next.js, React Native, Expo, Node.js, UI/UX, Figma, Mangalore">
+    <link rel="canonical" href="https://sumanth-kumar-portfolio.vercel.app/">
+    <meta name="theme-color" content="#141516">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Sumanth Kumar | Fullstack Developer">
-    <meta property="og:description" content="Portfolio of Sumanth Kumar, featuring fullstack web applications, AI-driven tools, and interactive digital experiences.">
-    <meta property="og:image" content="https://sumanth-kumar-portfolio.vercel.app/images/about-photo.png">
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Sumanth Kumar — Full-stack Developer & AI Product Builder">
+    <meta property="og:description" content="Full-stack developer and AI product builder: React, Next.js, React Native, Expo, UI/UX and AI-powered applications. Apps live on Google Play.">
+    <meta property="og:image" content="https://sumanth-kumar-portfolio.vercel.app/images/og-image.jpg">
     <meta property="og:url" content="https://sumanth-kumar-portfolio.vercel.app/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SumanthKum75525">
+    <meta name="twitter:title" content="Sumanth Kumar — Full-stack Developer & AI Product Builder">
+    <meta name="twitter:description" content="Full-stack developer and AI product builder: React, Next.js, React Native, Expo, UI/UX and AI-powered applications.">
+    <meta name="twitter:image" content="https://sumanth-kumar-portfolio.vercel.app/images/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sumanth Kumar",
+        "jobTitle": "Full-stack Developer & AI Product Builder",
+        "url": "https://sumanth-kumar-portfolio.vercel.app/",
+        "email": "mailto:sumanth.k.0202@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Mangalore", "addressRegion": "Karnataka", "addressCountry": "IN" },
+        "worksFor": { "@type": "Organization", "name": "Mirchi35 Private Limited" },
+        "sameAs": [
+            "https://github.com/Skarycloud",
+            "https://www.linkedin.com/in/sumanth-kumar-230194294",
+            "https://x.com/SumanthKum75525",
+            "https://www.instagram.com/skarycloud/"
+        ]
+    }
+    </script>
 
     <!-- mobile specific metas
     ================================================== -->
@@ -25,6 +51,10 @@
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="js/vendor/blobatar/motion.css">
+    <link rel="stylesheet" href="js/vendor/blobatar/gaze.css">
+    <link rel="stylesheet" href="css/chatbot.css">
 
     <!-- favicons
     ================================================== -->
@@ -59,7 +89,7 @@
         </div>
 
 
-        <!-- ## site header 
+        <!-- ## site header
         ================================================== -->
         <header class="s-header">
 
@@ -74,7 +104,7 @@
                         <li><a href="index.html" class="home-link">Sumanth Kumar.</a></li>
                         <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
                         <li><a href="#about" class="smoothscroll">About</a></li>
-                        <li><a href="#works" class="smoothscroll">Projects</a></li>
+                        <li><a href="#works" class="smoothscroll">Work</a></li>
                         <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
                     </ul>
                 </nav>
@@ -100,23 +130,28 @@
                         </div>
 
                         <h1 class="text-huge-title">
-                            I am Sumanth Kumar, <br>
-                            a Fullstack <br> 
-                            Developer based <br>
-                            in Mangalore.
+                            I'm Sumanth Kumar, <br>
+                            a full-stack <br>
+                            developer &amp; AI <br>
+                            product builder.
                         </h1>
+
+                        <p class="intro-tagline">
+                            <span>React</span><span>Next.js</span><span>React Native</span><span>Expo</span><span>Node.js</span><span>AI</span>
+                            <em>Mangalore, Karnataka, India</em>
+                        </p>
                     </div>
 
                     <ul class="intro-social">
-                        <li><a href="https://github.com/Skarycloud">Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/sumanth-kumar-230194294">Linkedin</a></li>
-                        <li><a href="https://x.com/SumanthKum75525">X</a></li>
-                        <li><a href="https://www.instagram.com/skarycloud/">Instagram</a></li>
+                        <li><a href="https://github.com/Skarycloud" target="_blank" rel="noopener noreferrer">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/sumanth-kumar-230194294" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+                        <li><a href="https://x.com/SumanthKum75525" target="_blank" rel="noopener noreferrer">X</a></li>
+                        <li><a href="https://www.instagram.com/skarycloud/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                     </ul>
 
                 </div> <!-- end intro content -->
 
-                <a href="#about" class="intro-scrolldown smoothscroll">
+                <a href="#about" class="intro-scrolldown smoothscroll" aria-label="Scroll to about">
                     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
                 </a>
 
@@ -131,8 +166,8 @@
                 <div class="row about-info wide" data-animate-block>
 
                     <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="images/about-photo.png" 
-                             srcset="images/about-photo.png 1x, images/about-photo@2x.png 2x" alt="" class="about-info__pic" data-animate-el>
+                        <img src="images/about-photo.png"
+                             srcset="images/about-photo.png 1x, images/about-photo@2x.png 2x" alt="Portrait of Sumanth Kumar" class="about-info__pic" data-animate-el>
                     </div>
 
                     <div class="column lg-6 md-12">
@@ -141,10 +176,24 @@
                             <h2 class="text-pretitle with-line" data-animate-el>
                                 About
                             </h2>
-                             <p class="attention-getter" data-animate-el>
-                                Full-stack developer specializing in React, Node.js, and modern web technologies, with a strong focus on building scalable products and seamless user experiences. I design intuitive interfaces in Figma, develop cross-platform applications, and create automation workflows using tools like n8n. With a solid foundation in AI and machine learning, I enjoy integrating AI-driven features and rapid prototyping using AI-assisted tools and agentic workflows. Previously at Ants Applied DataScience, I build high-impact solutions that combine strong engineering with thoughtful product design.
+                            <p class="attention-getter" data-animate-el>
+                                I design and build real products for web and mobile, from the Figma file to the Play Store listing.
                             </p>
-                            <a href="assets/Sumanth_Kumar_Resume.pdf" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
+
+                            <div class="about-bio" data-animate-el>
+                                <p>By day I'm at <strong>Mirchi35</strong>, where I've shipped two Android apps (React Native + Expo) to Google Play and worked on the company website. I take the UI/UX, the frontend, the API integration and the testing.</p>
+                                <p>Outside of that, I take on freelance product and design work, I'm building <strong>eMenu</strong> (a SaaS I founded), and I co-founded <strong>Auralion Labs</strong>, a product studio whose website I designed and built.</p>
+                                <p>Lately I spend a lot of time on AI: agentic workflows, AI-powered features, and using AI to prototype fast.</p>
+                            </div>
+
+                            <ul class="about-bring" data-animate-el>
+                                <li><span>Production experience</span>Apps live on Google Play</li>
+                                <li><span>Design + engineering</span>Figma → React / React Native</li>
+                                <li><span>Full-stack</span>Frontend, APIs, backend and automation</li>
+                                <li><span>Founder mindset</span>I build and ship my own products</li>
+                            </ul>
+
+                            <a href="assets/Sumanth_Kumar_Resume.pdf" class="btn btn--medium u-fullwidth" target="_blank" rel="noopener" data-animate-el>Download CV</a>
 
                         </div>
                     </div>
@@ -157,14 +206,18 @@
                         <h2 class="text-pretitle" data-animate-el>Expertise</h2>
 
                         <ul class="skills-list h1" data-animate-el>
-                            <li>Fullstack Development</li>
-                            <li>Fullstack Architecture</li>
-                            <li>AI-Assisted Prototyping</li>
-                            <li>Prompt Engineering</li>
-                            <li>Agile Development</li>
-                            <li>Gamification Design</li>
-                            <li>Privacy-First UX</li>
+                            <li>Full-stack Product Development</li>
+                            <li>React &amp; Next.js</li>
+                            <li>React Native &amp; Expo</li>
+                            <li>UI/UX &amp; Product Design</li>
+                            <li>AI &amp; Agentic Systems</li>
+                            <li>AI-assisted Development</li>
+                            <li>API Integration</li>
+                            <li>Backend Development</li>
+                            <li>Automation &amp; Workflows</li>
                             <li>Data Visualization</li>
+                            <li>Rapid Prototyping</li>
+                            <li>Product Engineering</li>
                         </ul>
 
                     </div>
@@ -185,11 +238,46 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Mirchi35 Private Limited</h4>
-                                    <h5 class="timeline__meta">Associate MERN Stack Developer & Test Engineer</h5>
-                                    <p class="timeline__timeframe">November 2025 – Present</p>
+                                    <h5 class="timeline__meta">Associate MERN Stack Developer &amp; Test Engineer</h5>
+                                    <p class="timeline__timeframe">Nov 2025 – Present <span class="timeline__now">Current role</span></p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Developed React Native (Expo) Android applications for a hyperlocal discovery platform connecting vendors and users. Built and launched two Android apps, configured Expo projects, and managed Android builds and deployment preparation for Google Play Console. Designed UI/UX layouts and reusable templates in Figma and developed the complete Mirchi35 landing page with responsive frontend design. Integrated APIs, performed testing and debugging, and optimized application performance for production.</p>
+                                    <ul>
+                                        <li><strong>Mirchi35 Studio</strong> (Android, live on Google Play): UI/UX in Figma, React Native (Expo) development, frontend architecture, API integration, testing and debugging, Android build and Play Store launch.</li>
+                                        <li><strong>Mirchi35 Community Connect</strong> (Android, live on Google Play): UI/UX, React Native (Expo) frontend, API integration, testing, Android build and Play Store deployment.</li>
+                                        <li><strong>Mirchi35 Website</strong>: responsive UI implementation, optimization and testing.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Freelance</h4>
+                                    <h5 class="timeline__meta">Full-stack Developer &amp; UI/UX Designer</h5>
+                                    <p class="timeline__timeframe">Part-time, alongside Mirchi35 · Present</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <ul>
+                                        <li>Product UI/UX in Figma, from user flows to visual systems.</li>
+                                        <li>Turning product requirements into working, responsive interfaces.</li>
+                                        <li>Selected work: <strong>GT-Five</strong> (app UI/UX, logo, posters and banners), <strong>Vakya</strong> (design and frontend).</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">eMenu &amp; Auralion Labs</h4>
+                                    <h5 class="timeline__meta">Founder &amp; Co-founder</h5>
+                                    <p class="timeline__timeframe">Present</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <ul>
+                                        <li><strong>Founder, eMenu</strong>: digital menu SaaS for restaurants.</li>
+                                        <li><strong>Co-founder, Auralion Labs</strong>: product studio; designed and built its website.</li>
+                                    </ul>
                                 </div>
                             </div>
 
@@ -198,10 +286,14 @@
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Ants Applied DataScience</h4>
                                     <h5 class="timeline__meta">Frontend Programmer (MEAN Stack)</h5>
-                                    <p class="timeline__timeframe">November 2023 – February 2025</p>
+                                    <p class="timeline__timeframe">Nov 2023 – Feb 2025</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Developed the Ants Portfolio Analyzer, a financial analytics platform providing insights on large-cap, mid-cap, and small-cap stocks with interactive dashboards and a subscription-based analytics model. Converted the web application into an Android mobile app using Ionic Capacitor. Contributed to Solar Data Lake, a real-time IoT monitoring platform for solar power plants, implementing dashboards, customer management, and admin controls. Also worked on AI-driven analytics projects, integrating R scripts to generate insights from restaurant customer order data.</p>
+                                    <ul>
+                                        <li><strong>Ants Portfolio Analyzer</strong>: financial analytics dashboards and interactive data visualization; converted it to an Android app with Ionic / Capacitor.</li>
+                                        <li><strong>Solar Data Lake</strong>: IoT monitoring dashboards.</li>
+                                        <li>Customer/admin interfaces, API integration, AI/data analytics projects.</li>
+                                    </ul>
                                 </div>
                             </div>
 
@@ -210,13 +302,13 @@
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Ants Applied DataScience</h4>
                                     <h5 class="timeline__meta">Assistant Software Programmer (Intern)</h5>
-                                    <p class="timeline__timeframe">March 2023 – October 2023</p>
+                                    <p class="timeline__timeframe">Mar 2023 – Oct 2023</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Worked on AI and machine learning projects, assisting with data cleaning, preprocessing, and standardization for analytics workflows. Collaborated with development teams to support data-driven applications, integrated REST APIs, and contributed to implementing new technologies across multiple technical tasks.</p>
+                                    <p>Data preprocessing and AI/ML workflows, REST APIs, and support for data-driven apps.</p>
                                 </div>
                             </div>
-    
+
                         </div> <!-- end timeline -->
 
                     </div> <!-- end column -->
@@ -232,82 +324,39 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Manipal University Jaipur</h4>
-                                    <h5 class="timeline__meta">Bachelor of Computer Applications (BCA)</h5>
-                                    <p class="timeline__timeframe">September 2024 - Present</p>
+                                    <h4 class="timeline__title">Manipal University Jaipur (Online)</h4>
+                                    <h5 class="timeline__meta">Bachelor of Computer Applications – Artificial Intelligence &amp; Machine Learning</h5>
+                                    <p class="timeline__timeframe">Sep 2024 – 2027 (expected)</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Currently pursuing a Bachelor's degree in Computer Applications with specialization in Artificial Intelligence and Machine Learning. Focusing on advanced AI algorithms, neural networks, and their practical applications in fullstack development. Balancing professional work with online learning to advance my technical expertise.</p>
+                                    <p>Remote distance-learning program, studied on weekends alongside full-time work.</p>
                                 </div>
                             </div>
-    
+
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">S J (Govt) Polytechnic</h4>
-                                    <h5 class="timeline__meta">Diploma in Computer Science & Engineering</h5>
-                                    <p class="timeline__timeframe">Nov 2021 – May 2023 <br> <strong>Grade/GPA: 9.0</strong></p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Completed a comprehensive diploma program with specialized coursework in artificial intelligence and machine learning concepts. Developed a strong foundation in programming fundamentals, data structures, algorithms, and web development technologies. Gained hands-on experience through practical labs and project-based learning.</p>
+                                    <h4 class="timeline__title">S J Government Polytechnic</h4>
+                                    <h5 class="timeline__meta">Diploma in Computer Science &amp; Engineering</h5>
+                                    <p class="timeline__timeframe">Nov 2021 – May 2023 <br> <strong>GPA: 9.0</strong></p>
                                 </div>
                             </div>
-    
+
                         </div> <!-- end timeline -->
-                        
+
+                        <h2 class="text-pretitle about-certs-title" data-animate-el>Certifications</h2>
+
+                        <ul class="cert-list" data-animate-el>
+                            <li><strong>HTML, CSS, and JavaScript for Web Developers</strong><span>Johns Hopkins University / Coursera</span></li>
+                            <li><strong>Developing Cloud Apps with Node.js and React</strong><span>IBM / Coursera</span></li>
+                            <li><strong>AI for Everyone</strong><span>DeepLearning.AI / Coursera</span></li>
+                            <li><strong>ChatGPT Prompt Engineering for Developers</strong><span>DeepLearning.AI</span></li>
+                            <li><strong>Docker for Absolute Beginners</strong><span>Coursera</span></li>
+                        </ul>
+
                     </div> <!-- end column -->
 
-
                 </div> <!-- end about-timelines -->
-
-
-                <div class="row about-timelines" data-animate-block>
-                    <div class="column lg-12">
-
-                        <h2 class="text-pretitle" data-animate-el>Certifications</h2>
-
-                        <div class="timeline" data-animate-el>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">HTML, CSS, and JavaScript for Web Developers</h4>
-                                    <h5 class="timeline__meta">Johns Hopkins University (Coursera)</h5>
-                                    <p class="timeline__timeframe">April 2023</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Developing Cloud Apps with Node.js and React</h4>
-                                    <h5 class="timeline__meta">IBM (Coursera)</h5>
-                                    <p class="timeline__timeframe">May 2023</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">AI for Everyone</h4>
-                                    <h5 class="timeline__meta">DeepLearning.AI (Coursera)</h5>
-                                    <p class="timeline__timeframe">January 2023</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">ChatGPT Prompt Engineering for Developers</h4>
-                                    <h5 class="timeline__meta">DeepLearning.AI</h5>
-                                    <p class="timeline__timeframe">March 2025</p>
-                                </div>
-                            </div>
-
-                        </div> <!-- end timeline -->
-
-                    </div>
-                </div> <!-- end about-certifications -->
 
             </section> <!-- end s-about -->
 
@@ -316,355 +365,421 @@
             ================================================== -->
             <section id="works" class="s-works target-section">
 
+                <div class="row wide work">
+                    <div class="column lg-12">
 
-                <div class="row works-portfolio">
-
-                    <div class="column lg-12" data-animate-block>
-
-                        <h2 class="text-pretitle" data-animate-el>
-                            Recent Projects
-                        </h2>
-                        <p class="h1" data-animate-el>
-                            Explore my latest fullstack creations from robust web applications to intuitive user interfaces and AI-powered solutions.
-                        </p>
-    
-                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-07">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/emenu.jpg"
-                                             srcset="images/portfolio/emenu.jpg 1x, images/portfolio/emenu@2x.jpg 2x" alt="eMenu QR-Based Digital Menu Platform">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Fullstack / Founder
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            eMenu
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://emenuweb.com/" target="_blank" rel="noopener noreferrer" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-08">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/scavenge.jpg"
-                                             srcset="images/portfolio/scavenge.jpg 1x, images/portfolio/scavenge@2x.jpg 2x" alt="Scavenge Scavenger Hunt Adventure Platform">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Fullstack / Gamification
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Scavenge
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://scavenge.rs/" target="_blank" rel="noopener noreferrer" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-06">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/image-pi.jpg" 
-                                             srcset="images/portfolio/image-pi.jpg 1x, images/portfolio/image-pi@2x.jpg 2x" alt="image-π Privacy-First Browser Image Toolkit">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            React / TypeScript
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            image-π
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://image-pi-dusky.vercel.app/" target="_blank" rel="noopener noreferrer" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-03">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/code-stack.jpg" 
-                                             srcset="images/portfolio/code-stack.jpg 1x, images/portfolio/code-stack@2x.jpg 2x" alt="Code Stack Developer Resource Platform">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Next.js/React.js
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Code Stack
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://codestack-sigma.vercel.app/" target="_blank" rel="noopener noreferrer" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-05">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/oryx.jpg" 
-                                             srcset="images/portfolio/oryx.jpg 1x, images/portfolio/oryx@2x.jpg 2x" alt="Oryx AI Data Standardization Platform">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Python/Next.js
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Orxy AI
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://oryx-ai.vercel.app/" target="_blank" rel="noopener noreferrer" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-01">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/salary-split.jpg"
-                                             srcset="images/portfolio/salary-split.jpg 1x, images/portfolio/salary-split@2x.jpg 2x"  alt="Salary Split Financial Visualization Tool">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            React.js
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Salary Split
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://salary-split-three.vercel.app/" target="_blank" rel="noopener noreferrer" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-04">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/terminal.jpg"
-                                             srcset="images/portfolio/terminal.jpg 1x, images/portfolio/terminal@2x.jpg 2x" alt="Terminal Styled Portfolio Interface">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                           Next.js/Tailwind.css
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Terminal Styled Portfolio
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://terminal-portfolio-seven-kohl.vercel.app/" target="_blank" rel="noopener noreferrer" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-02">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/u-w-roulette.jpg" 
-                                             srcset="images/portfolio/u-w-roulette.jpg 1x, images/portfolio/u-w-roulette@2x.jpg 2x" alt="Useless Website Roulette Fun Discovery App">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Next.js
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Useless Website Roulette
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://useless-website-roulette.vercel.app/" target="_blank" rel="noopener noreferrer" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                        </ul> <!-- end folio-list -->
-
-                    </div> <!-- end column -->
-
-
-                    <!-- Modal Templates Popup
-                    -------------------------------------------- -->
-                    <div id="modal-07" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-emenu.jpg" alt="eMenu Digital Platform Preview">
-                
-                            <div class="modal-popup__desc">
-                                <h5>eMenu</h5>
-                                <p>eMenu is a QR-based digital menu platform that enables restaurants and cafés to publish and update menus instantly without printing. It features a Google Sheets/CSV-powered management system for real-time updates, QR-based access, and analytics to reduce costs and improve ordering experiences.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>React</li>
-                                    <li>Next.js</li>
-                                    <li>Node.js</li>
-                                    <li>Google Sheets API</li>
-                                    <li>QR Integration</li>
-                                </ul>
+                        <!-- header -->
+                        <header class="work__head" data-reveal>
+                            <div class="work__intro">
+                                <h2 class="text-pretitle">Selected Work</h2>
+                                <p class="work__title">Products I've designed, built <em>and shipped.</em></p>
                             </div>
+                            <dl class="work__stats">
+                                <div><dt>2</dt><dd>Android apps live on Google Play</dd></div>
+                                <div><dt>1</dt><dd>SaaS founded &amp; in active build</dd></div>
+                                <div><dt>8</dt><dd>Featured production, client &amp; founder builds</dd></div>
+                            </dl>
+                        </header>
 
-                            <a href="https://emenuweb.com/" class="modal-popup__details">Project link</a>
+                        <!-- filters -->
+                        <div class="work__filters" role="tablist" aria-label="Filter projects" data-reveal>
+                            <button class="chip is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+                            <button class="chip" role="tab" aria-selected="false" data-filter="mobile">Mobile</button>
+                            <button class="chip" role="tab" aria-selected="false" data-filter="web">Web</button>
+                            <button class="chip" role="tab" aria-selected="false" data-filter="design">UI/UX</button>
+                            <button class="chip" role="tab" aria-selected="false" data-filter="founder">Founder</button>
+                            <button class="chip" role="tab" aria-selected="false" data-filter="ai">AI</button>
                         </div>
-                    </div> <!-- end modal -->
 
-                    <div id="modal-08" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-scavenge.jpg" alt="Scavenge Adventure Platform Interface">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Scavenge</h5>
-                                <p>Scavenge is an adventure platform for creating and participating in real-world scavenger hunts. It features team-based gameplay, real-time GPS tracking, live leaderboards, and QR code challenges, enabling interactive adventures and corporate team-building activities.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>React</li>
-                                    <li>Node.js</li>
-                                    <li>Maps API</li>
-                                    <li>GPS Tracking</li>
-                                    <li>QR Integration</li>
-                                </ul>
+                        <!-- featured grid -->
+                        <div class="work__grid">
+
+                            <!-- 01 · Mirchi35 Studio -->
+                            <article class="pcard pcard--wide" data-cat="mobile design" data-reveal style="--accent: #e8392f; --tint: #2a1210;">
+                                <div class="pcard__media media--shots">
+                                    <figure><img src="images/projects/studio-2.jpg" alt="Mirchi35 Studio home screen" loading="lazy"></figure>
+                                    <figure><img src="images/projects/studio-1.jpg" alt="Mirchi35 Studio: create ads, grow faster" loading="lazy"></figure>
+                                    <figure><img src="images/projects/studio-3.jpg" alt="Mirchi35 Studio ad template picker" loading="lazy"></figure>
+                                    <figure><img src="images/projects/studio-4.jpg" alt="Mirchi35 Studio my ads screen" loading="lazy"></figure>
+                                </div>
+                                <div class="pcard__body">
+                                    <div class="pcard__meta">
+                                        <span class="pcard__index">01</span>
+                                        <span class="badge badge--live"><i></i>Live on Google Play</span>
+                                    </div>
+                                    <p class="pcard__cat">React Native / Expo · Android · Production</p>
+                                    <h3 class="pcard__title">Mirchi35 Studio</h3>
+                                    <p class="pcard__desc">The vendor app for Mirchi35, India's live local-discovery platform. Local businesses post live updates, deals and offers from their phone.</p>
+                                    <ul class="tags">
+                                        <li>React Native</li><li>Expo Router</li><li>Redux Toolkit</li><li>Axios</li><li>Figma</li>
+                                    </ul>
+                                    <div class="pcard__actions">
+                                        <button type="button" class="pbtn pbtn--solid" data-open>Case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                                        <a class="pbtn" href="https://play.google.com/store/apps/details?id=com.mirchi35.studio" target="_blank" rel="noopener noreferrer">Google Play <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                    </div>
+                                </div>
+                                <template class="pcard__detail">
+                                    <div class="pm-gallery">
+                                        <img src="images/projects/studio-1.jpg" alt="Mirchi35 Studio store screenshot 1">
+                                        <img src="images/projects/studio-2.jpg" alt="Mirchi35 Studio store screenshot 2">
+                                        <img src="images/projects/studio-3.jpg" alt="Mirchi35 Studio store screenshot 3">
+                                        <img src="images/projects/studio-4.jpg" alt="Mirchi35 Studio store screenshot 4">
+                                    </div>
+                                    <div class="pm-head">
+                                        <img class="pm-icon" src="images/projects/studio-icon.png" alt="">
+                                        <div>
+                                            <p class="pcard__cat">React Native / Expo · Android · Production</p>
+                                            <h3 class="pm-title">Mirchi35 Studio</h3>
+                                        </div>
+                                    </div>
+                                    <p class="pm-lead">The Android app from Mirchi35, India's live local-discovery platform where local vendors post live updates, deals and offers.</p>
+                                    <div class="pm-cols">
+                                        <section><h4>Role</h4><p>Associate MERN Stack Developer &amp; Test Engineer at Mirchi35, responsible for the app's UI/UX and frontend development.</p></section>
+                                        <section><h4>What I worked on</h4><ul class="pm-list"><li>Figma UI/UX</li><li>React Native + Expo build</li><li>Frontend architecture</li><li>API integration</li><li>Responsive mobile UI</li><li>Testing and debugging</li><li>Android build config</li><li>Google Play launch</li></ul></section>
+                                    </div>
+                                    <h4>Tech</h4>
+                                    <ul class="tags"><li>React Native</li><li>Expo (Expo Router)</li><li>Redux Toolkit</li><li>Axios</li><li>Figma</li></ul>
+                                    <div class="pm-links"><a class="pbtn pbtn--solid" href="https://play.google.com/store/apps/details?id=com.mirchi35.studio" target="_blank" rel="noopener noreferrer">View on Google Play <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+                                </template>
+                            </article>
+
+                            <!-- 02 · Community Connect -->
+                            <article class="pcard" data-cat="mobile design" data-reveal style="--accent: #e5402b; --tint: #2b1411;">
+                                <div class="pcard__media media--shots">
+                                    <figure><img src="images/projects/pulse-2.jpg" alt="Community Connect business details" loading="lazy"></figure>
+                                    <figure><img src="images/projects/pulse-1.jpg" alt="Community Connect nearby businesses" loading="lazy"></figure>
+                                    <figure><img src="images/projects/pulse-3.jpg" alt="Community Connect chat with vendors" loading="lazy"></figure>
+                                </div>
+                                <div class="pcard__body">
+                                    <div class="pcard__meta">
+                                        <span class="pcard__index">02</span>
+                                        <span class="badge badge--live"><i></i>Live on Google Play</span>
+                                    </div>
+                                    <p class="pcard__cat">React Native / Expo · Android · Production</p>
+                                    <h3 class="pcard__title">Mirchi35 Community Connect</h3>
+                                    <p class="pcard__desc">A multi-language community app in the Mirchi35 ecosystem: find nearby businesses, search by radius and chat with vendors.</p>
+                                    <ul class="tags"><li>React Native</li><li>Expo Router</li><li>i18next</li><li>Figma</li></ul>
+                                    <div class="pcard__actions">
+                                        <button type="button" class="pbtn pbtn--solid" data-open>Case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                                        <a class="pbtn" href="https://play.google.com/store/apps/details?id=com.mirchi35.pulse" target="_blank" rel="noopener noreferrer">Google Play <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                    </div>
+                                </div>
+                                <template class="pcard__detail">
+                                    <div class="pm-gallery">
+                                        <img src="images/projects/pulse-1.jpg" alt="Community Connect store screenshot 1">
+                                        <img src="images/projects/pulse-2.jpg" alt="Community Connect store screenshot 2">
+                                        <img src="images/projects/pulse-3.jpg" alt="Community Connect store screenshot 3">
+                                        <img src="images/projects/pulse-4.jpg" alt="Community Connect store screenshot 4">
+                                    </div>
+                                    <div class="pm-head">
+                                        <img class="pm-icon" src="images/projects/pulse-icon.png" alt="">
+                                        <div>
+                                            <p class="pcard__cat">React Native / Expo · Android · Production</p>
+                                            <h3 class="pm-title">Mirchi35 Community Connect</h3>
+                                        </div>
+                                    </div>
+                                    <p class="pm-lead">A community app in the Mirchi35 ecosystem for Android.</p>
+                                    <div class="pm-cols">
+                                        <section><h4>Role</h4><p>Associate MERN Stack Developer &amp; Test Engineer at Mirchi35, doing UI/UX and frontend development.</p></section>
+                                        <section><h4>What I worked on</h4><ul class="pm-list"><li>Figma UI/UX</li><li>React Native + Expo frontend</li><li>API integration</li><li>Testing and debugging</li><li>Android build and Play Store deployment</li></ul></section>
+                                    </div>
+                                    <h4>Tech</h4>
+                                    <ul class="tags"><li>React Native</li><li>Expo (Expo Router)</li><li>i18next (multi-language)</li><li>Figma</li></ul>
+                                    <div class="pm-links"><a class="pbtn pbtn--solid" href="https://play.google.com/store/apps/details?id=com.mirchi35.pulse" target="_blank" rel="noopener noreferrer">View on Google Play <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+                                </template>
+                            </article>
+
+                            <!-- 03 · eMenu -->
+                            <article class="pcard" data-cat="web founder" data-reveal style="--accent: #8b7cf6; --tint: #17142a;">
+                                <div class="pcard__media media--browser">
+                                    <div class="browser">
+                                        <div class="browser__bar"><i></i><i></i><i></i><span>emenuweb.com</span></div>
+                                        <img src="images/projects/emenu-web.jpg" alt="eMenu website: Instant QR menu, zero effort" loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="pcard__body">
+                                    <div class="pcard__meta">
+                                        <span class="pcard__index">03</span>
+                                        <span class="badge">Founder</span>
+                                    </div>
+                                    <p class="pcard__cat">Founder · Full-stack · SaaS</p>
+                                    <h3 class="pcard__title">eMenu</h3>
+                                    <p class="pcard__desc">A digital menu platform for restaurants and cafés. Build a menu, share it by QR code, and change prices without reprinting.</p>
+                                    <ul class="tags"><li>Next.js</li><li>Supabase</li><li>Prisma</li><li>Stripe</li><li>shadcn/ui</li></ul>
+                                    <div class="pcard__actions">
+                                        <button type="button" class="pbtn pbtn--solid" data-open>Case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                                        <a class="pbtn" href="https://emenuweb.com/" target="_blank" rel="noopener noreferrer">emenuweb.com <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                    </div>
+                                </div>
+                                <template class="pcard__detail">
+                                    <div class="pm-gallery pm-gallery--wide"><img src="images/projects/emenu-web.jpg" alt="eMenu website: Instant QR menu, zero effort"></div>
+                                    <div class="pm-head"><div><p class="pcard__cat">Founder · Full-stack · SaaS</p><h3 class="pm-title">eMenu</h3></div></div>
+                                    <p class="pm-lead">A digital menu platform for restaurants, cafés and food businesses. Businesses create and manage menus and share them through a QR code, with no reprinting when prices change.</p>
+                                    <div class="pm-cols">
+                                        <section><h4>Role</h4><p>Founder. I design and build the product.</p></section>
+                                        <section><h4>Features</h4><ul class="pm-list"><li>Drag-and-drop menu builder</li><li>Instant item and price updates</li><li>QR-based access</li><li>Branded customer menu with filters, search and multi-language support</li><li>Business dashboard with analytics</li></ul></section>
+                                    </div>
+                                    <h4>Tech</h4>
+                                    <ul class="tags"><li>Next.js</li><li>React</li><li>Tailwind CSS</li><li>shadcn/ui</li><li>Supabase</li><li>Prisma</li><li>Stripe</li></ul>
+                                    <div class="pm-links"><a class="pbtn pbtn--solid" href="https://emenuweb.com/" target="_blank" rel="noopener noreferrer">Visit emenuweb.com <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+                                </template>
+                            </article>
+
+                            <!-- 04 · GT-Five -->
+                            <article class="pcard" data-cat="design mobile" data-reveal style="--accent: #ff7a4d; --tint: #2b170f;">
+                                <div class="pcard__media media--shots">
+                                    <figure><img src="images/projects/gtfive-2.jpg" alt="GT-Five rewards screen" loading="lazy"></figure>
+                                    <figure><img src="images/projects/gtfive-1.jpg" alt="GT-Five app home: scan, earn, redeem" loading="lazy"></figure>
+                                    <figure><img src="images/projects/gtfive-3.jpg" alt="GT-Five withdraw points to cash" loading="lazy"></figure>
+                                </div>
+                                <div class="pcard__body">
+                                    <div class="pcard__meta">
+                                        <span class="pcard__index">04</span>
+                                        <span class="badge">Freelance</span>
+                                    </div>
+                                    <p class="pcard__cat">UI/UX · Brand &amp; Product Design</p>
+                                    <h3 class="pcard__title">GT-Five</h3>
+                                    <p class="pcard__desc">App UI/UX and brand graphics for a premium modular switches brand. User flows, screens, visual system, logo, posters and banners.</p>
+                                    <ul class="tags"><li>Figma</li><li>UI/UX</li><li>Branding</li></ul>
+                                    <div class="pcard__actions">
+                                        <button type="button" class="pbtn pbtn--solid" data-open>Case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                                        <a class="pbtn" href="https://play.google.com/store/apps/details?id=com.gtfive.gtfive_app" target="_blank" rel="noopener noreferrer">Google Play <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                    </div>
+                                </div>
+                                <template class="pcard__detail">
+                                    <div class="pm-gallery">
+                                        <img src="images/projects/gtfive-1.jpg" alt="GT-Five store screenshot 1">
+                                        <img src="images/projects/gtfive-2.jpg" alt="GT-Five store screenshot 2">
+                                        <img src="images/projects/gtfive-3.jpg" alt="GT-Five store screenshot 3">
+                                        <img class="is-wide" src="images/projects/gtfive-web.jpg" alt="gtfive.com website hero">
+                                        <img class="is-wide" src="images/projects/gtfive-web-2.jpg" alt="gtfive.com product series">
+                                    </div>
+                                    <div class="pm-head">
+                                        <img class="pm-icon" src="images/projects/gtfive-icon.png" alt="">
+                                        <div><p class="pcard__cat">Freelance · UI/UX · Brand &amp; Product Design</p><h3 class="pm-title">GT-Five</h3></div>
+                                    </div>
+                                    <p class="pm-lead">A brand of premium modular electrical switches, sockets and accessories, with its own Android app.</p>
+                                    <div class="pm-cols">
+                                        <section><h4>Role</h4><p>Freelance designer for the app's UI/UX and the brand graphics. Development was done by others.</p></section>
+                                        <section><h4>What I worked on</h4><ul class="pm-list"><li>App UI/UX in Figma: user flows, screens, visual system</li><li>Logo</li><li>Posters and banners</li></ul></section>
+                                    </div>
+                                    <h4>Tech</h4>
+                                    <ul class="tags"><li>Figma</li></ul>
+                                    <div class="pm-links">
+                                        <a class="pbtn pbtn--solid" href="https://play.google.com/store/apps/details?id=com.gtfive.gtfive_app" target="_blank" rel="noopener noreferrer">Google Play <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                        <a class="pbtn" href="https://gtfive.com/" target="_blank" rel="noopener noreferrer">gtfive.com <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                    </div>
+                                </template>
+                            </article>
+
+                            <!-- 05 · Scavenge -->
+                            <article class="pcard" data-cat="web" data-reveal style="--accent: #fbbf24; --tint: #241d0c;">
+                                <div class="pcard__media media--browser">
+                                    <div class="browser">
+                                        <div class="browser__bar"><i></i><i></i><i></i><span>scavenge.rs</span></div>
+                                        <img src="images/projects/scavenge-app.jpg" alt="Scavenge: create fun real-world games with tasks, maps, and scores" loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="pcard__body">
+                                    <div class="pcard__meta">
+                                        <span class="pcard__index">05</span>
+                                        <span class="badge badge--live"><i></i>Live</span>
+                                    </div>
+                                    <p class="pcard__cat">Full-stack · Gamification · Web App</p>
+                                    <h3 class="pcard__title">Scavenge</h3>
+                                    <p class="pcard__desc">A platform for creating and playing real-world scavenger hunts: team-based gameplay, real-time GPS tracking, live leaderboards and QR-code challenges, for city adventures and corporate team-building.</p>
+                                    <ul class="tags"><li>React</li><li>Node.js</li><li>Maps API</li><li>GPS Tracking</li><li>QR Codes</li></ul>
+                                    <div class="pcard__actions">
+                                        <button type="button" class="pbtn pbtn--solid" data-open>Case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                                        <a class="pbtn" href="https://scavenge.rs/" target="_blank" rel="noopener noreferrer">scavenge.rs <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                    </div>
+                                </div>
+                                <template class="pcard__detail">
+                                    <div class="pm-gallery">
+                                        <img class="is-wide" src="images/projects/scavenge-app.jpg" alt="Scavenge landing page, light theme">
+                                        <img class="is-wide" src="images/projects/scavenge-web.jpg" alt="Scavenge landing page, dark theme">
+                                        <img class="is-wide" src="images/projects/scavenge-web-3.jpg" alt="Scavenge features: custom hunts, team adventures, real-time tracking, leaderboards, QR challenges">
+                                        <img class="is-wide" src="images/projects/scavenge-web-2.jpg" alt="Scavenge flow: play, compete and celebrate">
+                                        <img class="is-wide" src="images/projects/scavenge-web-4.jpg" alt="Scavenge: create and monetize hunts">
+                                    </div>
+                                    <div class="pm-head"><div><p class="pcard__cat">Full-stack · Gamification · Web App</p><h3 class="pm-title">Scavenge</h3></div></div>
+                                    <p class="pm-lead">An adventure platform for creating and taking part in real-world scavenger hunts, from city games with friends to corporate team-building events.</p>
+                                    <div class="pm-cols">
+                                        <section><h4>Role</h4><p>Full-stack development of the web platform: hunt creation, live gameplay and the player experience.</p></section>
+                                        <section><h4>Features</h4><ul class="pm-list"><li><strong>Custom hunts:</strong> clues, locations and challenges tailored to each event</li><li><strong>Team adventures:</strong> group play with progress tracking</li><li><strong>Real-time GPS tracking</strong> of participants</li><li><strong>Live leaderboards</strong> with scoring and achievements</li><li><strong>QR-code challenges</strong> as checkpoints and clue reveals</li><li><strong>Instant sharing</strong> via link, QR code or social media</li></ul></section>
+                                    </div>
+                                    <h4>Tech</h4>
+                                    <ul class="tags"><li>React</li><li>Node.js</li><li>Maps API</li><li>GPS Tracking</li><li>QR Codes</li></ul>
+                                    <div class="pm-links"><a class="pbtn pbtn--solid" href="https://scavenge.rs/" target="_blank" rel="noopener noreferrer">Visit scavenge.rs <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+                                </template>
+                            </article>
+
+                            <!-- 06 · Auralion Labs -->
+                            <article class="pcard" data-cat="web founder design" data-reveal style="--accent: #c9c9d6; --tint: #18181d;">
+                                <div class="pcard__media media--browser">
+                                    <div class="browser">
+                                        <div class="browser__bar"><i></i><i></i><i></i><span>auralionlabs.com</span></div>
+                                        <img src="images/projects/auralion-web.jpg" alt="Auralion Labs website hero" loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="pcard__body">
+                                    <div class="pcard__meta">
+                                        <span class="pcard__index">06</span>
+                                        <span class="badge">Co-founder</span>
+                                    </div>
+                                    <p class="pcard__cat">Co-founder · Design &amp; Engineering</p>
+                                    <h3 class="pcard__title">Auralion Labs</h3>
+                                    <p class="pcard__desc">A product studio for AI products, web and mobile apps, automation and SaaS. I designed and built the company website.</p>
+                                    <ul class="tags"><li>Next.js</li><li>GSAP</li><li>Motion</li><li>Sanity CMS</li><li>Figma</li></ul>
+                                    <div class="pcard__actions">
+                                        <button type="button" class="pbtn pbtn--solid" data-open>Case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                                        <a class="pbtn" href="https://auralionlabs.com/" target="_blank" rel="noopener noreferrer">auralionlabs.com <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                    </div>
+                                </div>
+                                <template class="pcard__detail">
+                                    <div class="pm-gallery"><img class="is-wide" src="images/projects/auralion-web.jpg" alt="Auralion Labs website hero"><img class="is-wide" src="images/projects/auralion-web-2.jpg" alt="Auralion Labs: what we build"><img class="is-wide" src="images/projects/auralion-web-3.jpg" alt="Auralion Labs: how we build"></div>
+                                    <div class="pm-head"><div><p class="pcard__cat">Co-founder · Product Development · Design &amp; Engineering</p><h3 class="pm-title">Auralion Labs</h3></div></div>
+                                    <p class="pm-lead">A product studio that designs and builds AI products, web and mobile apps, automation systems and SaaS platforms.</p>
+                                    <div class="pm-cols">
+                                        <section><h4>Role</h4><p>Co-founder. I personally designed and built the company website.</p></section>
+                                        <section><h4>What I worked on</h4><ul class="pm-list"><li>UI/UX in Figma</li><li>Next.js + React build</li><li>Responsive layouts and motion</li><li>Sanity CMS blog</li><li>Cal.com call booking</li></ul></section>
+                                    </div>
+                                    <h4>Tech</h4>
+                                    <ul class="tags"><li>Next.js</li><li>React</li><li>Tailwind CSS</li><li>shadcn/ui</li><li>GSAP</li><li>Motion</li><li>Sanity CMS</li><li>Figma</li></ul>
+                                    <div class="pm-links"><a class="pbtn pbtn--solid" href="https://auralionlabs.com/" target="_blank" rel="noopener noreferrer">Visit auralionlabs.com <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+                                </template>
+                            </article>
+
+                            <!-- 07 · Mirchi35 Website -->
+                            <article class="pcard" data-cat="web" data-reveal style="--accent: #ff5a1f; --tint: #24120b;">
+                                <div class="pcard__media media--browser">
+                                    <div class="browser">
+                                        <div class="browser__bar"><i></i><i></i><i></i><span>mirchi35.com</span></div>
+                                        <img src="images/projects/mirchi35-web.jpg" alt="Mirchi35 website hero" loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="pcard__body">
+                                    <div class="pcard__meta">
+                                        <span class="pcard__index">07</span>
+                                        <span class="badge badge--live"><i></i>Live</span>
+                                    </div>
+                                    <p class="pcard__cat">Next.js / React · UI/UX · Frontend</p>
+                                    <h3 class="pcard__title">Mirchi35 Website</h3>
+                                    <p class="pcard__desc">The marketing site for Mirchi35's live discovery platform: UI implementation, responsive frontend, optimization and testing.</p>
+                                    <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>Motion</li></ul>
+                                    <div class="pcard__actions">
+                                        <button type="button" class="pbtn pbtn--solid" data-open>Case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                                        <a class="pbtn" href="https://mirchi35.com/" target="_blank" rel="noopener noreferrer">mirchi35.com <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                    </div>
+                                </div>
+                                <template class="pcard__detail">
+                                    <div class="pm-gallery"><img class="is-wide" src="images/projects/mirchi35-web.jpg" alt="Mirchi35 website hero, dark theme"><img class="is-wide" src="images/projects/mirchi35-web-2.jpg" alt="Mirchi35 website hero, light theme"><img class="is-wide" src="images/projects/mirchi35-web-3.jpg" alt="Mirchi35 website: why choose Mirchi35"></div>
+                                    <div class="pm-head"><div><p class="pcard__cat">Next.js / React · UI/UX · Frontend</p><h3 class="pm-title">Mirchi35 Website</h3></div></div>
+                                    <p class="pm-lead">The website for Mirchi35, India's live local-discovery platform.</p>
+                                    <div class="pm-cols">
+                                        <section><h4>Role</h4><p>Frontend developer at Mirchi35.</p></section>
+                                        <section><h4>What I worked on</h4><ul class="pm-list"><li>UI implementation</li><li>Responsive frontend</li><li>Optimization and testing</li></ul></section>
+                                    </div>
+                                    <h4>Tech</h4>
+                                    <ul class="tags"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>Motion</li></ul>
+                                    <div class="pm-links"><a class="pbtn pbtn--solid" href="https://mirchi35.com/" target="_blank" rel="noopener noreferrer">Visit mirchi35.com <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+                                </template>
+                            </article>
+
+                            <!-- 08 · Wren -->
+                            <article class="pcard pcard--wide pcard--reverse" data-cat="ai web" data-reveal style="--accent: #5eead4; --tint: #0f1f1e;">
+                                <div class="pcard__media media--browser">
+                                    <div class="browser">
+                                        <div class="browser__bar"><i></i><i></i><i></i><span>wren · clinic check-in</span></div>
+                                        <img src="images/projects/wren.jpg" alt="Wren patient check-in and clinician brief" loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="pcard__body">
+                                    <div class="pcard__meta">
+                                        <span class="pcard__index">08</span>
+                                        <span class="badge badge--ai">Hackathon · Agentic AI</span>
+                                    </div>
+                                    <p class="pcard__cat">Agentic AI · Healthcare Automation</p>
+                                    <h3 class="pcard__title">Wren – Agentic Healthcare Assistant</h3>
+                                    <p class="pcard__desc">Not a chatbot: an AI agent runs the patient's GP check-in, asks the follow-up questions people avoid at the desk and writes the intake into the chart, then condenses it into a 30-second brief for the doctor.</p>
+                                    <ul class="tags"><li>Gemini</li><li>Google ADK</li><li>Python</li><li>Cloud Run</li><li>Firestore</li></ul>
+                                    <div class="pcard__actions">
+                                        <button type="button" class="pbtn pbtn--solid" data-open>Case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                                        <a class="pbtn" href="https://allthingsagentichackathon.devpost.com/" target="_blank" rel="noopener noreferrer">Devpost <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                    </div>
+                                </div>
+                                <template class="pcard__detail">
+                                    <div class="pm-gallery pm-gallery--wide"><img src="images/projects/wren.jpg" alt="Wren patient check-in and clinician brief"></div>
+                                    <div class="pm-head"><div><p class="pcard__cat">Agentic AI · Healthcare Automation · Hackathon</p><h3 class="pm-title">Wren – Agentic Healthcare Assistant</h3></div></div>
+                                    <p class="pm-lead">An agentic waiting-room assistant for GP clinics. It's not a chatbot: an AI agent runs the patient's check-in, asks the follow-up questions people avoid at the desk and writes the day's intake into the chart. A separate clinician console turns that intake and past notes into a 30-second brief for the doctor to review.</p>
+                                    <div class="pm-cols">
+                                        <section><h4>Role</h4><p>Team project for the All Things Agentic hackathon. I worked on the patient and clinician interfaces: redesigned the patient check-in and clinician screens, added speech input for the patient chat, and fixed the chat composer and conversation flow.</p></section>
+                                        <section><h4>Features</h4><ul class="pm-list"><li><strong>Patient intake:</strong> an agent-led check-in that writes the day's chart</li><li><strong>Clinician brief:</strong> intake plus past notes condensed into a 30-second summary for review</li><li><strong>Waiting room:</strong> the clinician's patient queue, sorted by triage urgency (sickest first)</li></ul></section>
+                                    </div>
+                                    <h4>Tech</h4>
+                                    <ul class="tags"><li>Gemini</li><li>Google Agent Development Kit (ADK)</li><li>Python</li><li>Cloud Run</li><li>Firestore</li></ul>
+                                    <p class="pm-note">Hackathon prototype. Not a production or clinically validated system, and it does not diagnose. Cover is an illustrative concept of the interface.</p>
+                                    <div class="pm-links"><a class="pbtn pbtn--solid" href="https://allthingsagentichackathon.devpost.com/" target="_blank" rel="noopener noreferrer">View on Devpost <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+                                </template>
+                            </article>
+
+                        </div> <!-- end work__grid -->
+
+                        <!-- more projects -->
+                        <div class="more" data-reveal>
+                            <h3 class="text-pretitle">More projects</h3>
+                            <div class="more__grid">
+                                <a class="xcard" href="https://vakya.fun/" target="_blank" rel="noopener noreferrer">
+                                    <span class="xcard__top"><span class="xcard__id">PRJ-01</span><span class="xcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+                                    <strong class="xcard__title">Vakya</strong>
+                                    <span class="xcard__desc">A Bhagavad Gita verse on your lock screen, every day. Landing page design and build.</span>
+                                    <span class="xcard__foot"><span>Next.js · React · GSAP · Motion</span><span class="xcard__roll"><span class="xcard__url">vakya.fun</span><span class="xcard__cta">Open project &rarr;</span></span></span>
+                                </a>
+                                <a class="xcard" href="https://oryx-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                    <span class="xcard__top"><span class="xcard__id">PRJ-02</span><span class="xcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+                                    <strong class="xcard__title">Oryx AI</strong>
+                                    <span class="xcard__desc">Training datasets and evaluation tools for AI/LLM models.</span>
+                                    <span class="xcard__foot"><span>Node.js · React · Python · Tailwind CSS</span><span class="xcard__roll"><span class="xcard__url">oryx-ai.vercel.app</span><span class="xcard__cta">Open project &rarr;</span></span></span>
+                                </a>
+                                <a class="xcard" href="https://codestack-sigma.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                    <span class="xcard__top"><span class="xcard__id">PRJ-03</span><span class="xcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+                                    <strong class="xcard__title">Code Stack</strong>
+                                    <span class="xcard__desc">Open-source directory of developer tools, frameworks and learning resources.</span>
+                                    <span class="xcard__foot"><span>Next.js · TypeScript · React · Tailwind CSS</span><span class="xcard__roll"><span class="xcard__url">codestack-sigma.vercel.app</span><span class="xcard__cta">Open project &rarr;</span></span></span>
+                                </a>
+                                <a class="xcard" href="https://image-pi-dusky.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                    <span class="xcard__top"><span class="xcard__id">PRJ-04</span><span class="xcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+                                    <strong class="xcard__title">image-π</strong>
+                                    <span class="xcard__desc">Privacy-first image toolkit that runs entirely in the browser.</span>
+                                    <span class="xcard__foot"><span>React · TypeScript · Canvas API</span><span class="xcard__roll"><span class="xcard__url">image-pi-dusky.vercel.app</span><span class="xcard__cta">Open project &rarr;</span></span></span>
+                                </a>
+                                <a class="xcard" href="https://salary-split-three.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                    <span class="xcard__top"><span class="xcard__id">PRJ-05</span><span class="xcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+                                    <strong class="xcard__title">Salary Split</strong>
+                                    <span class="xcard__desc">Break a salary into monthly, weekly, daily and hourly figures, across currencies.</span>
+                                    <span class="xcard__foot"><span>React · API Integration</span><span class="xcard__roll"><span class="xcard__url">salary-split-three.vercel.app</span><span class="xcard__cta">Open project &rarr;</span></span></span>
+                                </a>
+                                <a class="xcard" href="https://terminal-portfolio-seven-kohl.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                    <span class="xcard__top"><span class="xcard__id">PRJ-06</span><span class="xcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+                                    <strong class="xcard__title">Terminal Portfolio</strong>
+                                    <span class="xcard__desc">A portfolio you navigate by typing commands, styled like a terminal.</span>
+                                    <span class="xcard__foot"><span>Next.js · React</span><span class="xcard__roll"><span class="xcard__url">terminal-portfolio-seven-kohl.vercel.app</span><span class="xcard__cta">Open project &rarr;</span></span></span>
+                                </a>
                             </div>
-
-                            <a href="https://scavenge.rs/" class="modal-popup__details">Project link</a>
                         </div>
-                    </div> <!-- end modal -->
 
-                    <div id="modal-06" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-image-pi.jpg" alt="image-π Image Toolkit Dashboard">
-                
-                            <div class="modal-popup__desc">
-                                <h5>image-π</h5>
-                                <p>Designed and developed image-π, a browser-based image toolkit that lets users compress, convert, resize, and edit images locally. Includes tools like background removal, QR generation, metadata stripping, and color palette extraction, ensuring fast processing and full user privacy.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>React</li>
-                                    <li>TypeScript</li>
-                                    <li>JavaScript</li>
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                    <li>Canvas API</li>
-                                    <li>Web APIs</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://image-pi-dusky.vercel.app/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
+                    </div>
+                </div> <!-- end work -->
 
-                    <div id="modal-03" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-code-stack.jpg" alt="Code Stack Platform Overview">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Code Stack</h5>
-                                <p>Code Stack is an open-source platform designed to help developers explore and organize programming technologies efficiently. It provides a structured directory of frameworks, libraries, tools, and learning resources, making it easier to navigate the ever-expanding tech landscape.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>React.js</li>
-                                    <li>Next.js</li>
-                                    <li>Tailwind.CSS</li>
-                                    <li>Responsive Design</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://codestack-sigma.vercel.app/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-05" hidden>
-                        <div class="modal-popup">
-
-                            <img src="images/portfolio/gallery/g-oryx.jpg" alt="Oryx AI Data Platform">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Oryx AI</h5>
-                                <p>Oryx AI is an innovative platform designed to standardize, evaluate, and provide access to high-quality training data for Large Language Models (LLMs). As AI research continues to evolve, the demand for structured, well-rated, and diverse datasets has grown significantly. Oryx AI addresses this need by offering a centralized hub for dataset discovery, evaluation, and usage.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Python</li>
-                                    <li>Next.js</li>
-                                    <li>JavaScript</li>
-                                    <li>UI/UX Design</li>
-                                    <li>In development</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://oryx-ai.vercel.app/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-01" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-salary-split.jpg" alt="Salary Split Visualization Tool">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Salary Split</h5>
-                                <p>SalarySplit is a responsive React application that allows users to enter their annual salary, break it down into monthly, weekly, daily, and hourly earnings, and convert it into different currencies, with an option to download exchange rate lists.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>React.js</li>
-                                    <li>API Integration</li>
-                                    <li>Responsive Design</li>
-                                    <li>Data Visualization</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://salary-split-three.vercel.app/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-04" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-terminal.jpg" alt="Terminal Styled Portfolio Command Interface">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Terminal Portfolio</h5>
-                                <p>I built my portfolio to look and feel like a Windows Terminal, giving it a unique and interactive experience. Instead of a traditional website, visitors can navigate through my projects, skills, and contact details using command-line-style inputs.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>React.js</li>
-                                    <li>Next.js</li>
-                                    <li>JavaScript</li>
-                                    <li>Responsive Design</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://terminal-portfolio-seven-kohl.vercel.app/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-02" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-u-w-roulette.jpg" alt="Useless Website Roulette Interface">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Useless Website Roulette</h5>
-                                <p>Useless Website Roulette is a Next.js project that transports users to random, ridiculous, and entertaining websites at the click of a button, making internet browsing fun and unpredictable.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>React.js</li>
-                                    <li>Next.js</li>
-                                    <li>Tailwind CSS</li>
-                                    <li>TypeScript</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://useless-website-roulette.vercel.app/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                </div> <!-- end works-portfolio -->
+                <!-- project modal -->
+                <dialog class="pmodal" id="project-modal" aria-labelledby="pm-title">
+                    <div class="pmodal__panel">
+                        <button class="pmodal__close" type="button" aria-label="Close" data-close>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                        </button>
+                        <div class="pmodal__content"></div>
+                    </div>
+                </dialog>
 
 
                 <div class="row tech-stack">
@@ -672,279 +787,47 @@
                         <h2 class="text-pretitle" data-animate-el>
                             My Tech Stack
                         </h2>
-                        
+
                         <div class="tech-carousel" data-animate-el>
                             <div class="tech-carousel__wrapper">
-                                <!-- First set of tech icons -->
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/react.svg" alt="React.js" class="tech-icon__img">
-                                        <span class="tech-icon__name">React JS</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/javascript.svg" alt="JavaScript" class="tech-icon__img">
-                                        <span class="tech-icon__name">JavaScript</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/html5.svg" alt="HTML5" class="tech-icon__img">
-                                        <span class="tech-icon__name">HTML5</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/css3.svg" alt="CSS3" class="tech-icon__img">
-                                        <span class="tech-icon__name">CSS3</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/tailwind.svg" alt="Tailwind CSS" class="tech-icon__img">
-                                        <span class="tech-icon__name">Tailwind CSS</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/bootstrap.svg" alt="Bootstrap" class="tech-icon__img">
-                                        <span class="tech-icon__name">Bootstrap</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/ionic.svg" alt="Ionic Framework" class="tech-icon__img">
-                                        <span class="tech-icon__name">Ionic</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/nodejs.svg" alt="Node.js" class="tech-icon__img">
-                                        <span class="tech-icon__name">Node.js</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/mongodb.svg" alt="MongoDB" class="tech-icon__img">
-                                        <span class="tech-icon__name">MongoDB</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/firebase.svg" alt="Firebase" class="tech-icon__img">
-                                        <span class="tech-icon__name">Firebase</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/git.svg" alt="Git" class="tech-icon__img">
-                                        <span class="tech-icon__name">Git</span>
-                                    </div>
-                                </div>
-
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/github.svg" alt="Github" class="tech-icon__img">
-                                        <span class="tech-icon__name">Github</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/python.svg" alt="Python" class="tech-icon__img">
-                                        <span class="tech-icon__name">Python</span>
-                                    </div>
-                                </div>
-
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/docker.svg" alt="docker" class="tech-icon__img">
-                                        <span class="tech-icon__name">Docker</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/materialui.svg" alt="materialui" class="tech-icon__img">
-                                        <span class="tech-icon__name">Material UI</span>
-                                    </div>
-                                </div>
-
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/nextjs.svg" alt="nextjs" class="tech-icon__img">
-                                        <span class="tech-icon__name">Next JS</span>
-                                    </div>
-                                </div>
-
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/postman.svg" alt="postman" class="tech-icon__img">
-                                        <span class="tech-icon__name">Postman</span>
-                                    </div>
-                                </div>
-
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/wordpress.svg" alt="wordpress" class="tech-icon__img">
-                                        <span class="tech-icon__name">Wordpress</span>
-                                    </div>
-                                </div>
-
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/vscode.svg" alt="vscode" class="tech-icon__img">
-                                        <span class="tech-icon__name">VS Code</span>
-                                    </div>
-                                </div>
-
-                                <!-- Duplicate set of tech icons for seamless looping -->
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/react.svg" alt="React.js" class="tech-icon__img">
-                                        <span class="tech-icon__name">React JS</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/javascript.svg" alt="JavaScript" class="tech-icon__img">
-                                        <span class="tech-icon__name">JavaScript</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/html5.svg" alt="HTML5" class="tech-icon__img">
-                                        <span class="tech-icon__name">HTML5</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/css3.svg" alt="CSS3" class="tech-icon__img">
-                                        <span class="tech-icon__name">CSS3</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/tailwind.svg" alt="Tailwind CSS" class="tech-icon__img">
-                                        <span class="tech-icon__name">Tailwind CSS</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/bootstrap.svg" alt="Bootstrap" class="tech-icon__img">
-                                        <span class="tech-icon__name">Bootstrap</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/ionic.svg" alt="Ionic Framework" class="tech-icon__img">
-                                        <span class="tech-icon__name">Ionic</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/nodejs.svg" alt="Node.js" class="tech-icon__img">
-                                        <span class="tech-icon__name">Node.js</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/mongodb.svg" alt="MongoDB" class="tech-icon__img">
-                                        <span class="tech-icon__name">MongoDB</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/firebase.svg" alt="Firebase" class="tech-icon__img">
-                                        <span class="tech-icon__name">Firebase</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/git.svg" alt="Git" class="tech-icon__img">
-                                        <span class="tech-icon__name">Git</span>
-                                    </div>
-                                </div>
-
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/github.svg" alt="Github" class="tech-icon__img">
-                                        <span class="tech-icon__name">Github</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="tech-carousel__slide">
-                                    <div class="tech-icon">
-                                        <img src="images/tech/python.svg" alt="Python" class="tech-icon__img">
-                                        <span class="tech-icon__name">Python</span>
-                                    </div>
-                                </div>
-
-                                    <div class="tech-carousel__slide">
-                                        <div class="tech-icon">
-                                            <img src="images/tech/docker.svg" alt="docker" class="tech-icon__img">
-                                            <span class="tech-icon__name">Docker</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="tech-carousel__slide">
-                                        <div class="tech-icon">
-                                            <img src="images/tech/materialui.svg" alt="materialui" class="tech-icon__img">
-                                            <span class="tech-icon__name">Material UI</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="tech-carousel__slide">
-                                        <div class="tech-icon">
-                                            <img src="images/tech/nextjs.svg" alt="nextjs" class="tech-icon__img">
-                                            <span class="tech-icon__name">Next JS</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="tech-carousel__slide">
-                                        <div class="tech-icon">
-                                            <img src="images/tech/postman.svg" alt="postman" class="tech-icon__img">
-                                            <span class="tech-icon__name">Postman</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="tech-carousel__slide">
-                                        <div class="tech-icon">
-                                            <img src="images/tech/wordpress.svg" alt="wordpress" class="tech-icon__img">
-                                            <span class="tech-icon__name">Wordpress</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="tech-carousel__slide">
-                                        <div class="tech-icon">
-                                            <img src="images/tech/vscode.svg" alt="vscode" class="tech-icon__img">
-                                            <span class="tech-icon__name">VS Code</span>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/react.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">React</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/nextjs.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Next.js</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/typescript.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">TypeScript</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/javascript.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">JavaScript</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/react.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">React Native</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/expo.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Expo</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/tailwind.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Tailwind CSS</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/nodejs.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Node.js</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/express.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Express</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/mongodb.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">MongoDB</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/supabase.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Supabase</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/firebase.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Firebase</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/python.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Python</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/googlegemini.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Agentic AI</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/figma.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Figma</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/ionic.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Ionic</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/capacitor.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Capacitor</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/materialui.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Material UI</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/bootstrap.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Bootstrap</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/git.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Git</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/github.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">GitHub</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/docker.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Docker</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/postman.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Postman</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/vscode.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">VS Code</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/vercel.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Vercel</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/netlify.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Netlify</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/googleplay.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Play Console</span></div></div>
+                                <!-- second set is cloned by js/portfolio.js for a seamless loop -->
                             </div>
+                        </div>
+
+                        <div class="stack-groups" data-animate-el>
+                            <div><h4>Frontend</h4><p>React, Next.js, JavaScript, TypeScript, HTML, CSS, Tailwind CSS, Bootstrap, Material UI</p></div>
+                            <div><h4>Mobile</h4><p>React Native, Expo, Ionic, Capacitor</p></div>
+                            <div><h4>Backend</h4><p>Node.js, Express.js, MongoDB, Firebase, Supabase</p></div>
+                            <div><h4>AI / Data</h4><p>Python, AI/ML, Agentic AI, Data Visualization</p></div>
+                            <div><h4>Tools</h4><p>Git, GitHub, Docker, Postman, Figma, VS Code</p></div>
+                            <div><h4>Deployment</h4><p>Vercel, Netlify, Hostinger, Google Play Console</p></div>
                         </div>
                     </div>
                 </div>
@@ -963,32 +846,51 @@
                         </h2>
 
                         <p class="h1">
-                            I'd love to hear from you.
-                            Whether you have a question about a project or want to 
-                            chat about fullstack development, React, or AI-driven innovations shoot me a message.
+                            Have a product idea, need a web or mobile app, or want to build something with AI? Let's talk.
                         </p>
                     </div>
                 </div> <!-- end contact-top -->
 
-                <div class="row contact-bottom">
-                    <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Reach me at</h3>
-                        <p class="contact-links">
-                            <!-- <a href="mailto:sumanth.k.0202@gmail.com" class="mailtoui">sumanth.k.0202@gmail.com</a> <br> -->
-                            <a href="tel:+918970732689">+91 8970732689</a>
-                        </p>
-                    </div>
-                    <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Social</h3>
-                        <ul class="contact-social">
-                        <li><a href="https://github.com/Skarycloud">Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/sumanth-kumar-230194294">Linkedin</a></li>
-                        <li><a href="https://x.com/SumanthKum75525">X</a></li>
-                        <li><a href="https://www.instagram.com/skarycloud/">Instagram</a></li>
-                        </ul>
-                    </div>
-                    <div class="column lg-4 md-12 contact-block">
-                        <a href="mailto:sumanth.k.0202@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
+                <div class="row contact-bottom" data-reveal>
+                    <div class="column lg-12">
+
+                        <div class="contact-grid">
+
+                            <div class="contact-card">
+                                <h3 class="contact-card__label">Email</h3>
+                                <a class="contact-card__value" href="mailto:sumanth.k.0202@gmail.com">sumanth.k.0202@gmail.com</a>
+                                <button class="copy-btn" type="button" data-copy="sumanth.k.0202@gmail.com" aria-label="Copy email address">
+                                    <svg class="i-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12"/><path d="M16 8V4H4v12h4"/></svg><svg class="i-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17.5 19 7"/></svg><span class="copy-btn__text">Copy</span>
+                                </button>
+                            </div>
+
+                            <div class="contact-card">
+                                <h3 class="contact-card__label">Phone</h3>
+                                <a class="contact-card__value" href="tel:+918970732689">+91 89707 32689</a>
+                                <button class="copy-btn" type="button" data-copy="+918970732689" aria-label="Copy phone number">
+                                    <svg class="i-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12"/><path d="M16 8V4H4v12h4"/></svg><svg class="i-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17.5 19 7"/></svg><span class="copy-btn__text">Copy</span>
+                                </button>
+                            </div>
+
+                            <div class="contact-card contact-card--social">
+                                <h3 class="contact-card__label">Social</h3>
+                                <ul class="contact-socials">
+                                    <li><a href="https://github.com/Skarycloud" target="_blank" rel="noopener noreferrer"><span>GitHub</span><small>@Skarycloud</small><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+                                    <li><a href="https://www.linkedin.com/in/sumanth-kumar-230194294" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><small>Sumanth Kumar</small><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+                                    <li><a href="https://x.com/SumanthKum75525" target="_blank" rel="noopener noreferrer"><span>X</span><small>@SumanthKum75525</small><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+                                    <li><a href="https://www.instagram.com/skarycloud/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><small>@skarycloud</small><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <a href="mailto:sumanth.k.0202@gmail.com" class="mailtoui contact-cta">
+                            <span class="contact-cta__text">Say hello<em>Tell me about your project, idea or role</em></span>
+                            <span class="contact-cta__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                        </a>
+
+                        <p class="copy-status" role="status" aria-live="polite"></p>
+
                     </div>
                 </div> <!-- end contact-bottom -->
 
@@ -1003,7 +905,8 @@
 
             <div class="row">
                 <div class="column ss-copyright">
-                    <span>© Copyright Sumanth Kumar 2025</span>
+                    <span>© <b data-year>2026</b> Sumanth Kumar</span>
+                    <span>Full-stack Developer &amp; AI Product Builder</span>
                 </div>
 
                 <div class="ss-go-top">
@@ -1022,6 +925,8 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script type="module" src="js/chatbot.js"></script>
 
 </body>
 </html>
