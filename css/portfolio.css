@@ -2913,3 +2913,36 @@ p.timeline__meta { color: var(--color-text-dark); line-height: var(--vspace-0_87
     box-shadow : 0 .6cqw 1.4cqw -.4cqw rgba(0, 0, 0, .35);
 }
 .bl__cursor span { top: auto; bottom: 2.4cqw; right: 2.2cqw; }
+
+/* Figma-style cursor: pointer first, name tag below-right of it (never over it).
+   The path keeps the cursor far enough inside the screen for the tag to fit. */
+.bl__cursor { display: flex; align-items: flex-start; gap: 0; }
+.bl__cursor svg { position: relative; z-index: 1; }
+.bl__cursor span {
+    position   : static;
+    margin     : 2.8cqw 0 0 .6cqw;
+    right      : auto;
+    top        : auto;
+    bottom     : auto;
+}
+
+@keyframes bl-cursor {
+    0%       { left: 100%; top: 100%; opacity: 0; }
+    14%      { left: 60%;  top: 42%;  opacity: 1; }
+    38%      { left: 64%;  top: 44%;  opacity: 1; }
+    48%, 60% { left: 62%;  top: 77%;  opacity: 1; }
+    70%, 90% { left: 58%;  top: 88%;  opacity: 1; }
+    100%     { left: 90%;  top: 100%; opacity: 0; }
+}
+.bl.is-static[data-step="1"] .bl__cursor { left: 64%; top: 44%; }
+.bl__cursor span { margin: 2cqw 0 0 -.4cqw; padding: .35cqw 1.1cqw; font-size: 1.7cqw; }
+@keyframes bl-cursor {
+    0%       { left: 52%; top: 30%; opacity: 0; }
+    14%      { left: 50%; top: 42%; opacity: 1; }
+    38%      { left: 54%; top: 44%; opacity: 1; }
+    48%, 60% { left: 52%; top: 76%; opacity: 1; }
+    70%, 90% { left: 48%; top: 88%; opacity: 1; }
+    100%     { left: 50%; top: 84%; opacity: 0; }
+}
+.bl.is-static[data-step="1"] .bl__cursor { left: 54%; top: 44%; }
+.bl__cursor span { margin: 2.2cqw 0 0 0; }
