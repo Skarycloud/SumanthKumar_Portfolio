@@ -1,229 +1,214 @@
-<!-- Header -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:141516,55:2a2112,100:ECC47E&height=220&section=header&text=Sumanth%20Kumar&fontSize=64&fontColor=F4F2EE&fontAlignY=36&desc=Full-stack%20Developer%20%26%20AI%20Product%20Builder&descSize=20&descAlignY=58&animation=fadeIn" alt="Sumanth Kumar — Full-stack Developer & AI Product Builder" width="100%" />
-</p>
-
 <p align="center">
   <a href="https://sumanth-kumar-portfolio.vercel.app/">
-    <img src="https://readme-typing-svg.demolab.com?font=DM+Serif+Display&size=26&duration=2800&pause=900&color=ECC47E&center=true&vCenter=true&width=760&lines=I+design+and+build+real+products+for+web+%26+mobile.;From+the+Figma+file+to+the+Play+Store+listing.;React+%C2%B7+Next.js+%C2%B7+React+Native+%C2%B7+Expo+%C2%B7+Node.js+%C2%B7+AI" alt="Typing intro" />
+    <img src="docs/media/banner.jpg" alt="Sumanth Kumar, Full-stack Developer & AI Product Builder" width="100%" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://sumanth-kumar-portfolio.vercel.app/"><img src="https://img.shields.io/badge/Live_Portfolio-ECC47E?style=for-the-badge&logo=vercel&logoColor=111111" alt="Live portfolio" /></a>
-  <a href="https://play.google.com/store/apps/details?id=com.mirchi35.studio"><img src="https://img.shields.io/badge/Apps_live_on-Google_Play-1E1F22?style=for-the-badge&logo=googleplay&logoColor=34A853" alt="Apps live on Google Play" /></a>
-  <a href="https://www.linkedin.com/in/sumanth-kumar-230194294"><img src="https://img.shields.io/badge/LinkedIn-1E1F22?style=for-the-badge&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
-  <a href="mailto:sumanth.k.0202@gmail.com"><img src="https://img.shields.io/badge/Say_hello-1E1F22?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+  <a href="https://sumanth-kumar-portfolio.vercel.app/">
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&duration=2600&pause=900&color=ECC47E&center=true&vCenter=true&width=760&lines=From+the+Figma+file+to+the+Play+Store+listing.;Apps+live+on+Google+Play.;A+droid+assistant+with+an+on-device+AI+brain." alt="From the Figma file to the Play Store listing" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://sumanth-kumar-portfolio.vercel.app/"><img src="https://img.shields.io/badge/Visit_the_site-ECC47E?style=for-the-badge&logo=vercel&logoColor=111111" alt="Visit the site" /></a>
+  <img src="https://img.shields.io/badge/Lighthouse-91_mobile_·_97_desktop-1E1F22?style=for-the-badge&logo=lighthouse&logoColor=F44B21" alt="Lighthouse 91 mobile, 97 desktop" />
+  <img src="https://img.shields.io/badge/First_load-~180_KB-1E1F22?style=for-the-badge&logo=speedtest&logoColor=white" alt="About 180 KB first load" />
+  <img src="https://img.shields.io/badge/Build_step-none-1E1F22?style=for-the-badge&logo=html5&logoColor=E34F26" alt="No build step" />
+</p>
+
+<p align="center">
+  <b>A hand-built portfolio: plain HTML, CSS and JavaScript, an animated story of how I work,<br />a droid assistant with an optional on-device AI brain, and every project I've shipped.</b>
 </p>
 
 <br />
 
 <p align="center">
-  <a href="https://sumanth-kumar-portfolio.vercel.app/">
-    <img src="docs/screenshots/demo.gif" alt="Portfolio walkthrough: hero, filtering the work grid, hovering a project and opening a case study" width="100%" />
-  </a>
+  <img src="docs/media/hero.jpg" alt="Hero: I'm Sumanth Kumar, a full-stack developer and AI product builder" width="100%" />
 </p>
 
 ---
 
-## About
-
-I design and build real products for web and mobile, from the Figma file to the Play Store listing.
-
-By day I'm an **Associate MERN Stack Developer & Test Engineer at Mirchi35**, where I've shipped two Android apps (React Native + Expo) to Google Play and worked on the company website, owning the UI/UX, frontend, API integration and testing. Alongside that I take on freelance product and design work, I'm building **[eMenu](https://emenuweb.com/)** (a SaaS I founded), and I co-founded **[Auralion Labs](https://auralionlabs.com/)**, a product studio whose website I designed and built.
-
-Lately I spend a lot of time on AI: agentic workflows, AI-powered features, and using AI to prototype fast.
-
-| | |
-|---|---|
-| **Production experience** | Apps live on Google Play |
-| **Design + engineering** | Figma → React / React Native |
-| **Full-stack** | Frontend, APIs, backend and automation |
-| **Founder mindset** | I build and ship my own products |
-
----
-
-## Screenshots
+## ✦ Highlights
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/screenshots/hero.jpg" alt="Hero section" /></td>
-    <td width="50%"><img src="docs/screenshots/about.jpg" alt="About section" /></td>
+    <td width="50%" valign="top">
+      <h3>The Build Loop</h3>
+      <p>The About section tells my process as a live scene: a screen is <b>designed in Figma</b>, <b>built in React Native</b>, <b>wired to APIs and tests</b>, then <b>shipped to Google Play</b>. Glassy UI, studio-rendered product shots, a Figma cursor and a typing code editor.</p>
+      <p><sub>Pure HTML/CSS · scales as one piece on any screen · click any step · pauses on hover · still frame for reduced motion</sub></p>
+    </td>
+    <td width="50%"><img src="docs/media/build-loop.gif" alt="The Build Loop animation cycling through design, build, integrate and ship" width="100%" /></td>
   </tr>
   <tr>
-    <td align="center"><sub><b>Hero</b> · identity, focus and stack at a glance</sub></td>
-    <td align="center"><sub><b>About</b> · what I do and what I bring</sub></td>
+    <td width="50%"><img src="docs/media/chat.gif" alt="S2-K1 answering questions about Sumanth" width="100%" /></td>
+    <td width="50%" valign="top">
+      <h3>S2-K1, a droid assistant</h3>
+      <p>Ask it anything about my work. Known questions get exact, hand-written answers; compliments and confusion get sentiment-aware replies, and its face reacts.</p>
+      <p>Optionally it wakes a <b>local AI brain</b>: <a href="https://huggingface.co/onnx-community/LFM2.5-350M-ONNX">LFM2.5-350M</a> running <b>inside the browser</b> with Transformers.js + WebGPU. No server, no API key, messages never leave the device. Answers are grounded in portfolio facts and unsupported sentences are filtered out.</p>
+      <p><sub>Blobatar face with cursor-tracking eyes · droid beeps synthesised with the Web Audio API (mutable)</sub></p>
+    </td>
   </tr>
   <tr>
-    <td width="50%"><img src="docs/screenshots/work.jpg" alt="Selected work header with filters" /></td>
-    <td width="50%"><img src="docs/screenshots/work-grid.jpg" alt="Project cards grid" /></td>
-  </tr>
-  <tr>
-    <td align="center"><sub><b>Selected Work</b> · stats and category filters</sub></td>
-    <td align="center"><sub><b>Project cards</b> · real store screenshots and live site captures</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/case-study.jpg" alt="Case study modal" /></td>
-    <td width="50%"><img src="docs/screenshots/stack.jpg" alt="Tech stack" /></td>
-  </tr>
-  <tr>
-    <td align="center"><sub><b>Case study</b> · role, scope, features, tech and links</sub></td>
-    <td align="center"><sub><b>Tech stack</b> · marquee and grouped skills</sub></td>
+    <td width="50%" valign="top">
+      <h3>Selected Work</h3>
+      <p>Category filters with View Transitions, cursor-tracked card spotlights and per-project accents. Each project opens a <b>case study</b> with a draggable, momentum-scrolling gallery of real Play Store screenshots and live site captures.</p>
+      <p><sub>Native &lt;dialog&gt; · keyboard &amp; screen-reader friendly · bottom sheet on mobile</sub></p>
+    </td>
+    <td width="50%"><img src="docs/media/work.gif" alt="Filtering projects and opening a case study" width="100%" /></td>
   </tr>
 </table>
 
-<p align="center">
-  <img src="docs/screenshots/mobile.jpg" alt="Mobile layouts: hero, project card and case-study bottom sheet" width="100%" />
-  <br />
-  <sub><b>Mobile</b> · fully responsive, with the case study as a bottom sheet</sub>
-</p>
+---
+
+## ✦ Screens
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/media/about.jpg" alt="About section with the Build Loop" /></td>
+    <td width="50%"><img src="docs/media/work.jpg" alt="Selected work with filters" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>About</b> · the Build Loop next to the story</sub></td>
+    <td align="center"><sub><b>Selected Work</b> · stats and filters</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/media/grid.jpg" alt="Project cards" /></td>
+    <td width="50%"><img src="docs/media/case.jpg" alt="Case study dialog" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Project cards</b> · real screenshots</sub></td>
+    <td align="center"><sub><b>Case study</b> · drag to explore</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/media/chat.jpg" alt="Chatting with S2-K1" /></td>
+    <td width="50%"><img src="docs/media/contact.jpg" alt="Contact section with copy buttons" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>S2-K1</b> · answers with actions and suggestions</sub></td>
+    <td align="center"><sub><b>Contact</b> · one-tap copy for email and phone</sub></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td width="68%"><img src="docs/media/mobile.jpg" alt="Mobile screens: hero, Build Loop, project card, S2-K1" /></td>
+    <td width="32%"><img src="docs/media/mobile-scroll.gif" alt="Scrolling the whole site on a phone" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Mobile</b> · tested from 320px phones to 1920px desktops, landscape included</sub></td>
+    <td align="center"><sub>Full scroll on a phone</sub></td>
+  </tr>
+</table>
 
 ---
 
-## Featured work
+## ✦ Featured work
 
-| # | Project | What it is | My role | Stack | Link |
-|:-:|---|---|---|---|---|
-| 01 | **Mirchi35 Studio** | Vendor app for India's live local-discovery platform | UI/UX, React Native frontend, testing, Play Store launch | React Native · Expo Router · Redux Toolkit | [Google Play](https://play.google.com/store/apps/details?id=com.mirchi35.studio) |
-| 02 | **Mirchi35 Community Connect** | Multi-language community app in the Mirchi35 ecosystem | UI/UX, React Native frontend, API integration, deployment | React Native · Expo Router · i18next | [Google Play](https://play.google.com/store/apps/details?id=com.mirchi35.pulse) |
-| 03 | **eMenu** | Digital menu SaaS for restaurants, shared by QR | Founder: design and build | Next.js · Supabase · Prisma · Stripe | [emenuweb.com](https://emenuweb.com/) |
-| 04 | **GT-Five** | Premium modular switches brand with an Android app | Freelance app UI/UX, logo, posters, banners | Figma | [Google Play](https://play.google.com/store/apps/details?id=com.gtfive.gtfive_app) · [gtfive.com](https://gtfive.com/) |
-| 05 | **Scavenge** | Platform for real-world scavenger hunts: GPS tracking, live leaderboards, QR challenges | Full-stack development | React · Node.js · Maps API | [scavenge.rs](https://scavenge.rs/) |
-| 06 | **Auralion Labs** | Product studio for AI, web, mobile and SaaS | Co-founder; designed and built the website | Next.js · GSAP · Sanity CMS | [auralionlabs.com](https://auralionlabs.com/) |
-| 07 | **Mirchi35 Website** | Marketing site for the Mirchi35 platform | Frontend: UI, responsive build, optimization | Next.js · TypeScript · Tailwind CSS | [mirchi35.com](https://mirchi35.com/) |
-| 08 | **Wren** | Agentic waiting-room assistant for GP clinics *(hackathon prototype)* | Patient and clinician interfaces, speech input | Gemini · Google ADK · Cloud Run · Firestore | [Devpost](https://allthingsagentichackathon.devpost.com/) |
+| | Project | What it is | My role | Link |
+|:-:|---|---|---|---|
+| 01 | **Mirchi35 Studio** | Vendor app for a live local-discovery platform | UI/UX, React Native frontend, testing, Play Store launch | [Google Play](https://play.google.com/store/apps/details?id=com.mirchi35.studio) |
+| 02 | **Mirchi35 Community Connect** | Multi-language community app | UI/UX, React Native frontend, API integration | [Google Play](https://play.google.com/store/apps/details?id=com.mirchi35.pulse) |
+| 03 | **eMenu** | QR digital menu SaaS for restaurants | Founder: design and build | [emenuweb.com](https://emenuweb.com/) |
+| 04 | **GT-Five** | Premium switches brand with an Android app | Freelance app UI/UX and brand graphics | [Google Play](https://play.google.com/store/apps/details?id=com.gtfive.gtfive_app) |
+| 05 | **Scavenge** | Real-world scavenger hunts with GPS and leaderboards | Full-stack development | [scavenge.rs](https://scavenge.rs/) |
+| 06 | **Auralion Labs** | Product studio for AI, web, mobile and SaaS | Co-founder; designed and built the website | [auralionlabs.com](https://auralionlabs.com/) |
+| 07 | **Mirchi35 Website** | Marketing site for the platform | Frontend: UI, responsive build, optimization | [mirchi35.com](https://mirchi35.com/) |
+| 08 | **Wren** | Agentic waiting-room assistant for GP clinics *(hackathon)* | Patient and clinician interfaces | [Devpost](https://allthingsagentichackathon.devpost.com/) |
 
 <details>
 <summary><b>More projects</b></summary>
 <br />
 
-<table>
-  <tr>
-    <td width="50%"><a href="https://oryx-ai.vercel.app/"><img src="images/projects/oryx-web.jpg" alt="Oryx AI" /></a></td>
-    <td width="50%"><a href="https://codestack-sigma.vercel.app/"><img src="images/projects/codestack-web.jpg" alt="Code Stack" /></a></td>
-  </tr>
-  <tr>
-    <td align="center"><sub><b>Oryx AI</b></sub></td>
-    <td align="center"><sub><b>Code Stack</b></sub></td>
-  </tr>
-</table>
-
-- **[Vakya](https://vakya.fun/)**: a Bhagavad Gita verse on your lock screen, every day; landing page design and build (Next.js, GSAP, Motion)
-- **[Oryx AI](https://oryx-ai.vercel.app/)**: training datasets and evaluation tools for AI/LLM models (Node.js, React, Python, Tailwind CSS)
-- **[Code Stack](https://codestack-sigma.vercel.app/)**: open-source directory of developer tools (Next.js, TypeScript, React, Tailwind CSS)
-- **[image-π](https://image-pi-dusky.vercel.app/)**: privacy-first image toolkit that runs in the browser
-- **[Salary Split](https://salary-split-three.vercel.app/)**: salary budgeting visualization (React)
-- **[Terminal Portfolio](https://terminal-portfolio-seven-kohl.vercel.app/)**: a portfolio you navigate by command line
+[Vakya](https://vakya.fun/) · [Oryx AI](https://oryx-ai.vercel.app/) · [Code Stack](https://codestack-sigma.vercel.app/) · [image-π](https://image-pi-dusky.vercel.app/) · [Salary Split](https://salary-split-three.vercel.app/) · [Terminal Portfolio](https://terminal-portfolio-seven-kohl.vercel.app/)
 
 </details>
 
 ---
 
-## Experience
+## ✦ Built with care
 
-| Role | Company | When |
-|---|---|---|
-| **Associate MERN Stack Developer & Test Engineer** | Mirchi35 Private Limited | Nov 2025 – Present |
-| **Freelance Full-stack Developer & UI/UX Designer** | Part-time, alongside Mirchi35 | Present |
-| **Founder** · eMenu &nbsp;/&nbsp; **Co-founder** · Auralion Labs | — | Present |
-| **Frontend Programmer (MEAN Stack)** | Ants Applied DataScience | Nov 2023 – Feb 2025 |
-| **Assistant Software Programmer (Intern)** | Ants Applied DataScience | Mar 2023 – Oct 2023 |
+| | |
+|---|---|
+| **Performance** | Lighthouse **91** mobile / **97** desktop, **100** best practices and SEO, about 180 KB on first load. Responsive WebP, deferred scripts, styles for the chat load with the chat, and the AI model only downloads when a visitor asks for it. |
+| **Accessibility** | WCAG AA contrast, valid HTML, semantic heading order, keyboard-navigable tabs, dialogs and galleries, live-region announcements, and `prefers-reduced-motion` respected everywhere. |
+| **Responsive** | Checked at 320, 360, 390, 430, 768, 820, 1024, 1280, 1440 and 1920px plus landscape phones: no horizontal scroll, nothing clipped. |
+| **Privacy** | No analytics. The chat runs entirely in the browser; nothing typed is stored or sent. |
+| **SEO** | Open Graph and Twitter cards, `Person` JSON-LD, canonical URL, `robots.txt`, `sitemap.xml`. Caching and security headers in `vercel.json`. |
 
-**Education** · BCA in Artificial Intelligence & Machine Learning, Manipal University Jaipur (Online), Sep 2024 – 2027 (expected) · Diploma in Computer Science & Engineering, S J Government Polytechnic, 2021 – 2023 (GPA 9.0)
-
----
-
-## Tech stack
+### Stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,html,css,tailwind,bootstrap,materialui&theme=dark" alt="Frontend" /><br />
-  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,firebase,supabase,python&theme=dark" alt="Backend and data" /><br />
-  <img src="https://skillicons.dev/icons?i=git,github,docker,postman,figma,vscode,vercel,netlify&theme=dark" alt="Tools and deployment" />
+  <img src="https://skillicons.dev/icons?i=html,css,js&theme=dark" alt="HTML, CSS, JavaScript" />
+  &nbsp;·&nbsp;
+  <img src="https://img.shields.io/badge/Transformers.js-1E1F22?style=for-the-badge&logo=huggingface&logoColor=FFD21E" alt="Transformers.js" />
+  <img src="https://img.shields.io/badge/WebGPU-1E1F22?style=for-the-badge&logo=webgpu&logoColor=white" alt="WebGPU" />
+  <img src="https://img.shields.io/badge/Web_Audio-1E1F22?style=for-the-badge&logo=audiomack&logoColor=white" alt="Web Audio API" />
+  <img src="https://img.shields.io/badge/anime.js-1E1F22?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="anime.js" />
+  <img src="https://img.shields.io/badge/Vercel-1E1F22?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 </p>
 
-| Area | Tools |
-|---|---|
-| **Frontend** | React, Next.js, JavaScript, TypeScript, HTML, CSS, Tailwind CSS, Bootstrap, Material UI |
-| **Mobile** | React Native, Expo, Ionic, Capacitor |
-| **Backend** | Node.js, Express.js, MongoDB, Firebase, Supabase |
-| **AI / Data** | Python, AI/ML, Agentic AI, Data Visualization |
-| **Tools** | Git, GitHub, Docker, Postman, Figma, VS Code |
-| **Deployment** | Vercel, Netlify, Hostinger, Google Play Console |
+<details>
+<summary><b>What I work with day to day</b></summary>
+<br />
+
+<img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,tailwind,nodejs,express,mongodb,firebase,supabase,python,figma,git,docker,vercel&theme=dark" alt="React, Next.js, TypeScript, JavaScript, Tailwind, Node.js, Express, MongoDB, Firebase, Supabase, Python, Figma, Git, Docker, Vercel" />
+
+React Native · Expo · Ionic · Capacitor · Material UI · Postman · Netlify · Google Play Console
+
+</details>
 
 ---
 
-## About this site
+## ✦ Run it locally
 
-A fast, dependency-free static site: plain HTML, CSS and JavaScript, no build step.
-
-- **The Build Loop** in the About section: an animated, interactive scene of how Sumanth works (design in Figma, build in React Native, connect APIs and tests, ship to Google Play). Pure HTML/CSS laid out at one design size and scaled as a whole, so it is identical on every screen; clickable steps, pauses on hover and off-screen, and a still version for reduced motion
-- **Work section** with category filters (animated with the View Transitions API where supported), cursor-tracked card spotlights and per-project accent colours
-- **Case studies** in a native `<dialog>`: focus handling, Escape and backdrop to close, and a bottom sheet on mobile
-- **Real imagery**: Google Play store screenshots and live captures of each shipped site
-- **Motion with restraint**: scroll reveals via `IntersectionObserver`, a seamless tech marquee, and full `prefers-reduced-motion` support
-- **S2-K1, a droid assistant** with a hybrid brain:
-  - common questions get exact, hand-written answers from the portfolio (instant, never wrong about facts)
-  - compliments, criticism and confusion get sentiment-aware replies, and the droid's face reacts
-  - an optional **local AI brain**, [LFM2.5-350M](https://huggingface.co/onnx-community/LFM2.5-350M-ONNX), runs entirely in the browser with [Transformers.js](https://huggingface.co/docs/transformers.js) + WebGPU in a Web Worker. It answers free-form questions using only the relevant portfolio facts, and a grounding check drops anything not supported by them. No server, no API key, and messages never leave the device. It is opt-in (~258 MB one-time download, cached by the browser) and stays asleep on devices without WebGPU
-  - a [Blobatar](https://blobatar.dev/) face whose eyes follow the cursor, plus droid beeps synthesised live with the Web Audio API (mutable)
-- **Fast**: Lighthouse 91 mobile / 97 desktop for performance and 100 for best practices and SEO; about 184 KB transferred on first load. Responsive WebP images, deferred scripts, no render-blocking chat styles, and the AI model only downloads when a visitor asks for it
-- **SEO-ready**: Open Graph and Twitter cards, canonical URL, `Person` structured data (JSON-LD), `robots.txt` and `sitemap.xml`; caching and security headers in `vercel.json`
-
-### Run locally
-
-There is no `package.json`; any static file server works.
+No install, no build step: any static server works.
 
 ```bash
 git clone https://github.com/Skarycloud/SumanthKumar_Portfolio.git
 cd SumanthKumar_Portfolio
-
-npx serve .                 # or
-python -m http.server 5500  # then open http://localhost:5500
+npx serve .            # or: python -m http.server 5500
 ```
 
-Or open the folder in VS Code and use the **Live Server** extension.
+Or open the folder in VS Code and use **Live Server**. The optional AI brain needs a WebGPU browser (recent Chrome or Edge); add `?ai-debug` to the URL to see its raw and filtered output.
 
-### Project structure
+<details>
+<summary><b>Project structure</b></summary>
 
 ```
-├── index.html              # all content and sections
+├── index.html               all content and sections
 ├── css/
-│   ├── styles.css          # base theme (layout, typography, timeline)
-│   ├── portfolio.css       # work section, case-study modal, overrides
-│   └── chatbot.css         # S2-K1 chat window
+│   ├── styles.css           base theme (layout, typography, timeline)
+│   ├── portfolio.css        work, case study, Build Loop, contact
+│   └── chatbot.css          S2-K1 chat window
 ├── js/
-│   ├── plugins.js          # anime.js + MoveTo
-│   ├── main.js             # preloader, nav, scroll spy, intro animation
-│   ├── portfolio.js        # reveals, filters, spotlight, modal, marquee
-│   ├── chatbot.js          # S2-K1: knowledge, router, sentiment, chat UI, sounds
-│   ├── ai/brain.js         # local AI: support check, loading, streaming
-│   ├── ai/worker.js        # Web Worker running the model with Transformers.js
-│   └── vendor/blobatar/    # Blobatar (MIT), vendored, no CDN at runtime
-├── images/
-│   ├── projects/           # project covers and store screenshots
-│   └── tech/               # tech stack icons
-├── assets/                 # résumé (PDF)
-└── docs/screenshots/       # README media
+│   ├── plugins.js           anime.js + MoveTo
+│   ├── main.js              preloader, nav, scroll spy, intro animation
+│   ├── portfolio.js         reveals, filters, modal, gallery, Build Loop, copy
+│   ├── chatbot.js           S2-K1: knowledge, router, sentiment, UI, sounds
+│   ├── ai/brain.js          local AI: support check, loading, streaming
+│   ├── ai/worker.js         Web Worker running the model (Transformers.js)
+│   └── vendor/blobatar/     Blobatar (MIT), vendored
+├── images/                  project shots, Build Loop renders, tech icons
+├── assets/                  résumé (PDF)
+├── docs/media/              README media
+└── vercel.json              caching + security headers
 ```
 
-Deployed on **Vercel** as a static site.
+</details>
 
 ---
 
-## Let's talk
+## ✦ Let's build something
 
 Have a product idea, need a web or mobile app, or want to build something with AI?
 
 <p>
-  <a href="mailto:sumanth.k.0202@gmail.com"><img src="https://img.shields.io/badge/Email-sumanth.k.0202%40gmail.com-1E1F22?style=flat-square&logo=gmail&logoColor=EA4335" alt="Email" /></a>
-  <a href="https://github.com/Skarycloud"><img src="https://img.shields.io/badge/GitHub-Skarycloud-1E1F22?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="https://www.linkedin.com/in/sumanth-kumar-230194294"><img src="https://img.shields.io/badge/LinkedIn-Sumanth_Kumar-1E1F22?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
-  <a href="https://x.com/SumanthKum75525"><img src="https://img.shields.io/badge/X-@SumanthKum75525-1E1F22?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
-  <a href="https://www.instagram.com/skarycloud/"><img src="https://img.shields.io/badge/Instagram-skarycloud-1E1F22?style=flat-square&logo=instagram&logoColor=E4405F" alt="Instagram" /></a>
+  <a href="mailto:sumanth.k.0202@gmail.com"><img src="https://img.shields.io/badge/Email-sumanth.k.0202%40gmail.com-1E1F22?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/sumanth-kumar-230194294"><img src="https://img.shields.io/badge/LinkedIn-Sumanth_Kumar-1E1F22?style=for-the-badge&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
+  <a href="https://github.com/Skarycloud"><img src="https://img.shields.io/badge/GitHub-Skarycloud-1E1F22?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://x.com/SumanthKum75525"><img src="https://img.shields.io/badge/X-@SumanthKum75525-1E1F22?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
+  <a href="https://www.instagram.com/skarycloud/"><img src="https://img.shields.io/badge/Instagram-skarycloud-1E1F22?style=for-the-badge&logo=instagram&logoColor=E4405F" alt="Instagram" /></a>
 </p>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ECC47E,45:2a2112,100:141516&height=120&section=footer" alt="" width="100%" />
-</p>
-
-<p align="center"><sub>© Sumanth Kumar · Mangalore, Karnataka, India</sub></p>
+<p align="center"><sub>Designed and built by Sumanth Kumar · Mangalore, India</sub></p>
