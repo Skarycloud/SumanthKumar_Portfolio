@@ -51,7 +51,7 @@
     ================================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@500;600;700&family=Public+Sans:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/portfolio.css">
 
@@ -186,19 +186,18 @@
                                             <div class="ui ui--status" style="--i:0"><b>9:41</b><span><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M3 17h2.5v3H3zM8 14h2.5v6H8zM13 11h2.5v9H13zM18 7h2.5v13H18z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9.5a12 12 0 0 1 17 0M6.5 12.8a7.6 7.6 0 0 1 11 0M9.6 16a3.2 3.2 0 0 1 4.8 0"/><circle class="fill" cx="12" cy="19" r="1"/></svg><svg viewBox="0 0 30 24" aria-hidden="true"><rect x="2" y="6.5" width="23" height="11" rx="3"/><rect class="fill" x="4.3" y="8.8" width="15" height="6.4" rx="1.5"/><path d="M27.5 10v4"/></svg></span></div>
                                             <div class="ui ui--top" style="--i:1"><span class="ui-hello"><small>Good morning</small><b>Discover</b></span><span class="ui-acts"><span class="ui-circ"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></span><span class="ui-circ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1 12h-11zM9 8V6.5a3 3 0 0 1 6 0V8"/></svg><i></i></span></span></div>
                                             <div class="ui ui--hero" style="--i:2">
-                                                <span class="ui-render r-orb"></span><span class="ui-render r-pill"></span>
-                                                <span class="ui-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 13.8 10.2 20.5 12l-6.7 1.8L12 20.5l-1.8-6.7L3.5 12l6.7-1.8z"/></svg><em>New offer</em></span>
+                                                <span class="ui-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 13.8 10.2 20.5 12l-6.7 1.8L12 20.5l-1.8-6.7L3.5 12l6.7-1.8z"/></svg><em>New customer offer</em></span>
                                                 <b>20% Off</b>
-                                                <small>Your first order nearby</small>
+                                                <small>On your first order</small>
                                                 <span class="ui-dots"><i></i><i></i><i></i></span>
                                             </div>
-                                            <div class="ui ui--sec" style="--i:3"><b>Popular nearby</b><small>Show all</small></div>
+                                            <div class="ui ui--sec" style="--i:3"><b>New collections</b><small>Show all</small></div>
                                             <div class="ui ui--cards" style="--i:4">
-                                                <span class="ui-card c1"><span class="ui-render r-ball"></span><b>Harbor</b><small>Café &amp; brunch</small></span>
-                                                <span class="ui-card c2"><span class="ui-render r-cap"></span><b>Northline</b><small>Design studio</small></span>
+                                                <span class="ui-card c1"><span class="ui-glass"><b>Velvet Lounge</b><small>Modular seating</small></span></span>
+                                                <span class="ui-card c2"><span class="ui-glass"><b>Sage Chair</b><small>Everyday seat</small></span></span>
                                                 <span class="ui-card c3"></span>
                                             </div>
-                                            <div class="ui ui--cta" style="--i:5"><span class="ui-cta-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 20 4l-7 16-2-7z"/></svg></span><b>Get directions</b></div>
+                                            <div class="ui ui--cta" style="--i:5"><span class="ui-cta-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1 12h-11zM9 8V6.5a3 3 0 0 1 6 0V8"/></svg></span><b>Shop collection</b></div>
                                             <i class="ui-home"></i>
 
                                             <div class="bl__select"><i></i><i></i><i></i><i></i></div>
@@ -226,7 +225,7 @@
 <span class="ln" style="--n:2;--c:32"><b class="k">export default function</b> <b class="f">Home</b>() {</span>
 <span class="ln" style="--n:3;--c:32">  <b class="k">const</b> { data } = <b class="f">useOffers</b>();</span>
 <span class="ln" style="--n:4;--c:10">  <b class="k">return</b> (</span>
-<span class="ln" style="--n:5;--c:37">    &lt;<b class="t">Screen</b> <b class="a">title</b>=<b class="s">"Offers near you"</b>&gt;</span>
+<span class="ln" style="--n:5;--c:37">    &lt;<b class="t">Screen</b> <b class="a">title</b>=<b class="s">"New collections"</b>&gt;</span>
 <span class="ln" style="--n:6;--c:22">      &lt;<b class="t">OfferCard</b> <b class="a">live</b> /&gt;</span>
 <span class="ln" style="--n:7;--c:31">      &lt;<b class="t">FlatList</b> <b class="a">data</b>={data} /&gt;</span>
 <span class="ln" style="--n:8;--c:13">    &lt;/<b class="t">Screen</b>&gt;</span>

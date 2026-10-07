@@ -2739,3 +2739,163 @@ p.timeline__meta { color: var(--color-text-dark); line-height: var(--vspace-0_87
     border-radius: .8cqw !important;
     animation: bl-shimmer 1.2s linear infinite;
 }
+
+
+/* ===================================================================
+ * Build Loop phone: glass edition
+ * Full-bleed studio renders, frosted controls, Inter type.
+ * ------------------------------------------------------------------- */
+.bl__screen { font-family: "Inter", var(--font-1); background: #e9e8e5; }
+.bl__screen .ui { letter-spacing: -.01em; }
+
+/* status + header float over the hero image */
+.ui--status, .ui--top { z-index: 2; }
+
+/* frosted round buttons */
+.ui-circ {
+    background         : rgba(255, 255, 255, .42);
+    backdrop-filter    : blur(14px) saturate(1.4);
+    -webkit-backdrop-filter : blur(14px) saturate(1.4);
+    box-shadow         : inset 0 0 0 1px rgba(255, 255, 255, .6), 0 1cqw 2.4cqw -1.2cqw rgba(0, 0, 0, .25);
+}
+
+.ui-hello small { color: #6f7073; }
+
+/* hero: full-bleed render, edge to edge, rounded bottom */
+.ui--hero {
+    top           : 0;
+    left          : 0;
+    width         : 100%;
+    height        : 54%;
+    padding       : 0 7% 7%;
+    border-radius : 0 0 5.4cqw 5.4cqw !important;
+    border-width  : 0 0 1px 0;
+}
+
+.ui--hero::before {
+    content    : "";
+    position   : absolute;
+    inset      : 0;
+    background : url("../images/bl-hero.webp") 62% 40% / cover no-repeat;
+    opacity    : 0;
+    transform  : scale(1.06);
+    transition : opacity .9s var(--ease-out), transform 1.4s var(--ease-out);
+}
+
+/* soft scrim so the copy sits on the image */
+.ui--hero::after {
+    content    : "";
+    position   : absolute;
+    inset      : 0;
+    background : linear-gradient(180deg, rgba(233, 232, 229, .55) 0%, rgba(233, 232, 229, 0) 26%, rgba(233, 232, 229, 0) 52%, rgba(233, 232, 229, .78) 100%);
+    opacity    : 0;
+    transition : opacity .9s;
+}
+
+.ui--hero > * { position: relative; z-index: 1; }
+.ui--hero b     { font-size: 7.2cqw; font-weight: 700; letter-spacing: -.045em; }
+.ui--hero small { font-size: 1.95cqw; color: #4a4b4f; }
+.ui-chip {
+    padding            : .7cqw 1.6cqw .7cqw 1.2cqw;
+    margin-bottom      : 1.4cqw;
+    border-radius      : 4cqw !important;
+    background         : rgba(255, 255, 255, .45);
+    backdrop-filter    : blur(10px);
+    -webkit-backdrop-filter : blur(10px);
+    box-shadow         : inset 0 0 0 1px rgba(255, 255, 255, .6);
+    color              : #2c2d30;
+}
+.ui-dots { left: 50%; right: auto; bottom: 2.4cqw; transform: translateX(-50%); }
+
+.bl:not([data-step="1"]) .ui--hero { background: #dddcd9; box-shadow: none; }
+.bl:is([data-step="3"], [data-step="4"]) .ui--hero::before { opacity: 1; transform: none; }
+.bl:is([data-step="3"], [data-step="4"]) .ui--hero::after  { opacity: 1; }
+
+/* section + image cards with frosted labels */
+.ui--sec   { top: 57%; }
+.ui--sec b { font-size: 2.6cqw; letter-spacing: -.02em; }
+.ui--cards { top: 63.5%; height: 21%; }
+
+.ui-card { padding: 1.2cqw; background: #d6d5d2; }
+
+.ui-card::before {
+    content    : "";
+    position   : absolute;
+    inset      : 0;
+    background : center 35% / cover no-repeat;
+    opacity    : 0;
+    transform  : scale(1.08);
+    transition : opacity .9s var(--ease-out), transform 1.4s var(--ease-out);
+}
+.ui-card.c1::before { background-image: url("../images/bl-card-a.webp"); }
+.ui-card.c2::before { background-image: url("../images/bl-card-b.webp"); }
+.ui-card.c3::before { background-image: url("../images/bl-hero.webp"); background-position: 30% 50%; }
+.bl:is([data-step="3"], [data-step="4"]) .ui-card::before { opacity: 1; transform: none; transition-delay: .25s; }
+.bl:is([data-step="3"], [data-step="4"]) .ui-card.c1 { background: #2a2b2e; }
+
+.ui-glass {
+    position           : relative;
+    display            : flex;
+    flex-direction     : column;
+    gap                : .2cqw;
+    padding            : 1.2cqw 1.6cqw;
+    border-radius      : 2.6cqw !important;
+    background         : rgba(255, 255, 255, .38);
+    backdrop-filter    : blur(12px) saturate(1.3);
+    -webkit-backdrop-filter : blur(12px) saturate(1.3);
+    box-shadow         : inset 0 0 0 1px rgba(255, 255, 255, .5);
+}
+.ui-card .ui-glass b     { font-size: 1.85cqw; color: #111; }
+.ui-card .ui-glass small { font-size: 1.3cqw; color: #3d3e42; }
+.bl:is([data-step="3"], [data-step="4"]) .ui-card.c1 .ui-glass { background: rgba(20, 20, 22, .35); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .14); }
+.bl:is([data-step="3"], [data-step="4"]) .ui-card.c1 .ui-glass b     { color: #fff; }
+.bl:is([data-step="3"], [data-step="4"]) .ui-card.c1 .ui-glass small { color: rgba(255, 255, 255, .7); }
+.bl[data-step="2"] :is(.ui-glass b, .ui-glass small) { color: transparent; background: rgba(0, 0, 0, .1); border-radius: .8cqw !important; }
+
+/* frosted CTA pill */
+.ui--cta { top: 86.6%; }
+.bl:not([data-step="1"]) .ui--cta {
+    background         : rgba(255, 255, 255, .55);
+    backdrop-filter    : blur(14px) saturate(1.4);
+    -webkit-backdrop-filter : blur(14px) saturate(1.4);
+    box-shadow         : inset 0 0 0 1px rgba(255, 255, 255, .7), 0 2cqw 4cqw -1.8cqw rgba(0, 0, 0, .3);
+}
+
+/* Figma selection follows the new layout */
+@keyframes bl-select {
+    0%, 14%  { top: 0;     left: 0;   width: 100%; height: 54%;  opacity: 0; }
+    20%, 38% { top: 0;     left: 0;   width: 100%; height: 54%;  opacity: 1; }
+    48%, 60% { top: 63.5%; left: 6%;  width: 88%;  height: 21%;  opacity: 1; }
+    70%, 90% { top: 86.6%; left: 14%; width: 72%;  height: 9%;   opacity: 1; }
+    100%     { top: 86.6%; left: 14%; width: 72%;  height: 9%;   opacity: 0; }
+}
+.bl.is-static[data-step="1"] .bl__select { top: 0; left: 0; width: 100%; height: 54%; }
+.bl.is-static .ui--hero::before, .bl.is-static .ui--hero::after, .bl.is-static .ui-card::before { transition: none; }
+
+/* coloured product renders: hero uses the sofa, cards use light glass labels */
+.ui--hero::before { background-position: 55% 30%; }
+.ui--hero::after  { background: linear-gradient(180deg, rgba(225, 224, 221, .5) 0%, rgba(225, 224, 221, 0) 24%, rgba(225, 224, 221, 0) 50%, rgba(225, 224, 221, .82) 100%); }
+.ui-card.c3::before { background-position: 75% 50%; }
+.bl:is([data-step="3"], [data-step="4"]) .ui-card.c1 { background: #d6d5d2; }
+.bl:is([data-step="3"], [data-step="4"]) .ui-card.c1 .ui-glass { background: rgba(255, 255, 255, .38); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .5); }
+.bl:is([data-step="3"], [data-step="4"]) .ui-card.c1 .ui-glass b     { color: #111; }
+.bl:is([data-step="3"], [data-step="4"]) .ui-card.c1 .ui-glass small { color: #3d3e42; }
+
+/* hero copy in white over a warm dark scrim, like a product shot */
+.ui--hero { padding-bottom: 9%; }
+.ui--hero::after { background: linear-gradient(180deg, rgba(225, 224, 221, .55) 0%, rgba(225, 224, 221, 0) 26%, rgba(40, 30, 26, 0) 46%, rgba(40, 30, 26, .55) 100%); }
+.bl:is([data-step="3"], [data-step="4"]) .ui--hero b     { color: #fff; }
+.bl:is([data-step="3"], [data-step="4"]) .ui--hero small { color: rgba(255, 255, 255, .85); }
+.bl:is([data-step="3"], [data-step="4"]) .ui-chip { background: rgba(255, 255, 255, .22); color: #fff; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35); }
+.bl:is([data-step="3"], [data-step="4"]) .ui-dots i { background: rgba(255, 255, 255, .45); }
+.bl:is([data-step="3"], [data-step="4"]) .ui-dots i:nth-child(2) { background: #fff; }
+.ui-dots { bottom: 3cqw; }
+
+/* card labels fit their titles */
+.ui-glass { padding: 1cqw 1.3cqw; }
+.ui-card .ui-glass b     { font-size: 1.7cqw; overflow: visible; text-overflow: clip; }
+.ui-card .ui-glass small { font-size: 1.25cqw; }
+.ui--hero { padding-bottom: 11%; }
+.ui-dots  { bottom: 2cqw; }
+.ui-card .ui-glass b { font-size: 1.55cqw; }
+.ui--hero > .ui-dots { position: absolute; left: 50%; bottom: 2.4cqw; transform: translateX(-50%); }
