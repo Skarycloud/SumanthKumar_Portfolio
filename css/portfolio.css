@@ -12,7 +12,7 @@
     --line-strong  : rgba(255, 255, 255, .14);
     --ink          : #f4f2ee;
     --ink-2        : #a6a6a8;
-    --ink-3        : #6f7072;
+    --ink-3        : #8d8e91;
     --radius-lg    : 2.4rem;
     --radius-md    : 1.6rem;
 }
@@ -963,7 +963,7 @@ html.modal-open { overflow: hidden; }
     background : var(--color-body);
 }
 
-.stack-groups h4 {
+.stack-groups h3 {
     margin         : 0 0 .8rem;
     font-family    : var(--font-1);
     font-size      : 1.2rem;
@@ -1760,3 +1760,12 @@ p { text-align: left; }
     .pm-gallery img.is-wide { height: 62dvh; max-height: none; }
     .pm-gallery--wide img { height: auto; max-height: 62dvh; width: auto; max-width: 100%; }
 }
+
+
+/* headings were re-levelled for a valid outline (h2 > h3); keep their look */
+.timeline__title { line-height: var(--vspace-1); }
+p.timeline__meta { color: var(--color-text-dark); line-height: var(--vspace-0_875); text-align: left; }
+
+/* a11y: the about photo now lives in a <picture> */
+.about-info__pic-block picture { display: block; }
+.about-info__pic { width: 100%; height: auto; }

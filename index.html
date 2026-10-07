@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Sumanth Kumar — Full-stack Developer & AI Product Builder</title>
+    <title>Sumanth Kumar — Full-stack Developer &amp; AI Product Builder</title>
     <meta name="description" content="Sumanth Kumar is a full-stack developer and AI product builder specializing in React, Next.js, React Native, Expo, UI/UX, and AI-powered applications.">
     <meta name="author" content="Sumanth Kumar">
     <meta name="keywords" content="Sumanth Kumar, full-stack developer, AI product builder, React, Next.js, React Native, Expo, Node.js, UI/UX, Figma, Mangalore">
@@ -49,12 +49,11 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/portfolio.css">
-    <link rel="stylesheet" href="js/vendor/blobatar/motion.css">
-    <link rel="stylesheet" href="js/vendor/blobatar/gaze.css">
-    <link rel="stylesheet" href="css/chatbot.css">
 
     <!-- favicons
     ================================================== -->
@@ -166,8 +165,16 @@
                 <div class="row about-info wide" data-animate-block>
 
                     <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="images/about-photo.png"
-                             srcset="images/about-photo.png 1x, images/about-photo@2x.png 2x" alt="Portrait of Sumanth Kumar" class="about-info__pic" data-animate-el>
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="images/about-photo-600.webp 600w, images/about-photo-900.webp 900w, images/about-photo-1200.webp 1200w"
+                                    sizes="(max-width: 1000px) 100vw, 50vw">
+                            <img src="images/about-photo-900.jpg"
+                                 srcset="images/about-photo-600.jpg 600w, images/about-photo-900.jpg 900w, images/about-photo-1200.jpg 1200w"
+                                 sizes="(max-width: 1000px) 100vw, 50vw"
+                                 width="1123" height="1536" loading="lazy" decoding="async"
+                                 alt="Portrait of Sumanth Kumar" class="about-info__pic" data-animate-el>
+                        </picture>
                     </div>
 
                     <div class="column lg-6 md-12">
@@ -237,8 +244,8 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Mirchi35 Private Limited</h4>
-                                    <h5 class="timeline__meta">Associate MERN Stack Developer &amp; Test Engineer</h5>
+                                    <h3 class="timeline__title">Mirchi35 Private Limited</h3>
+                                    <p class="timeline__meta">Associate MERN Stack Developer &amp; Test Engineer</p>
                                     <p class="timeline__timeframe">Nov 2025 – Present <span class="timeline__now">Current role</span></p>
                                 </div>
                                 <div class="timeline__desc">
@@ -253,8 +260,8 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Freelance</h4>
-                                    <h5 class="timeline__meta">Full-stack Developer &amp; UI/UX Designer</h5>
+                                    <h3 class="timeline__title">Freelance</h3>
+                                    <p class="timeline__meta">Full-stack Developer &amp; UI/UX Designer</p>
                                     <p class="timeline__timeframe">Part-time, alongside Mirchi35 · Present</p>
                                 </div>
                                 <div class="timeline__desc">
@@ -269,8 +276,8 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">eMenu &amp; Auralion Labs</h4>
-                                    <h5 class="timeline__meta">Founder &amp; Co-founder</h5>
+                                    <h3 class="timeline__title">eMenu &amp; Auralion Labs</h3>
+                                    <p class="timeline__meta">Founder &amp; Co-founder</p>
                                     <p class="timeline__timeframe">Present</p>
                                 </div>
                                 <div class="timeline__desc">
@@ -284,8 +291,8 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Ants Applied DataScience</h4>
-                                    <h5 class="timeline__meta">Frontend Programmer (MEAN Stack)</h5>
+                                    <h3 class="timeline__title">Ants Applied DataScience</h3>
+                                    <p class="timeline__meta">Frontend Programmer (MEAN Stack)</p>
                                     <p class="timeline__timeframe">Nov 2023 – Feb 2025</p>
                                 </div>
                                 <div class="timeline__desc">
@@ -300,8 +307,8 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Ants Applied DataScience</h4>
-                                    <h5 class="timeline__meta">Assistant Software Programmer (Intern)</h5>
+                                    <h3 class="timeline__title">Ants Applied DataScience</h3>
+                                    <p class="timeline__meta">Assistant Software Programmer (Intern)</p>
                                     <p class="timeline__timeframe">Mar 2023 – Oct 2023</p>
                                 </div>
                                 <div class="timeline__desc">
@@ -324,8 +331,8 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Manipal University Jaipur (Online)</h4>
-                                    <h5 class="timeline__meta">Bachelor of Computer Applications – Artificial Intelligence &amp; Machine Learning</h5>
+                                    <h3 class="timeline__title">Manipal University Jaipur (Online)</h3>
+                                    <p class="timeline__meta">Bachelor of Computer Applications – Artificial Intelligence &amp; Machine Learning</p>
                                     <p class="timeline__timeframe">Sep 2024 – 2027 (expected)</p>
                                 </div>
                                 <div class="timeline__desc">
@@ -336,8 +343,8 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">S J Government Polytechnic</h4>
-                                    <h5 class="timeline__meta">Diploma in Computer Science &amp; Engineering</h5>
+                                    <h3 class="timeline__title">S J Government Polytechnic</h3>
+                                    <p class="timeline__meta">Diploma in Computer Science &amp; Engineering</p>
                                     <p class="timeline__timeframe">Nov 2021 – May 2023 <br> <strong>GPA: 9.0</strong></p>
                                 </div>
                             </div>
@@ -383,12 +390,12 @@
 
                         <!-- filters -->
                         <div class="work__filters" role="tablist" aria-label="Filter projects" data-reveal>
-                            <button class="chip is-active" role="tab" aria-selected="true" data-filter="all">All</button>
-                            <button class="chip" role="tab" aria-selected="false" data-filter="mobile">Mobile</button>
-                            <button class="chip" role="tab" aria-selected="false" data-filter="web">Web</button>
-                            <button class="chip" role="tab" aria-selected="false" data-filter="design">UI/UX</button>
-                            <button class="chip" role="tab" aria-selected="false" data-filter="founder">Founder</button>
-                            <button class="chip" role="tab" aria-selected="false" data-filter="ai">AI</button>
+                            <button type="button" class="chip is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+                            <button type="button" class="chip" role="tab" aria-selected="false" data-filter="mobile">Mobile</button>
+                            <button type="button" class="chip" role="tab" aria-selected="false" data-filter="web">Web</button>
+                            <button type="button" class="chip" role="tab" aria-selected="false" data-filter="design">UI/UX</button>
+                            <button type="button" class="chip" role="tab" aria-selected="false" data-filter="founder">Founder</button>
+                            <button type="button" class="chip" role="tab" aria-selected="false" data-filter="ai">AI</button>
                         </div>
 
                         <!-- featured grid -->
@@ -790,44 +797,44 @@
 
                         <div class="tech-carousel" data-animate-el>
                             <div class="tech-carousel__wrapper">
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/react.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">React</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/nextjs.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Next.js</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/typescript.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">TypeScript</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/javascript.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">JavaScript</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/react.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">React Native</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/expo.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Expo</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/tailwind.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Tailwind CSS</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/nodejs.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Node.js</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/express.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Express</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/mongodb.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">MongoDB</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/supabase.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Supabase</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/firebase.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Firebase</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/python.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Python</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/googlegemini.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Agentic AI</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/figma.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Figma</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/ionic.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Ionic</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/capacitor.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Capacitor</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/materialui.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Material UI</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/bootstrap.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Bootstrap</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/git.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Git</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/github.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">GitHub</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/docker.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Docker</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/postman.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">Postman</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/vscode.svg" alt="" class="tech-icon__img"><span class="tech-icon__name">VS Code</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/vercel.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Vercel</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/netlify.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Netlify</span></div></div>
-                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/googleplay.svg" alt="" class="tech-icon__img tech-icon__img--si"><span class="tech-icon__name">Play Console</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/react.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">React</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/nextjs.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Next.js</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/typescript.svg" alt="" class="tech-icon__img tech-icon__img--si" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">TypeScript</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/javascript.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">JavaScript</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/react.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">React Native</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/expo.svg" alt="" class="tech-icon__img tech-icon__img--si" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Expo</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/tailwind.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Tailwind CSS</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/nodejs.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Node.js</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/express.svg" alt="" class="tech-icon__img tech-icon__img--si" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Express</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/mongodb.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">MongoDB</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/supabase.svg" alt="" class="tech-icon__img tech-icon__img--si" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Supabase</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/firebase.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Firebase</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/python.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Python</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/googlegemini.svg" alt="" class="tech-icon__img tech-icon__img--si" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Agentic AI</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/figma.svg" alt="" class="tech-icon__img tech-icon__img--si" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Figma</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/ionic.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Ionic</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/capacitor.svg" alt="" class="tech-icon__img tech-icon__img--si" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Capacitor</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/materialui.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Material UI</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/bootstrap.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Bootstrap</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/git.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Git</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/github.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">GitHub</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/docker.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Docker</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/postman.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Postman</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/vscode.svg" alt="" class="tech-icon__img" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">VS Code</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/vercel.svg" alt="" class="tech-icon__img tech-icon__img--si" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Vercel</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/netlify.svg" alt="" class="tech-icon__img tech-icon__img--si" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Netlify</span></div></div>
+                                <div class="tech-carousel__slide"><div class="tech-icon"><img src="images/tech/googleplay.svg" alt="" class="tech-icon__img tech-icon__img--si" width="60" height="60" loading="lazy" decoding="async"><span class="tech-icon__name">Play Console</span></div></div>
                                 <!-- second set is cloned by js/portfolio.js for a seamless loop -->
                             </div>
                         </div>
 
                         <div class="stack-groups" data-animate-el>
-                            <div><h4>Frontend</h4><p>React, Next.js, JavaScript, TypeScript, HTML, CSS, Tailwind CSS, Bootstrap, Material UI</p></div>
-                            <div><h4>Mobile</h4><p>React Native, Expo, Ionic, Capacitor</p></div>
-                            <div><h4>Backend</h4><p>Node.js, Express.js, MongoDB, Firebase, Supabase</p></div>
-                            <div><h4>AI / Data</h4><p>Python, AI/ML, Agentic AI, Data Visualization</p></div>
-                            <div><h4>Tools</h4><p>Git, GitHub, Docker, Postman, Figma, VS Code</p></div>
-                            <div><h4>Deployment</h4><p>Vercel, Netlify, Hostinger, Google Play Console</p></div>
+                            <div><h3>Frontend</h3><p>React, Next.js, JavaScript, TypeScript, HTML, CSS, Tailwind CSS, Bootstrap, Material UI</p></div>
+                            <div><h3>Mobile</h3><p>React Native, Expo, Ionic, Capacitor</p></div>
+                            <div><h3>Backend</h3><p>Node.js, Express.js, MongoDB, Firebase, Supabase</p></div>
+                            <div><h3>AI / Data</h3><p>Python, AI/ML, Agentic AI, Data Visualization</p></div>
+                            <div><h3>Tools</h3><p>Git, GitHub, Docker, Postman, Figma, VS Code</p></div>
+                            <div><h3>Deployment</h3><p>Vercel, Netlify, Hostinger, Google Play Console</p></div>
                         </div>
                     </div>
                 </div>
@@ -884,7 +891,7 @@
 
                         </div>
 
-                        <a href="mailto:sumanth.k.0202@gmail.com" class="mailtoui contact-cta">
+                        <a href="mailto:sumanth.k.0202@gmail.com" class="contact-cta">
                             <span class="contact-cta__text">Say hello<em>Tell me about your project, idea or role</em></span>
                             <span class="contact-cta__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
                         </a>
@@ -910,7 +917,7 @@
                 </div>
 
                 <div class="ss-go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top">
+                    <a class="smoothscroll" title="Back to top" href="#top" aria-label="Back to top">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
                     </a>
                 </div>
@@ -923,9 +930,9 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/portfolio.js"></script>
+    <script src="js/plugins.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/portfolio.js" defer></script>
     <script type="module" src="js/chatbot.js"></script>
 
 </body>

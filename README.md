@@ -160,8 +160,13 @@ A fast, dependency-free static site: plain HTML, CSS and JavaScript, no build st
 - **Case studies** in a native `<dialog>`: focus handling, Escape and backdrop to close, and a bottom sheet on mobile
 - **Real imagery**: Google Play store screenshots and live captures of each shipped site
 - **Motion with restraint**: scroll reveals via `IntersectionObserver`, a seamless tech marquee, and full `prefers-reduced-motion` support
-- **S2-K1, a droid assistant**: a scripted chat bot (no AI model, no network calls) that answers questions about projects, skills, experience and hiring, and can open any case study. Its face is a [Blobatar](https://blobatar.dev/) whose eyes follow the cursor and whose expression changes as it "thinks", and it chirps with original droid-style beeps synthesised live with the Web Audio API (mutable)
-- **SEO-ready**: Open Graph and Twitter cards, canonical URL and `Person` structured data (JSON-LD)
+- **S2-K1, a droid assistant** with a hybrid brain:
+  - common questions get exact, hand-written answers from the portfolio (instant, never wrong about facts)
+  - compliments, criticism and confusion get sentiment-aware replies, and the droid's face reacts
+  - an optional **local AI brain**, [LFM2.5-350M](https://huggingface.co/onnx-community/LFM2.5-350M-ONNX), runs entirely in the browser with [Transformers.js](https://huggingface.co/docs/transformers.js) + WebGPU in a Web Worker. It answers free-form questions using only the relevant portfolio facts, and a grounding check drops anything not supported by them. No server, no API key, and messages never leave the device. It is opt-in (~258 MB one-time download, cached by the browser) and stays asleep on devices without WebGPU
+  - a [Blobatar](https://blobatar.dev/) face whose eyes follow the cursor, plus droid beeps synthesised live with the Web Audio API (mutable)
+- **Fast**: Lighthouse 91 mobile / 97 desktop for performance and 100 for best practices and SEO; about 184 KB transferred on first load. Responsive WebP images, deferred scripts, no render-blocking chat styles, and the AI model only downloads when a visitor asks for it
+- **SEO-ready**: Open Graph and Twitter cards, canonical URL, `Person` structured data (JSON-LD), `robots.txt` and `sitemap.xml`; caching and security headers in `vercel.json`
 
 ### Run locally
 
@@ -182,15 +187,16 @@ Or open the folder in VS Code and use the **Live Server** extension.
 ```
 ├── index.html              # all content and sections
 ├── css/
-│   ├── vendor.css          # third-party styles
 │   ├── styles.css          # base theme (layout, typography, timeline)
 │   ├── portfolio.css       # work section, case-study modal, overrides
 │   └── chatbot.css         # S2-K1 chat window
 ├── js/
-│   ├── plugins.js          # anime.js, MoveTo, etc.
+│   ├── plugins.js          # anime.js + MoveTo
 │   ├── main.js             # preloader, nav, scroll spy, intro animation
 │   ├── portfolio.js        # reveals, filters, spotlight, modal, marquee
-│   ├── chatbot.js          # S2-K1: knowledge base, matcher, chat UI, droid sounds
+│   ├── chatbot.js          # S2-K1: knowledge, router, sentiment, chat UI, sounds
+│   ├── ai/brain.js         # local AI: support check, loading, streaming
+│   ├── ai/worker.js        # Web Worker running the model with Transformers.js
 │   └── vendor/blobatar/    # Blobatar (MIT), vendored, no CDN at runtime
 ├── images/
 │   ├── projects/           # project covers and store screenshots

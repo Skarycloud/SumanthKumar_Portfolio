@@ -1,5 +1,9 @@
 /* ===================================================================
- * S2-K1 - a scripted droid assistant for the portfolio
+ * S2-K1 - a droid assistant for the portfolio
+ *
+ * Hybrid brain: known questions get exact scripted answers; everything
+ * else can go to a small language model running locally in the
+ * browser (js/ai/), fed only the relevant portfolio facts.
  *
  * No AI model and no network: questions are matched against a small
  * knowledge base written from the portfolio content. The face is a
@@ -10,6 +14,10 @@
 import { _parts } from './vendor/blobatar/internal.js';
 import { gaze } from './vendor/blobatar/gaze.js';
 import * as EX from './vendor/blobatar/expression.js';
+import { brain, onBrain, wake, generate, checkSupport, MODEL, AI_DEBUG } from './ai/brain.js';
+
+// debug output: set AI_DEBUG in js/ai/brain.js, or add ?ai-debug to the URL
+const DEBUG = AI_DEBUG || /[?&]ai-debug\b/.test(location.search);
 
 
 /* -------------------------------------------------------------------
@@ -287,8 +295,15 @@ const INTENTS = [
     {
         id: 'bot', expr: 'wink',
         keys: ['who are you', 'what are you', 'are you ai', 'are you real', 'are you a bot', 'are you human', 'your name', 'chatgpt', 'gpt', 's2 k1', 's2k1', 'droid', 'robot', 'r2d2', 'r2 d2', 'who made you', 'your sounds', 'beep', 'how do you work'],
-        answer: () => `I'm <b>S2-K1</b>, a small droid assistant living on this page. Beep boop! I'm not an AI model: I match your question to answers written from Sumanth's portfolio, so I'm instant and nothing you type leaves your browser. For anything I can't answer, email him.`,
-        chips: ['Who is Sumanth?', 'Contact'],
+        answer: () => `I'm <b>S2-K1</b>, a small droid assistant living on this page. Beep boop! I answer common questions from notes written from Sumanth's portfolio, and I can wake an optional <b>AI brain</b> that runs entirely in your browser for everything else. Either way, nothing you type leaves your device.`,
+        chips: ['How were you built?', 'Who is Sumanth?'],
+    },
+    {
+        id: 'howbuilt', expr: 'happy',
+        keys: ['how were you built', 'how was this built', 'how are you built', 'how does this ai work', 'how does the ai work', 'local ai', 'on device', 'webgpu', 'transformers js', 'transformersjs', 'which model', 'what model', 'llm', 'language model', 'ai brain', 'your brain', 'tiny brain'],
+        weight: 1.3,
+        answer: () => `I'm a hybrid. Common questions get exact answers from my notes, so I never get Sumanth's facts wrong. For everything else I can wake <b>${MODEL.name}</b>, a small language model that runs <b>inside your browser</b> with Transformers.js and WebGPU: no server, no API key, and your messages never leave your device. It's a one-time ~${MODEL.sizeMB} MB download that your browser then caches. Sumanth built me with plain HTML, CSS and JavaScript.`,
+        chips: ['Who is Sumanth?', 'Show projects'],
     },
     {
         id: 'about',
@@ -496,7 +511,7 @@ const CHIP_ALIASES = {
     'who is sumanth?': 'about', 'show projects': 'projects', 'tech stack': 'skills', 'experience': 'experience',
     'work with him': 'hire', 'contact': 'contact', 'download cv': 'cv', 'mobile apps': 'mobile', 'ai work': 'ai',
     'design work': 'design', 'education': 'education', 'certifications': 'certs', 'mirchi35': 'mirchi35',
-    'ants applied datascience': 'ants', 'projects': 'projects',
+    'ants applied datascience': 'ants', 'projects': 'projects', 'how were you built?': 'howbuilt',
 };
 
 
@@ -583,6 +598,159 @@ function match(input, context) {
     return bestScore >= 1.8 ? best : FALLBACK;
 }
 
+// every intent with its score, best first (for picking facts to give the model)
+function rank(input) {
+    const text = normalize(input);
+    const tokens = text.trim().split(' ').filter(Boolean);
+    return INTENTS
+        .map(function(intent) { return { intent: intent, score: score(intent, text, tokens) }; })
+        .filter(function(r) { return r.score > 0; })
+        .sort(function(a, b) { return b.score - a.score; });
+}
+
+
+/* -------------------------------------------------------------------
+ * Local AI: knowledge, guard rails and tone
+ * ------------------------------------------------------------------- */
+const plain = function(html) {
+    // list items and paragraphs become separate sentences, never glued together
+    return String(html).replace(/<br\s*\/?>/g, '. ').replace(/<\/li>|<\/ul>|<\/p>/g, '. ').replace(/<span class="cb-tech">/g, '. Tech: ')
+        .replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&rarr;/g, '->')
+        .replace(/\s*\.\s*(\.\s*)+/g, '. ').replace(/:\s*\./g, ':').replace(/\s+/g, ' ').trim();
+};
+
+const CORE_FACTS = 'Sumanth Kumar is a full-stack developer and AI product builder from Mangalore, India. He designs and builds web and mobile products, from Figma to the Play Store. He works at Mirchi35, where he shipped two React Native + Expo Android apps to Google Play. He founded eMenu (a QR digital menu SaaS) and co-founded Auralion Labs (a product studio). Email: sumanth.k.0202@gmail.com.';
+
+const SELF_FACTS = "You are S2-K1, a little droid assistant on this portfolio site. Sumanth designed and built the site and you with plain HTML, CSS and JavaScript. Your face is a Blobatar whose eyes follow the cursor, and your droid beeps are synthesised live with the Web Audio API. Your optional AI brain is a small language model running in the visitor's browser with Transformers.js and WebGPU, so messages never leave their device.";
+const ABOUT_SELF = /\b(you|your|youre|droid|bot|robot|s2|beep|beeps|sound|sounds|site|website|page|portfolio|animation|chat)\b/i;
+
+// only the facts relevant to this question, so the tiny model stays focused
+function factsFor(ranked, text) {
+    const picked = ranked.filter(function(r) { return r.score >= 0.5 && ['greet', 'thanks', 'bye', 'help'].indexOf(r.intent.id) === -1; }).slice(0, 2);
+    // most relevant topic first: small models lean hardest on what they read first
+    const extra = picked.map(function(r) { return plain(r.intent.answer()); }).join(' ');
+    const self = ABOUT_SELF.test(text || '') ? ' ' + SELF_FACTS : '';
+    return (extra + ' ' + CORE_FACTS + self).trim().slice(0, 1600);
+}
+
+// questions about his private life never reach the model, so it can't invent answers
+const PERSONAL = /\b(favou?rite|age|how old|birthday|born|married|marriage|wife|girlfriend|boyfriend|partner|dating|single|relationship|salary|earns?|income|net worth|religion|caste|politics?|political|home address|family|parents|father|mother|siblings?|height|weight|food|eat|drink|hobbies|hobby|movie|movies|song|music|pets?)\b/i;
+
+const SENTIMENT = {
+    positive: /\b(awesome|amazing|great|love|loved|nice|cool|sick|fire|impressive|beautiful|clean|brilliant|excellent|wow|good job|well done|neat|slick|dope|best)\b/i,
+    negative: /\b(bad|boring|ugly|hate|terrible|awful|worst|slow|broken|useless|annoying|meh)\b/i,
+    confused: /\b(confused|confusing|dont understand|don t understand|what do you mean|huh|unclear|lost)\b|\?\?/i,
+    excited : /!{2,}|\b(omg|lets go|so cool|insane|crazy)\b/i,
+    curious : /\b(how|why|curious|wonder)\b/i,
+};
+
+function moodOf(text) {
+    const t = String(text).toLowerCase().replace(/[’']/g, '');
+    if (SENTIMENT.confused.test(t)) return 'confused';
+    if (SENTIMENT.negative.test(t)) return 'negative';
+    if (SENTIMENT.excited.test(t)) return 'excited';
+    if (SENTIMENT.positive.test(t)) return 'positive';
+    if (SENTIMENT.curious.test(t)) return 'curious';
+    return 'neutral';
+}
+
+const MOOD = {
+    positive : { expr: 'love',      tone: 'The visitor is being kind. Be warm and a little playful.' },
+    excited  : { expr: 'surprised', tone: 'The visitor is excited. Match their energy, briefly.' },
+    negative : { expr: 'sad',       tone: 'The visitor is unhappy. Be calm, kind and genuinely helpful. No jokes.' },
+    confused : { expr: 'unsure',    tone: 'The visitor is confused. Explain simply and clearly.' },
+    curious  : { expr: 'happy',     tone: 'The visitor is curious. Be clear and engaging.' },
+    neutral  : { expr: 'happy',     tone: '' },
+};
+
+const SYSTEM = `You are S2-K1, a small friendly droid living in Sumanth Kumar's portfolio website. You talk about Sumanth in the third person.
+Style: warm, a little witty, confident, never robotic. Reply in 1-2 short sentences in your own words. No emojis.
+Rules: use ONLY the FACTS given with the question, and name real projects from them. Never invent jobs, projects, clients, categories, numbers or personal details. If the FACTS don't cover it, say you don't know that one and suggest emailing Sumanth.`;
+
+const FEW_SHOT = [
+    { role: 'user', content: 'FACTS: Sumanth builds web and mobile products, from Figma designs to apps on Google Play. He shipped Mirchi35 Studio and Community Connect, two React Native Android apps. He founded eMenu, a QR digital menu SaaS.\n\nQUESTION: what sort of stuff does he make?' },
+    { role: 'assistant', content: 'Real products people use: Android apps like Mirchi35 Studio and Community Connect, and eMenu, the QR menu SaaS he founded. Figma to Play Store, all him.' },
+    { role: 'user', content: 'FACTS: He designs in Figma: user flows, screens and visual systems. He builds with React, React Native and Node.js, and shipped two Android apps to Google Play.\n\nQUESTION: is he a designer or a coder really?' },
+    { role: 'assistant', content: 'Honestly, both. He designs the screens in Figma and then builds them himself in React and React Native, which is how two of his apps made it onto Google Play.' },
+    { role: 'user', content: 'FACTS: Sumanth works with React, Next.js and Node.js.\n\nQUESTION: does he play the guitar?' },
+    { role: 'assistant', content: "That's outside my memory banks, I only know about his work. You could ask him at sumanth.k.0202@gmail.com!" },
+    { role: 'user', content: 'FACTS: Sumanth designs and builds web and mobile products.\n\nQUESTION: this site is really nice' },
+    { role: 'assistant', content: "Thank you! I'll pass that along to the human who built it, and to the CSS he argued with." },
+];
+
+/* Grounding check: a tiny model sometimes "fills in" plausible details.
+ * Each sentence must mostly use words found in the facts it was given
+ * (or the question); sentences that don't are dropped. */
+const GROUND_OK = new Set('about also because been being both build builds built building could does doing done each even from have here into just like made make makes making more most much only other over really some such than that their them then there these they this those very what when where which while with would your yours youre thank thanks pass along human code love glad happy nice great kind sure honestly definitely probably maybe know memory banks outside ask asking email reach work works working worked people real things stuff product products project projects thing want looking need help helps happen apps app developer design designs designed designing engineering person well good strong solid team great cool fun idea ideas start started startup builder builders handle handles handling shipping ship ships shipped team'.split(' '));
+
+function grounded(reply, facts, question) {
+    const vocab = new Set((facts + ' ' + question).toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function(w) { return w.length > 2; }));
+    const known = function(w) {
+        if (w.length <= 3 || GROUND_OK.has(w) || vocab.has(w)) return true;
+        const stem = w.slice(0, 5);
+        for (const v of vocab) if (v.length > 4 && v.slice(0, 5) === stem) return true;
+        return false;
+    };
+    // drop markdown, split only at real sentence ends (not inside "Next.js"),
+    // and drop a last sentence that the token limit cut off
+    const clean = reply.replace(/\*\*|__|`|^#+\s*/gm, '').replace(/\s+/g, ' ').trim();
+    let sentences = clean.split(/(?<=[.!?])\s+(?=[A-Z0-9"'(])/);
+    if (sentences.length > 1 && !/[.!?)"']$/.test(sentences[sentences.length - 1])) sentences = sentences.slice(0, -1);
+    const kept = sentences.filter(function(sn) {
+        const words = sn.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function(w) { return w.length > 3; });
+        if (words.length < 3) return true;
+        const ok = words.filter(known).length / words.length;
+        return ok >= 0.7;
+    });
+    return kept.join(' ').trim();
+}
+
+// sentiment-aware replies in S2-K1's voice. Instant, varied and always
+// accurate: tiny models get too creative with small talk.
+const MOOD_LINES = {
+    positive: [
+        "I was going to say thank you, but I'm literally code. So: thank you, on behalf of the code.",
+        "Beep! I'll pass that along to the human who built me. He'll pretend he isn't pleased.",
+        "That warmed my circuits. Sumanth designed and built every pixel here, so the credit is all his.",
+        "Saved to my happy memory banks. Want to see what else he's built?",
+    ],
+    self: [
+        "Thank you! My beeps are synthesised live in your browser, no audio files, so every one is a little different. Just like me.",
+        "Beep boop, flattered! Sumanth built me from scratch with plain HTML, CSS and JavaScript, eyes that follow your cursor included.",
+    ],
+    excited: [
+        "Right?! Beep boop! There's plenty more where that came from. Want a tour of his projects?",
+        "Love the energy! If you like this, wait until you see the apps he's shipped to Google Play.",
+    ],
+    negative: [
+        "Fair, and thanks for being honest. Tell me what you're looking for and I'll point you to the good stuff.",
+        "Ouch, my circuits felt that. Sumanth is always open to feedback, though: sumanth.k.0202@gmail.com.",
+    ],
+    confused: [
+        "Fair, I probably made that sound more complicated than it is. Short version: Sumanth designs and builds web and mobile apps, and two of them are live on Google Play. What would help most?",
+        "Let me make it simpler: he's a full-stack developer who takes products from a Figma design to a live app. Pick a topic below and I'll keep it short.",
+    ],
+};
+const MOOD_EXPR = { positive: 'love', self: 'happy', excited: 'surprised', negative: 'sad', confused: 'unsure' };
+let lastMoodLine = '';
+
+function moodReply(kind) {
+    const pool = MOOD_LINES[kind].filter(function(l) { return l !== lastMoodLine; });
+    const line = pool[Math.floor(Math.random() * pool.length)];
+    lastMoodLine = line;
+    return { id: 'mood', expr: MOOD_EXPR[kind], answer: function() { return line; }, chips: TOPICS };
+}
+
+// intents whose answers carry exact details or action buttons
+const EXACT = new Set(['contact', 'cv', 'hire', 'education', 'certs', 'experience', 'skills', 'howbuilt', 'bot', 'greet', 'bye', 'help', 'location']);
+
+const PERSONAL_REPLY = {
+    id: 'personal', expr: 'smug',
+    answer: () => `That's a personal one, and I only keep notes on Sumanth's <b>work</b>. Ask me about his projects, skills or experience, or ask him directly by email.`,
+    actions: [{ label: 'Email Sumanth', href: LINKS.email }],
+    chips: TOPICS,
+};
+
 
 /* -------------------------------------------------------------------
  * UI
@@ -598,6 +766,7 @@ const ICON = {
     user   : '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.4-5 8-5s6.5 1.5 8 5"/></svg>',
     grid   : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>',
     stack  : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5zM3 13l9 5 9-5M3 17.5l9 5 9-5"/></svg>',
+    chip   : '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4z"/></svg>',
     spark  : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg>',
 };
 
@@ -635,7 +804,7 @@ function build() {
                 <div class="cb-head__face"></div>
                 <div class="cb-head__text">
                     <h2 id="cb-title">${BOT}</h2>
-                    <p><i></i>Sumanth's droid assistant</p>
+                    <p><i></i><span class="cb-status">Sumanth's droid assistant</span></p>
                 </div>
                 <button class="cb-icon" type="button" data-sound aria-label="Droid sounds" title="Droid sounds"></button>
                 <button class="cb-icon" type="button" data-reset aria-label="New conversation" title="New conversation">${ICON.reset}</button>
@@ -647,6 +816,14 @@ function build() {
                     <div class="cb-welcome__face"></div>
                     <h3>Hi, I'm <span>${BOT}</span></h3>
                     <p>Ask me about Sumanth's projects, skills and experience, or how to work with him.</p>
+                    <div class="cb-ai" data-state="idle" hidden>
+                        <div class="cb-ai__row">
+                            <span class="cb-ai__icon">${ICON.chip}</span>
+                            <span class="cb-ai__text"><b>Wake my AI brain</b><small>Optional · ~${MODEL.sizeMB} MB one-time download · runs on your device</small></span>
+                            <button class="cb-ai__btn" type="button">Wake</button>
+                        </div>
+                        <div class="cb-ai__bar" aria-hidden="true"><i></i></div>
+                    </div>
                     <div class="cb-starters">
                         ${STARTERS.map(function(s) {
                             return `<button class="cb-starter" type="button" data-ask="${s.label}">
@@ -665,7 +842,7 @@ function build() {
                     <input id="cb-input" class="cb-input" type="text" maxlength="200" placeholder="Ask about projects, skills, hiring…" enterkeyhint="send">
                     <button class="cb-send" type="submit" aria-label="Send" disabled>${ICON.send}</button>
                 </div>
-                <p class="cb-foot">Scripted assistant · answers come from Sumanth's portfolio</p>
+                <p class="cb-foot">Answers come from Sumanth's portfolio · nothing you type leaves this device</p>
             </form>
         </section>
 
@@ -704,7 +881,13 @@ function build() {
 
     // conversation -------------------------------------------------
     const context = { project: null };
+    const history = [];                 // last few turns, this session only
     let busy = false;
+
+    function remember(role, text) {
+        history.push({ role: role, content: plain(text).slice(0, 400) });
+        while (history.length > 6) history.shift();
+    }
 
     function scrollDown() {
         body.scrollTo({ top: body.scrollHeight, behavior: reduceMotion ? 'auto' : 'smooth' });
@@ -792,6 +975,7 @@ function build() {
         const wait = reduceMotion ? 150 : Math.min(450 + len * 2, 1300);
         return typing(wait).then(function() {
             addBot(intent);
+            remember('assistant', intent.answer());
             voice.play(intent.expr === 'unsure' ? 'unsure' : intent.expr === 'love' ? 'happy' : 'reply');
             if (intent.project) context.project = intent.project;
             feel(intent.expr || 'happy', 2600);
@@ -800,15 +984,188 @@ function build() {
         });
     }
 
+    // the local model answers in a streaming bubble
+    function respondAI(text, ranked, mood) {
+        busy = true;
+        feel('thinking');
+        const m = el('div', 'cb-msg cb-msg--bot cb-msg--ai cb-typing');
+        const b = el('div', 'cb-bubble', '<i></i><i></i><i></i>');
+        m.appendChild(b);
+        log.appendChild(m);
+        scrollDown();
+
+        const facts = factsFor(ranked, text);
+        const tone = MOOD[mood].tone;
+        const messages = [{ role: 'system', content: SYSTEM + (tone ? '\n' + tone : '') }]
+            .concat(FEW_SHOT)
+            .concat(history.slice(-4))
+            .concat([{ role: 'user', content: 'FACTS: ' + facts + '\n\nQUESTION: ' + text }]);
+        if (DEBUG) console.info('[S2-K1] mood:', mood, '| facts from:', ranked.slice(0, 2).map(function(r) { return r.intent.id; }));
+
+        let started = false;
+        return generate(messages, function(sofar) {
+            if (!started) { started = true; m.classList.remove('cb-typing'); }
+            b.textContent = sofar;               // model output is shown as text, never HTML
+            body.scrollTop = body.scrollHeight;
+        }).then(function(res) {
+            const raw = (res.text || '').trim();
+            let reply = grounded(raw, facts, text);
+            if (DEBUG) console.info('[S2-K1] raw: ' + raw + ' || kept: ' + reply);
+            // a fragment ("Mirchi35 Website") is not an answer; neither is speaking as Sumanth
+            if (reply.split(/\s+/).length < 6 || /\b(I'd be happy|I can help|I'll build|my experience)\b/i.test(reply)) reply = '';
+            if (!reply) {
+                // nothing trustworthy left: give the exact scripted answer for this topic instead
+                m.remove();
+                busy = false;
+                const best = ranked.length && ranked[0].score >= 0.5 ? ranked[0].intent : FALLBACK;
+                return respond(best);
+            }
+            m.classList.remove('cb-typing');
+            b.textContent = reply;
+            const tag = el('span', 'cb-ai-tag', ICON.chip + '<span>On-device AI · may be imperfect</span>');
+            if (DEBUG) tag.lastChild.textContent += ' · ' + res.tokens + ' tok · ' + res.ms + ' ms · ' + brain.device;
+            m.appendChild(tag);
+
+            // one tap to the exact, hand-written answer for this topic
+            const source = ranked.length && ranked[0].score >= 0.5 ? ranked[0].intent : null;
+            if (source && ['thanks', 'greet', 'bye', 'howareyou', 'help'].indexOf(source.id) === -1) {
+                const row = el('div', 'cb-actions');
+                const more = el('button', 'cb-act', '<span>Full details</span>' + ICON.go);
+                more.type = 'button';
+                more.addEventListener('click', function() {
+                    if (busy) return;
+                    more.disabled = true;
+                    clearChips();
+                    respond(source);
+                });
+                row.appendChild(more);
+                m.appendChild(row);
+            }
+
+            remember('assistant', reply);
+            const chips = el('div', 'cb-chips');
+            TOPICS.slice(0, 4).forEach(function(label) {
+                const c = el('button', 'cb-chip'); c.type = 'button'; c.textContent = label; chips.appendChild(c);
+            });
+            log.appendChild(chips);
+            scrollDown();
+            voice.play(mood === 'positive' || mood === 'excited' ? 'happy' : 'reply');
+            feel(MOOD[mood].expr, 2600);
+        }).catch(function(err) {
+            console.error('[S2-K1] AI reply failed', err);
+            m.remove();
+            busy = false;
+            return respond(FALLBACK);
+        }).finally(function() {
+            busy = false;
+            syncSend();
+        });
+    }
+
+    // router: scripted when we know the answer, local AI for the rest
+    function route(text) {
+        const intent = match(text, context);
+        const mood = moodOf(text);
+        const aiOn = brain.state === 'ready';
+
+        if (PERSONAL.test(text) && !(intent && intent !== FALLBACK)) return respond(PERSONAL_REPLY);
+
+        const ranked = rank(text);
+        const top = ranked.length ? ranked[0].score : 0;
+        const words = text.split(/\s+/).length;
+        const feeling = mood === 'positive' || mood === 'excited' || mood === 'negative' || mood === 'confused';
+
+        // answers with exact details or buttons always stay scripted
+        const exact = intent && (intent.project || EXACT.has(intent.id) || CHIP_ALIASES[text.toLowerCase()]);
+        if (exact) return respond(intent);
+
+        // compliments, criticism, confusion: answer the feeling, not the keyword
+        const smallTalk = intent && ['thanks', 'howareyou', 'greet', 'bye'].indexOf(intent.id) > -1;
+        const strongTopic = intent && intent !== FALLBACK && !smallTalk && top >= 3;
+        if (feeling && !strongTopic) {
+            const aboutMe = /\b(droid|bot|robot|sound|sounds|beep|beeps|you|youre)\b/i.test(text) && !/\b(portfolio|site|website|his|he)\b/i.test(text);
+            const kind = (mood === 'positive' || mood === 'excited') && aboutMe ? 'self' : mood;
+            return respond(moodReply(kind));
+        }
+
+        // free-form questions about his work: the local model rephrases the real facts
+        if (aiOn) {
+            const loose = intent !== FALLBACK && top < 2.5 && words >= 6;
+            if (loose || (intent === FALLBACK && top >= 0.5)) return respondAI(text, ranked, mood);
+        }
+        return respond(intent || FALLBACK);
+    }
+
     function ask(text) {
         text = String(text).trim();
         if (!text || busy) return;
         clearChips();
         addUser(text);
+        remember('user', text);
         voice.play('send');
         syncSend();
-        respond(match(text, context));
+        route(text);
     }
+
+    // AI brain control ------------------------------------------------
+    const aiCard   = root.querySelector('.cb-ai');
+    const aiBtn    = root.querySelector('.cb-ai__btn');
+    const aiTitle  = aiCard.querySelector('.cb-ai__text b');
+    const aiSmall  = aiCard.querySelector('.cb-ai__text small');
+    const aiBar    = aiCard.querySelector('.cb-ai__bar i');
+    const statusEl = root.querySelector('.cb-status');
+    const footEl   = root.querySelector('.cb-foot');
+    let announced = false;
+
+    function wakeBrain() {
+        try { localStorage.setItem('cb-ai', 'on'); } catch (e) {}
+        wake();
+    }
+
+    aiBtn.addEventListener('click', function() { wakeBrain(); });
+
+    onBrain(function(b) {
+        aiCard.dataset.state = b.state;
+        root.classList.toggle('ai-on', b.state === 'ready');
+
+        if (b.state === 'unsupported') {
+            aiCard.hidden = false;
+            aiTitle.textContent = 'My AI brain is sleeping on this device';
+            aiSmall.textContent = 'It needs WebGPU. I can still answer from my notes.';
+            aiBtn.hidden = true;
+            statusEl.textContent = "Sumanth's droid assistant";
+        } else if (b.state === 'idle') {
+            aiCard.hidden = false;
+            aiBtn.hidden = false;
+            aiBtn.textContent = 'Wake';
+        } else if (b.state === 'loading') {
+            aiCard.hidden = false;
+            aiBtn.hidden = true;
+            const pct = Math.round(b.progress * 100);
+            aiTitle.textContent = b.phase;
+            aiSmall.textContent = pct > 0 && pct < 100 ? pct + '% · ~' + MODEL.sizeMB + ' MB, cached after the first time' : 'Setting up on your device…';
+            aiBar.style.transform = 'scaleX(' + Math.max(0.03, b.progress) + ')';
+            statusEl.textContent = b.phase + (pct > 0 && pct < 100 ? ' ' + pct + '%' : '');
+            feel('thinking');
+        } else if (b.state === 'ready') {
+            aiCard.hidden = false;
+            aiBtn.hidden = true;
+            aiTitle.textContent = 'AI brain online';
+            aiSmall.textContent = MODEL.name + ' running locally' + (DEBUG ? ' · ' + b.device + ' · ' + b.loadMs + ' ms' : '') + '. Ask me anything.';
+            aiBar.style.transform = 'scaleX(1)';
+            statusEl.textContent = 'Local AI · online';
+            footEl.textContent = 'Runs locally in your browser · your messages never leave this device';
+            if (!announced) { announced = true; feel('happy', 2200); voice.play('happy'); }
+        } else if (b.state === 'error') {
+            aiCard.hidden = false;
+            aiBtn.hidden = false;
+            aiBtn.textContent = 'Retry';
+            aiTitle.textContent = "My tiny brain couldn't wake up";
+            aiSmall.textContent = 'You can still ask me anything from my notes.';
+            statusEl.textContent = "Sumanth's droid assistant";
+            feel('sad', 2400);
+        }
+    });
 
     // delegated clicks for starters and chips
     root.addEventListener('click', function(e) {
@@ -829,6 +1186,11 @@ function build() {
         requestAnimationFrame(function() { panel.classList.add('is-in'); });
         feel('happy', 1800);
         voice.play('open');
+        checkSupport().then(function(ok) {
+            let optedIn = false;
+            try { optedIn = localStorage.getItem('cb-ai') === 'on'; } catch (e) {}
+            if (ok && optedIn) wake();          // cached after the first time, so this is quick
+        });
         if (window.matchMedia('(hover: hover)').matches) setTimeout(function() { input.focus({ preventScroll: true }); }, 220);
     }
 
@@ -884,7 +1246,7 @@ function build() {
     input.addEventListener('focus', function() { headGaze.lookAt(input); });
     input.addEventListener('blur', function() { headGaze.lookAt('pointer'); });
 
-    // capture phase: MailtoUI (plugins.js) throws on Escape further down
+    // capture phase, so Escape closes the chat before anything else sees it
     window.addEventListener('keydown', function(e) {
         const modal = document.getElementById('project-modal');
         if (e.key === 'Escape' && !panel.hidden && !(modal && modal.open)) {
@@ -914,5 +1276,22 @@ function build() {
     }
 }
 
-if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build);
-else build();
+// The chat's styles load here rather than in <head>, so they never delay
+// the first paint of the page. The UI is built once they have arrived.
+function loadStyles() {
+    const sheets = ['./vendor/blobatar/motion.css', './vendor/blobatar/gaze.css', '../css/chatbot.css'];
+    return Promise.all(sheets.map(function(path) {
+        return new Promise(function(resolve) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = new URL(path, import.meta.url).href;
+            link.onload = link.onerror = resolve;
+            document.head.appendChild(link);
+        });
+    }));
+}
+
+loadStyles().then(function() {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build);
+    else build();
+});

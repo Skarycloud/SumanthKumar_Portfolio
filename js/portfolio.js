@@ -343,8 +343,8 @@
             close();
         });
 
-        // MailtoUI (plugins.js) swallows Escape on document, so handle it
-        // first in the capture phase while the modal is open
+        // Escape closes the modal (capture phase, so it wins over other
+        // Escape handlers such as the chat's) and runs our exit animation
         window.addEventListener('keydown', function(e) {
             if (modal.open && (e.key === 'Escape' || e.keyCode === 27)) {
                 e.preventDefault();
